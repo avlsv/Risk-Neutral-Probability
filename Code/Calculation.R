@@ -1,3 +1,14 @@
 
+current_path <- rstudioapi::getActiveDocumentContext()$path 
+setwd(dirname(current_path))
 
-read_csv("data/Sep_t_Jan.csv")
+library(tidyquant)
+library(tidyverse)
+library(tsibble)
+
+
+
+getSymbols("SOFR", src="FRED")
+SOFR |> fortify.zoo(melt = F) |> as_tsibble()
+
+

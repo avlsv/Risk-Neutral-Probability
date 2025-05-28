@@ -26,12 +26,12 @@ stan_data <- list(
   y = as.vector(y)
 )
 
-mod5 <- stan(
+stan_model <- 
+  stan(
   "simplex.stan",
   data = stan_data,
-  iter = 8000,
-  chains = 8,
-  init_r = 1
+  iter = 4000,
+  chains = 8
 )
 
 
@@ -44,7 +44,12 @@ coefs_tbl <- rstan::extract(mod5, "b")$b |> as_tibble() |> summarize_all(mean)
 
 coefs <- get_posterior_mean(mod5) |> rowMeans()
 
+distr <- extract(mod5)
+
+hist_b1 <- distr$b[,1]|> hist(plot=F)
+
+hist(distr$b[,5],plot=F)$mids[which.max(hist(distr$b[,5],plot=F)$counts)]
 
 
-(round(coefs_tbl, digits = 3) - round(true_coefs, digits = 3)) / round(true_coefs, digits =
+ (round(coefs_tbl, digits = 3) - round(true_coefs, digits = 3)) / round(true_coefs, digits =
                                                                          3)
