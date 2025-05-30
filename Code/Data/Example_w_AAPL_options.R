@@ -90,8 +90,8 @@ estimation_procedure <- function(dataset, states= seq(120 - 20,260 + 20,  by = 1
     plot <- ggplot(betas, aes(x = state, y = estimate)) +
       geom_col() +
       geom_errorbar(aes(max = conf.high, min = conf.low)) +
-      scale_x_continuous("State", breaks = extended_breaks(n = 10)) +
-      scale_y_continuous("Probability")
+      scale_y_continuous("Probability", breaks = extended_breaks(n = 6))+
+      scale_x_continuous("State", breaks = extended_breaks(n = round(length(states)/2)+1)) 
 
 
     results[[j]] <- list(stan_model_aapl, coefs, betas, plot)
@@ -103,7 +103,7 @@ estimation_procedure <- function(dataset, states= seq(120 - 20,260 + 20,  by = 1
 
 results_23 <-
   estimation_procedure(read_csv("AAPL options 2025-05-23.csv"), 
-                       seq(110, 300, by = 10))#length=20
+                       seq(110, 300, by = 5))#length=20
 
 
 results_27 <-
@@ -138,25 +138,28 @@ summaries <- beta_coefs |>
   group_by(expiration, date) |>
   summarise(
     q5 = get_discrete_quantiles(estimate, state, 0.05),
+    q25 = get_discrete_quantiles(estimate, state, 0.05),
+    q50 = get_discrete_quantiles(estimate, state, 0.95),
+    q75 = get_discrete_quantiles(estimate, state, 0.95),
     q95 = get_discrete_quantiles(estimate, state, 0.95),
     mean = sum(estimate * state)
-  )
+  )|> ungroup()|> relocate(date)|> arrange(date)
 
 
 
 ggplot(beta_coefs, aes(x = state, y = estimate, group = expiration)) +
   geom_col() +
   facet_grid(date~expiration) +
-  geom_vline(data = summaries, aes(xintercept = q5), linetype = "dashed", linewidth = 0.5) +
-  geom_vline(data = summaries, aes(xintercept = q95), linetype = "dashed", linewidth = 0.5) +
-  geom_vline(data = summaries, aes(xintercept = mean), linetype = "dashed", linewidth = 0.5)
+  geom_vline(data = summaries, aes(xintercept = q5), linetype = "dashed", linewidth = 0.3) +
+  geom_vline(data = summaries, aes(xintercept = q95), linetype = "dashed", linewidth = 0.3) +
+  geom_vline(data = summaries, aes(xintercept = mean), linetype = "solid", linewidth = 0.3)
   scale_x_continuous("State", breaks = extended_breaks(n = 10)) +
   scale_y_continuous("Probability")
 
 
 alphas_23 <-
   bind_rows(
-    results_23[[1]][[1]] |>
+    results_23[[1]][[2]] |>
       filter(term == "alpha"),
     results_23[[2]][[2]] |>
       filter(term == "alpha"),
@@ -167,7 +170,7 @@ alphas_23 <-
 
 alphas_27 <-
   bind_rows(
-    results_27[[1]][[1]] |>
+    results_27[[1]][[2]] |>
       filter(term == "alpha"),
     results_27[[2]][[2]] |>
       filter(term == "alpha"),
@@ -175,4 +178,15 @@ alphas_27 <-
       filter(term == "alpha")
   ) |> bind_cols(tibble(expiration = expirations, date = rep("2025-05-27")))
 
+alphas <- bind_rows(alphas_23, alphas_27)
 
+
+
+extract(results_27[[3]][[1]])$lambda|> hist()
+
+library(patchwork)
+
+
+results_23[[3]][[4]]
+
+a+b
