@@ -20,7 +20,7 @@
 % \usepackage{natbib}
 % \usetheme{SimpleDarkBlue}
 
-\usepackage{mathrsfs}
+% \usepackage{mathrsfs}
 \usepackage[nospace]{varioref}	
 \usepackage{cleveref}
 
@@ -41,20 +41,15 @@
 
 \usepackage{makecell}
 
-
-
 % \usecolortheme{}
+\usepackage{amsmath}
 
 
-
-
-% \usepackage{amsmath}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 
-% \institute[NES]{New Economic School}
 
-\title{{Heterogeneous Macroeconomic Models} \\ \Large Review of theory and computation}
+\title{Bayesian Estimation of Risk-Neutral Probability}
 % Enter presentation information:
 \information%
 % Enter link to research paper (optional; comment line if not needed):
@@ -94,12 +89,48 @@
     \tableofcontents[currentsection]
 \end{frame}
 
+\begin{frame}{Implied Probability Density}
+
+    \[S=\sum_{s=1}^K\phi(s)q(s)\]
+
+    \[\phi^*\overset{d}{=}\frac{\phi(s)}{\sum_{s=1}^K\phi(s)}=\frac{\phi(s)}{1/(1+r)}=(1+r)\phi(s)\]
+
+    \[S=\frac{1}{1+r}\sum_{s=1}^K\phi^*(s)q(s)=\frac{1}{1+r}\mathbb{E}^*[q(s)].\]
+\end{frame}
+\begin{frame}
+    For TAS utility, the implied risk-neutral probability is
+    \[\phi^*(s)=\pi\frac{\beta u'[c(s)]}{u'[c(0)]}(1+r)= \pi\frac{u'[c(s)]}{u'[c(0)]}\approx \pi,\]
+    for $c(s)\approx c(0)$ or $u'$ is constant (risk-neutrality).
+\end{frame}
+
+\begin{frame}{Breeden-Litzenberger (1978) Formula}
+\nocite{breedenPricesStateContingentClaims1978}
+For short-term, $r\approx 0$.
+    \begin{align*}
+        C(S,t)&=\mathbb{E}^*\left[[S(T)-\mathcal{K}]^+\mid S(t)=S\right]\\ 
+        &=\int_0^{+\infty}(x-\mathcal{K})^+\,dP^*(x)\\ &=\int_{\mathcal{K}}^{+\infty}x\,dP^*(x)-\mathcal{K}\int_0^{+\infty}\,dP^*(x)\\ 
+        &=\int_{\mathcal{K}}^{+\infty}x\,dP^*(x)-\mathcal{K}(1-P^*(\mathcal{K}))
+    \end{align*}
+    \begin{align*}
+        \frac{\partial C}{\partial \mathcal{K}}&=-\mathcal{K}p^*(\mathcal{K})-1+P^*(\mathcal{K})+\mathcal{K}p^*(\mathcal{K})=P^*(\mathcal{K})-1\\ 
+        \frac{\partial^2 C}{\partial \mathcal{K}^2}&=p^*(\mathcal{K}).
+    \end{align*}
+
+ 
+\end{frame}
+
+\begin{frame}
+    
+\end{frame}
+
+
 
 
 \begin{frame}[allowframebreaks]{References}
     \renewcommand*{\bibfont}{\scriptsize}
     \printbibliography
 \end{frame}
+
 
 
 \end{document}

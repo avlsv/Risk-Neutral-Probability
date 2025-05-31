@@ -103,12 +103,12 @@ estimation_procedure <- function(dataset, states= seq(120 - 20,260 + 20,  by = 1
 
 results_23 <-
   estimation_procedure(read_csv("AAPL options 2025-05-23.csv"), 
-                       seq(110, 300, by = 5))#length=20
+                       seq(120, 300, by = 10))#length=20
 
 
 results_27 <-
   estimation_procedure(read_csv("AAPL options 2025-05-27.csv"), 
-                       seq(110, 300, by = 10))
+                       seq(120, 300, by = 10))
 
 
 beta_coefs <-

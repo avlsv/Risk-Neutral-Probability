@@ -1,0 +1,75 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{breedenPricesStateContingentClaims1978}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4f844f5106b47947356f4b20ad0470e4}{%
+           family={Breeden},
+           familyi={B\bibinitperiod},
+           given={Douglas\bibnamedelima T.},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6effe8bfca5639fbaf785cd77991ba54}{%
+           family={Litzenberger},
+           familyi={L\bibinitperiod},
+           given={Robert\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{fullhash}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{fullhashraw}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{bibnamehash}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{authorbibnamehash}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{authornamehash}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{authorfullhash}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \strng{authorfullhashraw}{3bafbcb2bb6e50d9de7c0729329e9d01}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper implements the time-state preference model in a multi-period economy, deriving the prices of primitive securities from the prices of call options on aggregate consumption. These prices permit an equilibrium valuation of assets with uncertain payoffs at many future dates. Furthermore, for any given portfolio, the price of a \$1.00 claim received at a future date, if the portfolio's value is between two given levels at that time, is derived explicitly from a second partial derivative of its call-option pricing function. An intertemporal capital asset pricing model is derived for payoffs that are jointly lognormally distributed with aggregate consumption. It is shown that using the Black-Scholes equation for options on aggregate consumption implies that individuals' preferences aggregate to isoelastic utility.}
+      \field{eprinttype}{jstor}
+      \field{issn}{0021-9398}
+      \field{journaltitle}{The Journal of Business}
+      \field{number}{4}
+      \field{title}{Prices of {{State-Contingent Claims Implicit}} in {{Option Prices}}}
+      \field{volume}{51}
+      \field{year}{1978}
+      \true{nocite}
+      \field{pages}{621\bibrangedash 651}
+      \range{pages}{31}
+      \verb{eprint}
+      \verb 2352653
+      \endverb
+      \verb{file}
+      \verb /Users/vlasov/Documents/Zotero/storage/93F5GLGT/Breeden and Litzenberger - 1978 - Prices of State-Contingent Claims Implicit in Option Prices.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
