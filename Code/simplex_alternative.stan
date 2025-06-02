@@ -12,7 +12,7 @@ parameters {
 }
 model {
   //lambda ~ uniform(0.9,1);//lambda prior
-  alpha ~ beta(2,2); //beta(2,2); // dirichlet parameter prior
+  alpha ~ lognormal(1,1); //beta(2,2); // dirichlet parameter prior
   b ~ dirichlet(rep_vector(alpha, k)); // coef prior
   y ~ normal(lambda * X * b, sigma);  // likelihood
   

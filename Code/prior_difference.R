@@ -12,23 +12,26 @@ df <- tibble(
 
 
 
+
 # Plot
 prior_difference_plot <-
-ggplot(df, aes(x = x, y = density, color = dist)) +
+  ggplot(df, aes(x = x, y = density, color = dist)) +
   geom_line() +
-  geom_vline(aes(xintercept=1), alpha=0.5)+
+  geom_vline(aes(xintercept = 1), alpha = 0.5) +
   labs(
     x = "x",
-    y="",
+    y = "",
     color = "Distribution",
     fill = "Distribution"
-  ) + theme_minimal() +theme(legend.position = "bottom")
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
 
 
 ggsave("prior_difference.pdf",
        prior_difference_plot,
        path = "~/Documents/Risk-Neutral-Probability/Figures/",
-       width = 297 / 1.6,
-       height = 210 / 1.6,
+       width = 297 / 1.8,
+       height = 210 / 1.8,
        units = "mm"
 )

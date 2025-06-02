@@ -124,6 +124,33 @@
       \verb /Users/vlasov/Documents/Zotero/storage/93F5GLGT/Breeden and Litzenberger - 1978 - Prices of State-Contingent Claims Implicit in Option Prices.pdf
       \endverb
     \endentry
+    \entry{markfisherSimplexRegression2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=96493977bd1e9ee83a9e15e00a27b086}{%
+           family={{Mark Fisher}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{fullhash}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{fullhashraw}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{bibnamehash}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{authorbibnamehash}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{authornamehash}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{authorfullhash}{96493977bd1e9ee83a9e15e00a27b086}
+      \strng{authorfullhashraw}{96493977bd1e9ee83a9e15e00a27b086}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Simplex {{Regression}}}
+      \field{year}{2016}
+      \verb{file}
+      \verb /Users/vlasov/Documents/Zotero/storage/QSTU2G3W/market-probability-tracker_simplex-regression.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

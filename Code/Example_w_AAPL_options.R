@@ -114,12 +114,6 @@ results_23 <-
   )
 
 
-results_23_1 <-
-  estimation_procedure(
-    dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
-    states = state_space, 
-    model = "simplex_alternative.stan"
-  )
 
 
 results_27 <-
@@ -127,6 +121,17 @@ results_27 <-
     dataset = read_csv("data/AAPL options 2025-05-27.csv", show_col_types = F),
     states = state_space
   )
+
+
+#alternative specification
+results_23_1 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
+    states = state_space,
+    model="simplex_alternative.stan"
+  )
+
+
 
 
 expirations <-
@@ -276,7 +281,7 @@ alpha_histogram <-
   ggplot(as_tibble(extract(results_23[[3]][[1]])$alpha), aes(x = value)) +
   geom_histogram(alpha = 0.3, color = "black", fill = "green") +
   geom_histogram(
-    data = as_tibble(extract(results_23_1[[3]][[1]])$alpha),
+    data = as_tibble(extract(results_27[[3]][[1]])$alpha),
     alpha = 0.3, color = "black", fill = "blue"
   ) +
   labs(x = "Alpha", y = "Frequency") +
