@@ -52,4 +52,9 @@ hist(distr$b[,5],plot=F)$mids[which.max(hist(distr$b[,5],plot=F)$counts)]
 
 
  (round(coefs_tbl, digits = 3) - round(true_coefs, digits = 3)) / round(true_coefs, digits =
-                                                                         3)
+                  
+
+                                                                          
+                                                                          
+                                                                          
+                                                                                                                               3)

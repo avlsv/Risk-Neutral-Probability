@@ -74,6 +74,7 @@
 % \AtBeginDocument{\usebeamerfont{normal text}}
 
 
+\graphicspath{{../Figures/}}
 
 \begin{document}
 
@@ -89,18 +90,24 @@
     \tableofcontents[currentsection]
 \end{frame}
 
-\begin{frame}{Implied Probability Density}
+\begin{frame}{\al{Implied} Risk-Neutral Probability Density}
 
     \[S=\sum_{s=1}^K\phi(s)q(s)\]
 
     \[\phi^*\overset{d}{=}\frac{\phi(s)}{\sum_{s=1}^K\phi(s)}=\frac{\phi(s)}{1/(1+r)}=(1+r)\phi(s)\]
 
     \[S=\frac{1}{1+r}\sum_{s=1}^K\phi^*(s)q(s)=\frac{1}{1+r}\mathbb{E}^*[q(s)].\]
+
 \end{frame}
-\begin{frame}
-    For TAS utility, the implied risk-neutral probability is
+\begin{frame}{Implied \al{Risk-Neutral} Probability Density}
+ 
+    For TAS utility, the state-prices are 
+    \[\phi(s)=\pi\frac{\beta u'[c(s)]}{u'[c(0)]},\]
+    \then implied risk-neutral probability is
     \[\phi^*(s)=\pi\frac{\beta u'[c(s)]}{u'[c(0)]}(1+r)= \pi\frac{u'[c(s)]}{u'[c(0)]}\approx \pi,\]
-    for $c(s)\approx c(0)$ or $u'$ is constant (risk-neutrality).
+    for $u'$ is constant (risk-neutrality) or $c(s)\approx c(0)$.
+
+
 \end{frame}
 
 \begin{frame}{Breeden-Litzenberger (1978) Formula}
@@ -115,22 +122,62 @@ For short-term, $r\approx 0$.
         \frac{\partial C}{\partial \mathcal{K}}&=-\mathcal{K}p^*(\mathcal{K})-1+P^*(\mathcal{K})+\mathcal{K}p^*(\mathcal{K})=P^*(\mathcal{K})-1\\ 
         \frac{\partial^2 C}{\partial \mathcal{K}^2}&=p^*(\mathcal{K}).
     \end{align*}
+ \cite{ait-sahaliaNonparametricOptionPricing2003}
 
- 
 \end{frame}
 
-\begin{frame}
+
+
+\begin{frame}{Bayesian Formulation}
+    \[y_i=\lambda\sum_{j=1}^KX_{ij}\beta_j+\varepsilon_i,\]
+    where $\varepsilon_i\sim N(0,\sigma^2)$, and $\beta=(\beta_1,\dots, \beta_K)\in \Delta^{K-1}$, where $\Delta^{K-1}$ denotes the simplex of dimension $(K-1)$.
+    
+    In vector form,
+    \[y=\lambda X \beta+\varepsilon.\]
+
+    In order to insure $\beta\in \Delta^{K-1}$, we select the Dirichlet prior:
+    \[p(\beta\mid \alpha)=\operatorname{Dirichlet}(\beta\mid \alpha)\propto \prod_{i=1}^{K}x_{i}^{\alpha-1}.\]
+
+\end{frame}
+
+
+\begin{frame}{Priors}
+     \[p(\beta\mid \alpha)=\operatorname{Dirichlet}(\beta\mid \alpha)\propto \prod_{i=1}^{K}x_{i}^{\alpha-1}.\]
+    \[p(\alpha)=\operatorname{Weibull}(1.5,1)\]
+    \[p(\sigma^2)\propto \frac{1}{\sigma^2}\]
+
+    \[p(\alpha,\lambda,\sigma,\beta\mid y)\propto N(y\mid \lambda X\beta,\sigma)\times\operatorname{Dirichlet}(\beta\mid \alpha)\times \frac{1}{\sigma^2}\]
+
+\end{frame}
+
+\begin{frame}{Example. AAPL}
+    Calculated for 2025-05-23 with expiration date 2025-06-13.
+    \begin{center}
+        \includegraphics[width=0.9\linewidth]{betas_23_1.pdf}
+    \end{center}
     
 \end{frame}
 
+\begin{frame}{Beta Estimates}\centering
+    \includegraphics[width=\linewidth]{betas.pdf}
+\end{frame}
 
+\begin{frame}{Alpha Estimates}
+    \includegraphics[scale=0.6]{alphas.pdf}
+\end{frame}
 
+\lastslide
 
 \begin{frame}[allowframebreaks]{References}
     \renewcommand*{\bibfont}{\scriptsize}
     \printbibliography
 \end{frame}
 
+\appendix 
+
+\begin{frame}
+    
+\end{frame}
 
 
 \end{document}

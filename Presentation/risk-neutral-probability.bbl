@@ -19,6 +19,57 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{ait-sahaliaNonparametricOptionPricing2003}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bba2860ae3d27359366385595e8b4b1e}{%
+           family={{Ait-Sahalia}},
+           familyi={A\bibinitperiod},
+           given={Yacine},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e19e9d74d55d3cf003e9b953b91e258e}{%
+           family={Duarte},
+           familyi={D\bibinitperiod},
+           given={Jefferson},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{fullhash}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{fullhashraw}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{bibnamehash}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{authorbibnamehash}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{authornamehash}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{authorfullhash}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \strng{authorfullhashraw}{6e3b6cabf42b3fb392d2e8bc88d46f62}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Frequently, economic theory places shape restrictions on functional relationships between economic variables. This paper develops a method to constrain the values of the first and second derivatives of nonparametric locally polynomial estimators. We apply this technique to estimate the state price density (SPD), or risk-neutral density, implicit in the market prices of options. The option pricing function must be monotonic and convex. Simulations demonstrate that nonparametric estimates can be quite feasible in the small samples relevant for day-to-day option pricing, once appropriate theory-motivated shape restrictions are imposed. Using S\&P 500 option prices, we show that unconstrained nonparametric estimators violate the constraints during more than half the trading days in 1999, unlike the constrained estimator we propose.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{month}{9}
+      \field{number}{1}
+      \field{title}{Nonparametric Option Pricing under Shape Restrictions}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{116}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \field{pages}{9\bibrangedash 47}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1016/S0304-4076(03)00102-7
+      \endverb
+      \verb{file}
+      \verb /Users/vlasov/Documents/Zotero/storage/3XUSJ6FH/Aı̈t-Sahalia and Duarte - 2003 - Nonparametric option pricing under shape restrictions.pdf;/Users/vlasov/Documents/Zotero/storage/PQ45C2YZ/Aı̈t-Sahalia and Duarte - 2003 - Nonparametric option pricing under shape restrictions.pdf;/Users/vlasov/Documents/Zotero/storage/LPXCIWYF/S0304407603001027.html
+      \endverb
+      \keyw{Constraints,Convexity,Kernel,Local polynomials,Monotonicity,Regression,State price density}
+    \endentry
     \entry{breedenPricesStateContingentClaims1978}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=4f844f5106b47947356f4b20ad0470e4}{%
@@ -57,8 +108,12 @@
       \field{journaltitle}{The Journal of Business}
       \field{number}{4}
       \field{title}{Prices of {{State-Contingent Claims Implicit}} in {{Option Prices}}}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
       \field{volume}{51}
       \field{year}{1978}
+      \field{urldateera}{ce}
       \true{nocite}
       \field{pages}{621\bibrangedash 651}
       \range{pages}{31}
