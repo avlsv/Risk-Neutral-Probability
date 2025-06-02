@@ -1,9 +1,9 @@
 library(tidyverse)
 
-x_vals <- seq(0, 5, length.out = 1000)
+x_vals <- seq(0, 3, length.out = 1000)
 
 # Create data frame with both densities
-df <- data.frame(
+df <- tibble(
   x = rep(x_vals, 2),
   density = c(dweibull(x_vals, shape = 1.1, scale = 1),
               dlnorm(x_vals, meanlog = 0, sdlog = 1)),
@@ -13,8 +13,10 @@ df <- data.frame(
 
 
 # Plot
+prior_difference_plot <-
 ggplot(df, aes(x = x, y = density, color = dist)) +
   geom_line() +
+  geom_vline(aes(xintercept=1), alpha=0.5)+
   labs(
     x = "x",
     y="",
@@ -24,7 +26,9 @@ ggplot(df, aes(x = x, y = density, color = dist)) +
 
 
 ggsave("prior_difference.pdf",
+       prior_difference_plot,
        path = "~/Documents/Risk-Neutral-Probability/Figures/",
        width = 297 / 1.6,
        height = 210 / 1.6,
        units = "mm"
+)

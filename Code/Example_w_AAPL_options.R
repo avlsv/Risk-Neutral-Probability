@@ -13,7 +13,7 @@ options(mc.cores = parallel::detectCores())
 
 
 
-estimation_procedure <- function(dataset, states = seq(120 - 20, 260 + 20, by = 10)) {
+estimation_procedure <- function(dataset, model="simplex.stan", states = seq(120 - 20, 260 + 20, by = 10)) {
   print(dataset$date[1])
 
   dataset_1 <- dataset |> select(expiration, strike, call_put, bid, ask)
@@ -76,7 +76,7 @@ estimation_procedure <- function(dataset, states = seq(120 - 20, 260 + 20, by = 
 
     stan_model_aapl <-
       stan(
-        "simplex.stan",
+        as.character(model),
         data = stan_data_aapl,
         iter = 4000,
         chains = 4
@@ -109,16 +109,25 @@ length(state_space)
 
 results_23 <-
   estimation_procedure(
-    read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
-    state_space
-  ) 
+    dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
+    states = state_space
+  )
+
+
+results_23_1 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
+    states = state_space, 
+    model = "simplex_alternative.stan"
+  )
 
 
 results_27 <-
   estimation_procedure(
-    read_csv("data/AAPL options 2025-05-27.csv", show_col_types = F),
-    state_space
+    dataset = read_csv("data/AAPL options 2025-05-27.csv", show_col_types = F),
+    states = state_space
   )
+
 
 expirations <-
   read_csv("data/AAPL options 2025-05-27.csv",
@@ -240,7 +249,7 @@ a + b
 
 
 
-for (i in seq(1, 3)) {
+for (i in seq(1, length(expirations))) {
   ggsave(paste("betas_23_", as.character(i), ".pdf", sep = ""),
     results_23[[i]][[4]],
     path = "~/Documents/Risk-Neutral-Probability/Figures/",
@@ -251,7 +260,7 @@ for (i in seq(1, 3)) {
 }
 
 
-for (i in seq(1, 3)) {
+for (i in seq(1, length(expirations))) {
   ggsave(paste("betas_27_", as.character(i), ".pdf", sep = ""),
     results_27[[i]][[4]],
     path = "~/Documents/Risk-Neutral-Probability/Figures/",
@@ -263,15 +272,23 @@ for (i in seq(1, 3)) {
 
 
 
-ggplot(as_tibble(extract(results_23[[3]][[1]])$alpha), aes(x = value)) +
-  geom_histogram(alpha=0.3, color="black", fill="green") +
-  geom_histogram(data=as_tibble(extract(results_27[[3]][[1]])$alpha),alpha=0.3, color="black", fill="blue") +
+alpha_histogram <-
+  ggplot(as_tibble(extract(results_23[[3]][[1]])$alpha), aes(x = value)) +
+  geom_histogram(alpha = 0.3, color = "black", fill = "green") +
+  geom_histogram(
+    data = as_tibble(extract(results_23_1[[3]][[1]])$alpha),
+    alpha = 0.3, color = "black", fill = "blue"
+  ) +
   labs(x = "Alpha", y = "Frequency") +
   theme_minimal()
 
+
+
+
 ggsave("alpha_histogram.pdf",
-       path = "~/Documents/Risk-Neutral-Probability/Figures/",
-       width = 297 / 1.6,
-       height = 210 / 1.6,
-       units = "mm"
+  alpha_histogram,
+  path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  width = 297 / 1.6,
+  height = 210 / 1.6,
+  units = "mm"
 )

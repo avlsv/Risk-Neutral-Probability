@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  2 JUN 2025 19:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  2 JUN 2025 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1268,23 +1268,7 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
 (Font)              scaled to size 4.0pt on input line 83.
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}]
-\openout4 = `risk-neutral-probability.vrb'.
-
- (./risk-neutral-probability.vrb (./risk-neutral-probability.toc))
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 91.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 91.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 91.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 14.4pt on input line 91.
-
-
-[2
-
-] (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}] (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
@@ -1299,6 +1283,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 101.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 14.4pt on input line 101.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 101.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
+(Font)              scaled to size 14.4pt on input line 101.
+
+
+[2
+
+]
 
 [3
 
@@ -1319,31 +1316,27 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [7
 
 ]
-
-[8
-
-]
-<../Figures/betas_23_1.pdf, id=83, 527.9725pt x 373.395pt>
+<../Figures/betas_23_1.pdf, id=71, 527.9725pt x 373.395pt>
 File: ../Figures/betas_23_1.pdf Graphic file (type pdf)
 <use ../Figures/betas_23_1.pdf>
 Package pdftex.def Info: ../Figures/betas_23_1.pdf  used on input line 164.
 (pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
 
 
-[9
+[8
 
  <../Figures/betas_23_1.pdf>]
-<../Figures/betas_23_3.pdf, id=94, 527.9725pt x 373.395pt>
+<../Figures/betas_23_3.pdf, id=82, 527.9725pt x 373.395pt>
 File: ../Figures/betas_23_3.pdf Graphic file (type pdf)
 <use ../Figures/betas_23_3.pdf>
 Package pdftex.def Info: ../Figures/betas_23_3.pdf  used on input line 173.
 (pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
 
 
-[10
+[9
 
  <../Figures/betas_23_3.pdf>]
-<../Figures/betas.pdf, id=105, 527.9725pt x 373.395pt>
+<../Figures/betas.pdf, id=93, 527.9725pt x 373.395pt>
 File: ../Figures/betas.pdf Graphic file (type pdf)
 <use ../Figures/betas.pdf>
 Package pdftex.def Info: ../Figures/betas.pdf  used on input line 177.
@@ -1354,25 +1347,25 @@ Overfull \vbox (4.407pt too high) detected at line 177
 
 
 
-[11
+[10
 
  <../Figures/betas.pdf>]
 
-[12
+[11
 
 ]
-<../Figures/alphas.pdf, id=121, 439.6425pt x 373.395pt>
+<../Figures/alphas.pdf, id=109, 439.6425pt x 373.395pt>
 File: ../Figures/alphas.pdf Graphic file (type pdf)
 <use ../Figures/alphas.pdf>
 Package pdftex.def Info: ../Figures/alphas.pdf  used on input line 186.
 (pdftex.def)             Requested size: 263.78752pt x 224.03873pt.
 
 
-[13
+[12
 
  <../Figures/alphas.pdf>]
 
-[14
+[13
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
@@ -1395,7 +1388,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[15
+[14
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc} </usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 
@@ -1404,7 +1397,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[16
+[15
 
 ]
 \tf@nav=\write7
@@ -1422,24 +1415,24 @@ LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `risk-neutral-probability.out' has not changed.
-(rerunfilecheck)             Checksum: B1CC3531699375D1CF23835F7C87E19B;346.
+(rerunfilecheck)             Checksum: EE5C8C062C5ABB6159EE6F477980C97A;174.
 Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
 \openout1 = `risk-neutral-probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36013 strings out of 473600
- 710745 string characters out of 5728708
+ 35932 strings out of 473600
+ 708557 string characters out of 5728708
  1936905 words of memory out of 5000000
- 58089 multiletter control sequences out of 15000+600000
+ 58015 multiletter control sequences out of 15000+600000
  677435 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,11n,131p,1083b,1573s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,11n,131p,1083b,1571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (16 pages, 267676 bytes).
+Output written on risk-neutral-probability.pdf (15 pages, 266432 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 51805 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 51791 words of extra memory for PDF output out of 61914 (max. 10000000)
 
