@@ -83,7 +83,7 @@ estimation_procedure <- function(dataset, states = seq(120 - 20, 260 + 20, by = 
       )
 
     coefs <- stan_model_aapl |>
-      tidy(conf.int = T, conf.level = 0.95, conf.method = "HPDinterval")
+      tidy(conf.int = T, conf.level = 0.90, conf.method = "HPDinterval")
 
     betas <- coefs |>
       filter(startsWith(term, "b")) |>
@@ -91,7 +91,7 @@ estimation_procedure <- function(dataset, states = seq(120 - 20, 260 + 20, by = 
 
     plot <- ggplot(betas, aes(x = state, y = estimate)) +
       geom_col() +
-      geom_errorbar(aes(max = conf.high, min = conf.low)) +
+      geom_errorbar(aes(max = conf.high, min = conf.low), width=4) +
       scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
       scale_x_continuous("State", breaks = extended_breaks(n = round(length(states) / 2) + 1))+
       theme_light() 
@@ -260,3 +260,18 @@ for (i in seq(1, 3)) {
     units = "mm"
   )
 }
+
+
+
+ggplot(as_tibble(extract(results_23[[3]][[1]])$alpha), aes(x = value)) +
+  geom_histogram(alpha=0.3, color="black", fill="green") +
+  geom_histogram(data=as_tibble(extract(results_27[[3]][[1]])$alpha),alpha=0.3, color="black", fill="blue") +
+  labs(x = "Alpha", y = "Frequency") +
+  theme_minimal()
+
+ggsave("alpha_histogram.pdf",
+       path = "~/Documents/Risk-Neutral-Probability/Figures/",
+       width = 297 / 1.6,
+       height = 210 / 1.6,
+       units = "mm"
+)

@@ -140,10 +140,15 @@ For short-term, $r\approx 0$.
 
 \end{frame}
 
+\begin{frame}{Prior for Concentration Coefficient}
+    $\alpha$ is a vector of concentration parameters for Dirichlet distribution. 
+    
+    It is reasonable to select a distribution with positive support that is relatively flat on $[0,1]$.
+\end{frame}
 
-\begin{frame}{Priors}
+\begin{frame}{Priors and Posterior}
      \[p(\beta\mid \alpha)=\operatorname{Dirichlet}(\beta\mid \alpha)\propto \prod_{i=1}^{K}x_{i}^{\alpha-1}.\]
-    \[p(\alpha)=\operatorname{Weibull}(1.5,1)\]
+    \[p(\alpha)=\operatorname{Weibull}(1.1,1)\]
     \[p(\sigma^2)\propto \frac{1}{\sigma^2}\]
 
     \[p(\alpha,\lambda,\sigma,\beta\mid y)\propto N(y\mid \lambda X\beta,\sigma)\times\operatorname{Dirichlet}(\beta\mid \alpha)\times \frac{1}{\sigma^2}\]
@@ -151,9 +156,18 @@ For short-term, $r\approx 0$.
 \end{frame}
 
 \begin{frame}{Example. AAPL}
-    Calculated for 2025-05-23 with expiration date 2025-06-13.
+    Calculated in 2025-05-23 with expiration date 2025-06-13
     \begin{center}
-        \includegraphics[width=0.9\linewidth]{betas_23_1.pdf}
+        \includegraphics[width=0.8\linewidth]{betas_23_1.pdf}
+    \end{center}
+    
+\end{frame}
+
+
+\begin{frame}{Example. AAPL}
+    Calculated in 2025-05-23 (same) with expiration date 2025-07-18 (\al{+35 days}).
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{betas_23_3.pdf}
     \end{center}
     
 \end{frame}
@@ -162,7 +176,12 @@ For short-term, $r\approx 0$.
     \includegraphics[width=\linewidth]{betas.pdf}
 \end{frame}
 
+\begin{frame}
+
+\end{frame}
+
 \begin{frame}{Alpha Estimates}
+    \centering
     \includegraphics[scale=0.6]{alphas.pdf}
 \end{frame}
 
