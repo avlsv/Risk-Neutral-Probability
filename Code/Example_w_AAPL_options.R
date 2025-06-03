@@ -16,31 +16,32 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
 
   dataset_1 <- dataset |> select(expiration, strike, call_put, bid, ask)
 
-  
+
 
 
   dataset_2 <-
     dataset_1 |>
     mutate(option_price = (bid + ask) / 2) |>
     select(-bid, -ask)
-  
 
-  
+
+
 
   expirations <- unique(dataset_2$expiration)
 
-  current_prices <- aapl|> filter(date==dataset$date[1])|> 
-    select(-date)|> 
+  current_prices <- aapl |>
+    filter(date == dataset$date[1]) |>
+    select(-date) |>
     mutate(count = (length(expirations))) |>
-    uncount(count)|> 
-    mutate(call_put="Call", strike=0, expiration=expirations, option_price=price)|> 
+    uncount(count) |>
+    mutate(call_put = "Call", strike = 0, expiration = expirations, option_price = price) |>
     select(-price)
-  
-  
+
+
 
   results <- vector("list", length(expirations))
 
-  dataset_2.1<- bind_rows(dataset_2, current_prices)
+  dataset_2.1 <- bind_rows(dataset_2, current_prices)
 
 
   for (j in seq(1:length(expirations))) {
@@ -188,16 +189,23 @@ summaries <- beta_coefs |>
   group_by(expiration, date) |>
   summarise(
     q5 = get_discrete_quantiles(estimate, state, 0.05),
-    q25 = get_discrete_quantiles(estimate, state, 0.05),
-    q50 = get_discrete_quantiles(estimate, state, 0.95),
-    q75 = get_discrete_quantiles(estimate, state, 0.95),
+    q25 = get_discrete_quantiles(estimate, state, 0.25),
+    q50 = get_discrete_quantiles(estimate, state, 0.50),
+    q75 = get_discrete_quantiles(estimate, state, 0.75),
     q95 = get_discrete_quantiles(estimate, state, 0.95),
     mean = sum(estimate * state)
   ) |>
   ungroup() |>
   relocate(date) |>
-  arrange(date)|> 
-  mutate(price = c(rep(price_23, length(expiration)), rep(price_27, length(expiration))))
+  arrange(date) |>
+  mutate(
+    price =
+      c(
+        rep(price_23, length(expirations)),
+        rep(price_27, length(expirations))
+      )
+  )
+
 
 
 beta_coefs_plot <-
@@ -257,7 +265,7 @@ alphas_plot <-
   geom_point(position = position_dodge(width = 0.5)) +
   geom_errorbar(aes(min = conf.low, max = conf.high), width = .3, position = position_dodge(width = 0.5)) +
   scale_x_discrete("Expiration Date") +
-  scale_y_continuous(expression(alpha~"Estimate"), breaks = extended_breaks(n = 6)) +
+  scale_y_continuous(expression(alpha ~ "Estimate"), breaks = extended_breaks(n = 6)) +
   theme_minimal() +
   labs(color = "Date") +
   theme(legend.position = "bottom")
@@ -302,7 +310,7 @@ alpha_histogram <-
     alpha = 0.2, color = "black", fill = "#00BFC4"
   ) +
   labs(x = "Alpha", y = "Frequency") +
-  theme_minimal()
+  theme_light()
 alpha_histogram
 
 
@@ -316,7 +324,23 @@ ggsave("alpha_histogram.pdf",
 )
 
 
+summaries_plot <-
+  ggplot(summaries, aes(x = as_factor(as.character(expiration)), y = mean, group = date, color = date)) +
+  geom_point(position = position_dodge(width = 0.5)) +
+  geom_errorbar(aes(min = q5, max = q95), width = .5, position = position_dodge(width = 0.5)) +
+  geom_errorbar(aes(min = q25, max = q75), width = .2, position = position_dodge(width = 0.5)) +
+  geom_line(aes(y = price), position = position_dodge(width = 0.5), linetype = "dashed") +
+  scale_x_discrete("Expiration Date") +
+  scale_y_continuous("Price", breaks = extended_breaks(n = 6)) +
+  labs(color = "Date") +
+  theme_light() +
+  theme(legend.position = "bottom")
+summaries_plot
 
-(summaries$mean-c(rep(price_23, 3), rep(price_27, 3)))/summaries$mean*100
-
-
+ggsave("summaries_plot.pdf",
+  summaries_plot,
+  path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  width = 297 / 1.6,
+  height = 210 / 1.6,
+  units = "mm"
+)

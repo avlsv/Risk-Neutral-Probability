@@ -143,12 +143,13 @@ For short-term, $r\approx 0$.
 \end{frame}
 
 \begin{frame}{}
-$X$ consists of $n$ payoffs of $K$ derivatives, including the current price (you can think of it as call option with strike equal zero).
+$X$ consists of $n$ payoffs of $K$ derivatives, including the payoffs price (you can think of it as call option with strike equal zero).
 
-The state space is chosen to make 
+The state space is chosen to ensure that the first and last coefficients are near zero.
 
-
-
+ \begin{center}
+        \includegraphics[width=0.6\linewidth]{betas_23_3.pdf}
+    \end{center}
 
 \end{frame}
 
@@ -195,19 +196,22 @@ The state space is chosen to make
 \end{frame}
  
 
+\begin{frame}{Summary Statistics}
+    \begin{center}
+        \includegraphics[width=0.9\linewidth]{summaries_plot.pdf}
+    \end{center}
+\end{frame}
+
+
 \begin{frame}{Concentration Parameter Estimates}
     \centering
     \includegraphics[scale=0.6]{alphas.pdf}
 \end{frame}
 
-\begin{frame}{Model Sanity Check}
-    \includegraphics[width=0.8\textwidth]{probability_of_decrease.pdf}
+\begin{frame}{Alpha Distribution}
+    \centering
+    \includegraphics[width=0.8\linewidth]{alpha_histogram.pdf}
 \end{frame}
-
-% \begin{frame}{Alpha Distribution}
-%     \centering
-%     \includegraphics[width=0.8\linewidth]{alpha_histogram.pdf}
-% \end{frame}
 
 % \begin{frame}{Use Cases}
 %     123
