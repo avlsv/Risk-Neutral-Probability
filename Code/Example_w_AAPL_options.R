@@ -1,7 +1,5 @@
 library(tidyverse)
 library(quantmod)
-library(tsibble)
-library(fable)
 library(broom)
 library(broom.mixed)
 library(rstan)
@@ -13,7 +11,7 @@ options(mc.cores = parallel::detectCores())
 
 
 
-estimation_procedure <- function(dataset, model="simplex.stan", states = seq(120 - 20, 260 + 20, by = 10)) {
+estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(120 - 20, 260 + 20, by = 10)) {
   print(dataset$date[1])
 
   dataset_1 <- dataset |> select(expiration, strike, call_put, bid, ask)
@@ -91,10 +89,10 @@ estimation_procedure <- function(dataset, model="simplex.stan", states = seq(120
 
     plot <- ggplot(betas, aes(x = state, y = estimate)) +
       geom_col() +
-      geom_errorbar(aes(max = conf.high, min = conf.low), width=4) +
+      geom_errorbar(aes(max = conf.high, min = conf.low), width = 4) +
       scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
-      scale_x_continuous("State", breaks = extended_breaks(n = round(length(states) / 2) + 1))+
-      theme_light() 
+      scale_x_continuous("State", breaks = extended_breaks(n = round(length(states) / 2) + 1)) +
+      theme_light()
 
 
     results[[j]] <- list(stan_model_aapl, coefs, betas, plot)
@@ -123,12 +121,12 @@ results_27 <-
   )
 
 
-#alternative specification
+# alternative specification
 results_23_1 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
     states = state_space,
-    model="simplex_alternative.stan"
+    model = "simplex_alternative.stan"
   )
 
 
@@ -200,6 +198,40 @@ ggsave("betas.pdf",
 )
 
 
+aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
+  fortify.zoo(z, name = "date") |>
+  as_tibble() |>
+  select(date, AAPL.Close) |>
+  rename(price = AAPL.Close) |>
+  mutate(date = as_date(date)) |>
+  arrange(date)
+
+price_23 <- filter(aapl, date == "2025-05-23")$price
+
+beta_coefs |>
+  filter(date == "2025-05-23") |>
+  mutate(decrease = state <= price_23) |>
+  group_by(expiration) |>
+  summarize(
+    prob_of_decrease = sum(estimate * decrease),
+    prob_of_decrease_low = sum(conf.low * decrease),
+    prob_of_decrease_high = sum(conf.high * decrease)
+  )
+
+
+price_27 <- filter(aapl, date == "2025-05-27")$price
+
+beta_coefs |>
+  filter(date == "2025-05-27") |>
+  mutate(decrease = state <= price_27) |>
+  group_by(expiration) |>
+  summarize(
+    probability_of_decrease = sum(estimate * decrease),
+    prob_of_decrease_low = sum(conf.low * decrease),
+    prob_of_decrease_high = sum(conf.high * decrease)
+  )
+
+
 alphas_23 <-
   bind_rows(
     results_23[[1]][[2]] |>
@@ -240,11 +272,11 @@ alphas_plot <-
 alphas_plot
 
 ggsave("alphas.pdf",
-       alphas_plot,
-       path = "~/Documents/Risk-Neutral-Probability/Figures/",
-       width = 297 / (1.6*1.2),
-       height = 210 / 1.6,
-       units = "mm"
+  alphas_plot,
+  path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  width = 297 / (1.6 * 1.2),
+  height = 210 / 1.6,
+  units = "mm"
 )
 
 
@@ -279,14 +311,14 @@ for (i in seq(1, length(expirations))) {
 
 alpha_histogram <-
   ggplot(as_tibble(extract(results_23[[3]][[1]])$alpha), aes(x = value)) +
-  geom_histogram(alpha = 0.3, color = "black", fill = "green") +
+  geom_histogram(alpha = 0.2, color = "black", fill = "#F8766D") +
   geom_histogram(
     data = as_tibble(extract(results_27[[3]][[1]])$alpha),
-    alpha = 0.3, color = "black", fill = "blue"
+    alpha = 0.2, color = "black", fill = "#00BFC4"
   ) +
   labs(x = "Alpha", y = "Frequency") +
   theme_minimal()
-
+alpha_histogram
 
 
 
