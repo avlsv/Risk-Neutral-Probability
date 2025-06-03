@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  3 JUN 2025 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  3 JUN 2025 22:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1312,97 +1312,107 @@ Overfull \vbox (17.96938pt too high) detected at line 143
 [5
 
 ]
-<../Figures/prior_difference.pdf, id=59, 468.75125pt x 331.2375pt>
+
+[6
+
+]
+<../Figures/prior_difference.pdf, id=64, 468.75125pt x 331.2375pt>
 File: ../Figures/prior_difference.pdf Graphic file (type pdf)
 <use ../Figures/prior_difference.pdf>
-Package pdftex.def Info: ../Figures/prior_difference.pdf  used on input line 152.
+Package pdftex.def Info: ../Figures/prior_difference.pdf  used on input line 162.
 (pdftex.def)             Requested size: 235.01881pt x 166.07321pt.
 
-Overfull \vbox (10.28516pt too high) detected at line 152
+Overfull \vbox (10.53517pt too high) detected at line 162
  []
 
 
 
-[6
+[7
 
  <../Figures/prior_difference.pdf>]
 
-[7
-
-]
-<../Figures/betas_23_1.pdf, id=79, 527.9725pt x 373.395pt>
-File: ../Figures/betas_23_1.pdf Graphic file (type pdf)
-<use ../Figures/betas_23_1.pdf>
-Package pdftex.def Info: ../Figures/betas_23_1.pdf  used on input line 173.
-(pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
-
-
 [8
 
- <../Figures/betas_23_1.pdf>]
-<../Figures/betas_23_3.pdf, id=90, 527.9725pt x 373.395pt>
-File: ../Figures/betas_23_3.pdf Graphic file (type pdf)
-<use ../Figures/betas_23_3.pdf>
-Package pdftex.def Info: ../Figures/betas_23_3.pdf  used on input line 181.
+]
+<../Figures/betas_23_1.pdf, id=84, 527.9725pt x 373.395pt>
+File: ../Figures/betas_23_1.pdf Graphic file (type pdf)
+<use ../Figures/betas_23_1.pdf>
+Package pdftex.def Info: ../Figures/betas_23_1.pdf  used on input line 183.
 (pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
 
 
 [9
 
- <../Figures/betas_23_3.pdf>]
-<../Figures/betas.pdf, id=101, 527.9725pt x 373.395pt>
-File: ../Figures/betas.pdf Graphic file (type pdf)
-<use ../Figures/betas.pdf>
-Package pdftex.def Info: ../Figures/betas.pdf  used on input line 185.
-(pdftex.def)             Requested size: 335.74263pt x 237.44504pt.
-
-Overfull \vbox (4.407pt too high) detected at line 185
- []
-
+ <../Figures/betas_23_1.pdf>]
+<../Figures/betas_23_3.pdf, id=95, 527.9725pt x 373.395pt>
+File: ../Figures/betas_23_3.pdf Graphic file (type pdf)
+<use ../Figures/betas_23_3.pdf>
+Package pdftex.def Info: ../Figures/betas_23_3.pdf  used on input line 191.
+(pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
 
 
 [10
 
- <../Figures/betas.pdf>]
-<../Figures/alphas.pdf, id=112, 439.6425pt x 373.395pt>
-File: ../Figures/alphas.pdf Graphic file (type pdf)
-<use ../Figures/alphas.pdf>
-Package pdftex.def Info: ../Figures/alphas.pdf  used on input line 191.
-(pdftex.def)             Requested size: 263.78752pt x 224.03873pt.
+ <../Figures/betas_23_3.pdf>]
+<../Figures/betas.pdf, id=106, 527.9725pt x 373.395pt>
+File: ../Figures/betas.pdf Graphic file (type pdf)
+<use ../Figures/betas.pdf>
+Package pdftex.def Info: ../Figures/betas.pdf  used on input line 195.
+(pdftex.def)             Requested size: 335.74263pt x 237.44504pt.
+
+Overfull \vbox (4.407pt too high) detected at line 195
+ []
+
 
 
 [11
 
- <../Figures/alphas.pdf>]
+ <../Figures/betas.pdf>]
+<../Figures/alphas.pdf, id=117, 439.6425pt x 373.395pt>
+File: ../Figures/alphas.pdf Graphic file (type pdf)
+<use ../Figures/alphas.pdf>
+Package pdftex.def Info: ../Figures/alphas.pdf  used on input line 201.
+(pdftex.def)             Requested size: 263.78752pt x 224.03873pt.
+
 
 [12
 
-]
+ <../Figures/alphas.pdf>]
+<../Figures/probability_of_decrease.pdf, id=129, 439.6425pt x 373.395pt>
+File: ../Figures/probability_of_decrease.pdf Graphic file (type pdf)
+<use ../Figures/probability_of_decrease.pdf>
+Package pdftex.def Info: ../Figures/probability_of_decrease.pdf  used on input line 205.
+(pdftex.def)             Requested size: 268.59512pt x 228.12956pt.
+
 
 [13
 
+ <../Figures/probability_of_decrease.pdf>]
+
+[14
+
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 208.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 222.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 208.
+(Font)              scaled to size 7.0pt on input line 222.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 208.
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 222.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 7.0pt on input line 208.
-LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 208.
+(Font)              scaled to size 7.0pt on input line 222.
+LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 222.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF.fd
 File: T1SourceCodePro-TLF.fd 2018/02/18 (autoinst) Font definitions for T1/SourceCodePro-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 208.
+(Font)              scaled to size 7.0pt on input line 222.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceCodePro-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-[14
+[15
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc} </usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -1426,18 +1436,18 @@ Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35936 strings out of 473600
- 709063 string characters out of 5728708
+ 35952 strings out of 473600
+ 709585 string characters out of 5728708
  1936905 words of memory out of 5000000
- 58021 multiletter control sequences out of 15000+600000
- 677435 words of font info for 128 fonts, out of 8000000 for 9000
+ 58032 multiletter control sequences out of 15000+600000
+ 677747 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,1083b,1571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (14 pages, 282186 bytes).
+Output written on risk-neutral-probability.pdf (15 pages, 288744 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 51788 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 51793 words of extra memory for PDF output out of 61914 (max. 10000000)
 

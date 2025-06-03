@@ -16,20 +16,31 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
 
   dataset_1 <- dataset |> select(expiration, strike, call_put, bid, ask)
 
-  nn <-
-    dataset_1 |> mutate(spread = (ask - bid) / bid * 100)
+  
 
 
   dataset_2 <-
     dataset_1 |>
     mutate(option_price = (bid + ask) / 2) |>
     select(-bid, -ask)
+  
+
+  
 
   expirations <- unique(dataset_2$expiration)
 
+  current_prices <- aapl|> filter(date==dataset$date[1])|> 
+    select(-date)|> 
+    mutate(count = (length(expirations))) |>
+    uncount(count)|> 
+    mutate(call_put="Call", strike=0, expiration=expirations, option_price=price)|> 
+    select(-price)
+  
+  
 
   results <- vector("list", length(expirations))
 
+  dataset_2.1<- bind_rows(dataset_2, current_prices)
 
 
   for (j in seq(1:length(expirations))) {
@@ -101,8 +112,17 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
   return(results)
 }
 
-state_space <- seq(120, 290, by = 10)
+state_space <- seq(110, 290, by = 10)
 length(state_space)
+
+
+aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
+  fortify.zoo(z, name = "date") |>
+  as_tibble() |>
+  select(date, AAPL.Close) |>
+  rename(price = AAPL.Close) |>
+  mutate(date = as_date(date)) |>
+  arrange(date)
 
 
 results_23 <-
@@ -122,12 +142,12 @@ results_27 <-
 
 
 # alternative specification
-results_23_1 <-
-  estimation_procedure(
-    dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
-    states = state_space,
-    model = "simplex_alternative.stan"
-  )
+# results_23_1 <-
+#   estimation_procedure(
+#     dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
+#     states = state_space,
+#     model = "simplex_alternative.stan"
+#   )
 
 
 
@@ -160,7 +180,8 @@ get_discrete_quantiles <- function(prob_vec, bins, probs) {
 
 
 
-
+price_23 <- filter(aapl, date == "2025-05-23")$price
+price_27 <- filter(aapl, date == "2025-05-27")$price
 
 # Calculate quantiles for each group
 summaries <- beta_coefs |>
@@ -175,7 +196,8 @@ summaries <- beta_coefs |>
   ) |>
   ungroup() |>
   relocate(date) |>
-  arrange(date)
+  arrange(date)|> 
+  mutate(price = c(rep(price_23, length(expiration)), rep(price_27, length(expiration))))
 
 
 beta_coefs_plot <-
@@ -198,38 +220,8 @@ ggsave("betas.pdf",
 )
 
 
-aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
-  fortify.zoo(z, name = "date") |>
-  as_tibble() |>
-  select(date, AAPL.Close) |>
-  rename(price = AAPL.Close) |>
-  mutate(date = as_date(date)) |>
-  arrange(date)
-
-price_23 <- filter(aapl, date == "2025-05-23")$price
-
-beta_coefs |>
-  filter(date == "2025-05-23") |>
-  mutate(decrease = state <= price_23) |>
-  group_by(expiration) |>
-  summarize(
-    prob_of_decrease = sum(estimate * decrease),
-    prob_of_decrease_low = sum(conf.low * decrease),
-    prob_of_decrease_high = sum(conf.high * decrease)
-  )
 
 
-price_27 <- filter(aapl, date == "2025-05-27")$price
-
-beta_coefs |>
-  filter(date == "2025-05-27") |>
-  mutate(decrease = state <= price_27) |>
-  group_by(expiration) |>
-  summarize(
-    probability_of_decrease = sum(estimate * decrease),
-    prob_of_decrease_low = sum(conf.low * decrease),
-    prob_of_decrease_high = sum(conf.high * decrease)
-  )
 
 
 alphas_23 <-
@@ -265,7 +257,7 @@ alphas_plot <-
   geom_point(position = position_dodge(width = 0.5)) +
   geom_errorbar(aes(min = conf.low, max = conf.high), width = .3, position = position_dodge(width = 0.5)) +
   scale_x_discrete("Expiration Date") +
-  scale_y_continuous("Estimate", breaks = extended_breaks(n = 6)) +
+  scale_y_continuous(expression(alpha~"Estimate"), breaks = extended_breaks(n = 6)) +
   theme_minimal() +
   labs(color = "Date") +
   theme(legend.position = "bottom")
@@ -278,13 +270,6 @@ ggsave("alphas.pdf",
   height = 210 / 1.6,
   units = "mm"
 )
-
-
-results_23[[3]][[4]]
-
-a + b
-
-
 
 for (i in seq(1, length(expirations))) {
   ggsave(paste("betas_23_", as.character(i), ".pdf", sep = ""),
@@ -329,3 +314,9 @@ ggsave("alpha_histogram.pdf",
   height = 210 / 1.6,
   units = "mm"
 )
+
+
+
+(summaries$mean-c(rep(price_23, 3), rep(price_27, 3)))/summaries$mean*100
+
+

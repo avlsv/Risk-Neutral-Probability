@@ -129,11 +129,11 @@ For short-term, $r\approx 0$.
 
 
 \begin{frame}{Bayesian Formulation}
-    \cite{markfisherSimplexRegression2016} proposed the following approach.
+    \cite{fisherSimplexRegression2016} proposes the following approach.
 
     \[y_i=\lambda\sum_{j=1}^KX_{ij}\beta_j+\varepsilon_i,\]
-    where $\varepsilon_i\sim N(0,\sigma^2)$, and $\beta=(\beta_1,\dots, \beta_K)\in \Delta^{K-1}$, where $\Delta^{K-1}$ denotes the simplex of dimension $(K-1)$.
-    
+    where $\beta=(\beta_1,\dots, \beta_K)\in \Delta^{K-1}$, $\Delta^{K-1}$ denotes the simplex of dimension $(K-1)$; $X_{ij}$ is a payoff of derivative $i$ in state $j$, and $\varepsilon_i\sim N(0,\sigma^2)$.
+
     In vector form,
     \[y=\lambda X \beta+\varepsilon.\]
 
@@ -142,10 +142,20 @@ For short-term, $r\approx 0$.
 
 \end{frame}
 
+\begin{frame}{}
+$X$ consists of $n$ payoffs of $K$ derivatives, including the current price (you can think of it as call option with strike equal zero).
+
+The state space is chosen to make 
+
+
+
+
+\end{frame}
+
 \begin{frame}{Prior for Concentration Coefficient}
     $\alpha$ is a vector of concentration parameters for Dirichlet distribution. 
     
-    It is reasonable to select a distribution that is relatively flat on $[0,1]$. \cite{markfisherSimplexRegression2016} uses lognormal prior.
+    It is reasonable to select a distribution that is relatively flat on $[0,1]$ and assign a large portion of mass to $[0,1]$. \cite{fisherSimplexRegression2016} uses lognormal prior.
 
     \includegraphics[width=0.7\textwidth]{prior_difference.pdf}
 
@@ -190,14 +200,18 @@ For short-term, $r\approx 0$.
     \includegraphics[scale=0.6]{alphas.pdf}
 \end{frame}
 
+\begin{frame}{Model Sanity Check}
+    \includegraphics[width=0.8\textwidth]{probability_of_decrease.pdf}
+\end{frame}
+
 % \begin{frame}{Alpha Distribution}
 %     \centering
 %     \includegraphics[width=0.8\linewidth]{alpha_histogram.pdf}
 % \end{frame}
 
-\begin{frame}{Use Cases}
-    123
-\end{frame}
+% \begin{frame}{Use Cases}
+%     123
+% \end{frame}
 
 
 \lastslide
