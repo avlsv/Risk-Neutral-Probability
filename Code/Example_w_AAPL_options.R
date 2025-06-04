@@ -222,13 +222,10 @@ beta_coefs_plot <-
 ggsave("betas.pdf",
   beta_coefs_plot,
   path = "~/Documents/Risk-Neutral-Probability/Figures/",
-  width = 297 / 1.6,
-  height = 210 / 1.6,
+  width = 297 / 1.3,
+  height = 210 / 1.3,
   units = "mm"
 )
-
-
-
 
 
 
