@@ -545,10 +545,6 @@ INPUT ../Figures/alphas.pdf
 INPUT ../Figures/alphas.pdf
 INPUT ../Figures/alphas.pdf
 INPUT ../Figures/alphas.pdf
-INPUT ../Figures/alpha_histogram.pdf
-INPUT ../Figures/alpha_histogram.pdf
-INPUT ../Figures/alpha_histogram.pdf
-INPUT ../Figures/alpha_histogram.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-It-tlf-t1.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-sc-t1.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF.fd

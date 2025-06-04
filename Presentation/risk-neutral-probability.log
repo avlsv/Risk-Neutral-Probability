@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  4 JUN 2025 00:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  4 JUN 2025 01:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1393,18 +1393,8 @@ Package pdftex.def Info: ../Figures/alphas.pdf  used on input line 209.
 [13
 
  <../Figures/alphas.pdf>]
-<../Figures/alpha_histogram.pdf, id=141, 527.9725pt x 373.395pt>
-File: ../Figures/alpha_histogram.pdf Graphic file (type pdf)
-<use ../Figures/alpha_histogram.pdf>
-Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 214.
-(pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
-
 
 [14
-
- <../Figures/alpha_histogram.pdf>]
-
-[15
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
@@ -1427,7 +1417,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[16
+[15
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc} </usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -1451,18 +1441,18 @@ Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35965 strings out of 473600
- 709871 string characters out of 5728708
+ 35952 strings out of 473600
+ 709504 string characters out of 5728708
  1936905 words of memory out of 5000000
- 58043 multiletter control sequences out of 15000+600000
+ 58032 multiletter control sequences out of 15000+600000
  677747 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,1083b,1571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (16 pages, 294105 bytes).
+Output written on risk-neutral-probability.pdf (15 pages, 289361 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 51798 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 51793 words of extra memory for PDF output out of 61914 (max. 10000000)
 
