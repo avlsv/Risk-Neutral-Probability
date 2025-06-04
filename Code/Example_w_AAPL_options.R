@@ -113,7 +113,7 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
   return(results)
 }
 
-state_space <- seq(110, 290, by = 10)
+state_space <- seq(120, 280, by = 10)
 length(state_space)
 
 
@@ -341,3 +341,4 @@ ggsave("summaries_plot.pdf",
   height = 210 / 1.6,
   units = "mm"
 )
+
