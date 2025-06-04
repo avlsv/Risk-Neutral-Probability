@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber risk-neutral-probability"] 1748965455.63842 "risk-neutral-probability.bcf" "risk-neutral-probability.bbl" "risk-neutral-probability" 1748997217.62887 0
+["biber risk-neutral-probability"] 1748965455.63842 "risk-neutral-probability.bcf" "risk-neutral-probability.bbl" "risk-neutral-probability" 1748998022.64467 0
   "references.bib" 1748965759.87675 4853 8201a820ce5d9a48efc6116a8fcad376 ""
-  "risk-neutral-probability.bcf" 1748997217.26817 108895 633b2f3a791fa5a7515af433eaa17764 "pdflatex"
+  "risk-neutral-probability.bcf" 1748998022.34942 108895 633b2f3a791fa5a7515af433eaa17764 "pdflatex"
   (generated)
   "risk-neutral-probability.bbl"
   "risk-neutral-probability.blg"
   (rewritten before read)
-["pdflatex"] 1748997213.87843 "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" "risk-neutral-probability.pdf" "risk-neutral-probability" 1748997217.62925 0
+["pdflatex"] 1748998019.58125 "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" "risk-neutral-probability.pdf" "risk-neutral-probability" 1748998022.64505 0
   "../Figures/alphas.pdf" 1748981418.65036 5431 a7c1c50386404a9259359a401a30d603 ""
   "../Figures/betas.pdf" 1748996652.36432 7430 5c0fb46e015e28e463f036d27cf07a45 ""
   "../Figures/betas_23_1.pdf" 1748981418.74934 5418 4c0cb32ab4d9fcf86d9591142f22ab9c ""
   "../Figures/betas_23_3.pdf" 1748981418.98793 5440 c6188edadead8f40700d5b1520b2dddc ""
   "../Figures/prior_difference.pdf" 1748883824.11813 15974 9ac28d13eb447a93c0bb1e8bf1830ffc ""
   "../Figures/summaries_plot.pdf" 1748984648.68467 5620 9d8c37b3029158fea8c0b896d00ffc71 ""
-  "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" 1748997213.60415 6594 cee48dbd614ca4929fbdcbfa3895a426 ""
+  "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" 1748998019.37501 6658 b1e30c20039c8bc1905517ba094bd2e5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc" 1558300257 2905 926f570532f1104044846d18d8d97080 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc" 1587936753 3267 177411e539fcc6ace86309ff03b22da6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc" 1587936753 3021 665788e9679767ade2a71155215d25e0 ""
@@ -282,13 +282,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1718364846 8238417 8f06f440554203638529dcd7d61a9d8d ""
   "/usr/local/texlive/2024/texmf.cnf" 1718364683.00481 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "presentation.sty" 1748705286.41685 3683 a1d9f185338dcb06bb0d58f270a3a05d ""
-  "risk-neutral-probability.aux" 1748997217.26149 3548 69f42e5b16e1ad61580fa6be8096d456 "pdflatex"
+  "risk-neutral-probability.aux" 1748998022.34448 3548 69f42e5b16e1ad61580fa6be8096d456 "pdflatex"
   "risk-neutral-probability.bbl" 1748965458.89017 8059 90574018c6707554dee9d0628d0f6517 "biber risk-neutral-probability"
-  "risk-neutral-probability.nav" 1748997217.27006 1728 c40fc8257a61fc30d4ac7498e390b272 "pdflatex"
-  "risk-neutral-probability.out" 1748997217.26299 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
-  "risk-neutral-probability.run.xml" 1748997217.26987 2511 42be3db28e1e9b0351b716e57fbdaa86 "pdflatex"
-  "risk-neutral-probability.tex" 1748997213.60415 6594 cee48dbd614ca4929fbdcbfa3895a426 ""
-  "risk-neutral-probability.vrb" 1748997216.37683 11 03cba00f6b70749ac61ba0e15a6279e7 "pdflatex"
+  "risk-neutral-probability.nav" 1748998022.35108 1728 c40fc8257a61fc30d4ac7498e390b272 "pdflatex"
+  "risk-neutral-probability.out" 1748998022.34557 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
+  "risk-neutral-probability.run.xml" 1748998022.35094 2511 42be3db28e1e9b0351b716e57fbdaa86 "pdflatex"
+  "risk-neutral-probability.tex" 1748998019.37501 6658 b1e30c20039c8bc1905517ba094bd2e5 ""
+  "risk-neutral-probability.vrb" 1748998021.60804 11 03cba00f6b70749ac61ba0e15a6279e7 "pdflatex"
   (generated)
   "risk-neutral-probability.aux"
   "risk-neutral-probability.bcf"
