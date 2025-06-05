@@ -217,6 +217,10 @@ beta_coefs_plot <-
   scale_y_continuous("Probability") +
   theme_light()
 
+
+beta_coefs_plot
+
+
 ggsave("betas.pdf",
   beta_coefs_plot,
   path = "~/Documents/Risk-Neutral-Probability/Figures/",
@@ -301,10 +305,10 @@ for (i in seq(1, length(expirations))) {
 
 alpha_histogram <-
   ggplot(as_tibble(extract(results_01[[1]][[1]])$alpha), aes(x = value)) +
-  geom_histogram(alpha = 0.2, color = "black", fill = "#F8766D") +
+  geom_histogram(alpha = 0.15, color = "black", fill = "#F8766D") +
   geom_histogram(
     data = as_tibble(extract(results_04[[1]][[1]])$alpha),
-    alpha = 0.2, color = "black", fill = "#00BFC4"
+    alpha = 0.15, color = "black", fill = "#00BFC4"
   ) +
   labs(x = "Alpha", y = "Frequency") +
   theme_light()
