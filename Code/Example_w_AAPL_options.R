@@ -113,7 +113,7 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
   return(results)
 }
 
-state_space <- seq(120, 280, by = 10)
+state_space <- seq(100, 290, by = 10)
 length(state_space)
 
 
@@ -126,20 +126,19 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   arrange(date)
 
 
-results_23 <-
+results_01 <-
   estimation_procedure(
-    dataset = read_csv("data/AAPL options 2025-05-23.csv", show_col_types = F),
+    dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
+    states = state_space
+  )
+
+results_04 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-04.csv", show_col_types = F),
     states = state_space
   )
 
 
-
-
-results_27 <-
-  estimation_procedure(
-    dataset = read_csv("data/AAPL options 2025-05-27.csv", show_col_types = F),
-    states = state_space
-  )
 
 
 # alternative specification
@@ -154,7 +153,7 @@ results_27 <-
 
 
 expirations <-
-  read_csv("data/AAPL options 2025-05-27.csv",
+  read_csv("data/AAPL options 2025-04-01.csv",
     show_col_types = F
   )$expiration |>
   unique()
@@ -163,12 +162,12 @@ expirations <-
 
 beta_coefs <-
   bind_rows(
-    results_23[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-05-23"),
-    results_23[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-05-23"),
-    results_23[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-05-23"),
-    results_27[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-05-27"),
-    results_27[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-05-27"),
-    results_27[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-05-27"),
+    results_01[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-04-01"),
+    results_01[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-04-01"),
+    results_01[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-01"),
+    results_04[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-04-04"),
+    results_04[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-04-04"),
+    results_04[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-04")
   )
 
 
@@ -180,9 +179,9 @@ get_discrete_quantiles <- function(prob_vec, bins, probs) {
 }
 
 
+price_01 <- filter(aapl, date == "2025-04-01")$price
+price_04 <- filter(aapl, date == "2025-04-04")$price
 
-price_23 <- filter(aapl, date == "2025-05-23")$price
-price_27 <- filter(aapl, date == "2025-05-27")$price
 
 # Calculate quantiles for each group
 summaries <- beta_coefs |>
@@ -200,9 +199,8 @@ summaries <- beta_coefs |>
   arrange(date) |>
   mutate(
     price =
-      c(
-        rep(price_23, length(expirations)),
-        rep(price_27, length(expirations))
+      c(rep(price_01, length(expirations)),
+        rep(price_04, length(expirations))
       )
   )
 
@@ -229,28 +227,30 @@ ggsave("betas.pdf",
 
 
 
-alphas_23 <-
+
+
+alphas_01 <-
   bind_rows(
-    results_23[[1]][[2]] |>
+    results_01[[1]][[2]] |>
       filter(term == "alpha"),
-    results_23[[2]][[2]] |>
+    results_01[[2]][[2]] |>
       filter(term == "alpha"),
-    results_23[[3]][[2]] |>
+    results_01[[3]][[2]] |>
       filter(term == "alpha")
-  ) |> bind_cols(tibble(expiration = expirations, date = rep(as_date("2025-05-23"))))
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-01")))
 
 
-alphas_27 <-
+alphas_04 <-
   bind_rows(
-    results_27[[1]][[2]] |>
+    results_04[[1]][[2]] |>
       filter(term == "alpha"),
-    results_27[[2]][[2]] |>
+    results_04[[2]][[2]] |>
       filter(term == "alpha"),
-    results_27[[3]][[2]] |>
+    results_04[[3]][[2]] |>
       filter(term == "alpha")
-  ) |> bind_cols(tibble(expiration = expirations, date = rep(as_date("2025-05-27"))))
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-04")))
 
-alphas <- bind_rows(alphas_23, alphas_27)
+alphas <- bind_rows(alphas_01,alphas_04)
 
 
 
@@ -277,8 +277,8 @@ ggsave("alphas.pdf",
 )
 
 for (i in seq(1, length(expirations))) {
-  ggsave(paste("betas_23_", as.character(i), ".pdf", sep = ""),
-    results_23[[i]][[4]],
+  ggsave(paste("betas_01_", as.character(i), ".pdf", sep = ""),
+    results_01[[i]][[4]],
     path = "~/Documents/Risk-Neutral-Probability/Figures/",
     width = 297 / 1.6,
     height = 210 / 1.6,
@@ -288,8 +288,8 @@ for (i in seq(1, length(expirations))) {
 
 
 for (i in seq(1, length(expirations))) {
-  ggsave(paste("betas_27_", as.character(i), ".pdf", sep = ""),
-    results_27[[i]][[4]],
+  ggsave(paste("betas_04_", as.character(i), ".pdf", sep = ""),
+    results_04[[i]][[4]],
     path = "~/Documents/Risk-Neutral-Probability/Figures/",
     width = 297 / 1.6,
     height = 210 / 1.6,
@@ -300,10 +300,10 @@ for (i in seq(1, length(expirations))) {
 
 
 alpha_histogram <-
-  ggplot(as_tibble(extract(results_23[[3]][[1]])$alpha), aes(x = value)) +
+  ggplot(as_tibble(extract(results_01[[1]][[1]])$alpha), aes(x = value)) +
   geom_histogram(alpha = 0.2, color = "black", fill = "#F8766D") +
   geom_histogram(
-    data = as_tibble(extract(results_27[[3]][[1]])$alpha),
+    data = as_tibble(extract(results_04[[1]][[1]])$alpha),
     alpha = 0.2, color = "black", fill = "#00BFC4"
   ) +
   labs(x = "Alpha", y = "Frequency") +
