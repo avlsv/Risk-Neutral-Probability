@@ -314,7 +314,11 @@ alpha_histogram <-
   theme_light()
 alpha_histogram
 
-
+wilcox.test(
+  extract(results_27[[1]][[1]])$alpha,
+  extract(results_23[[1]][[1]])$alpha,
+  paired = F, alternative="greater"
+)
 
 ggsave("alpha_histogram.pdf",
   alpha_histogram,
