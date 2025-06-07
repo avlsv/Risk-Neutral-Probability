@@ -220,8 +220,11 @@ The state space is chosen to ensure that the first and last coefficients are nea
 \end{frame}
 
 \begin{frame}{Concentration Parameter and State Space}
-    The concentration parameter is dependent on the state space.
+    The concentration parameter is dependent on the state space. Since we want to ensure that the list of possibilities is exhaustive, we will be facing several betas close to zero. This coressponds to the concentration parameter being close to zero.
     
+    \begin{center}
+        \includegraphics[width=0.9\linewidth]{dirichlet_histogram.pdf}
+    \end{center}
 \end{frame}
 
 
@@ -232,7 +235,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
     \end{itemize}
 \begin{itemize}
     \item This method can be applied to derivatives of rate of interest (e.g SOFR options by CME).
-    \item Concentration parameter then measures whether the forward guidance policy communication is perceived by the market.
+    \item Concentration parameter then measures whether the forward guidance effect is present.
 \end{itemize}
 
 

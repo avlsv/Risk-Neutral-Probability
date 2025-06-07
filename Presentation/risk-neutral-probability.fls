@@ -550,6 +550,10 @@ INPUT ../Figures/alpha_histogram.pdf
 INPUT ../Figures/alpha_histogram.pdf
 INPUT ../Figures/alpha_histogram.pdf
 INPUT ../Figures/alpha_histogram.pdf
+INPUT ../Figures/dirichlet_histogram.pdf
+INPUT ../Figures/dirichlet_histogram.pdf
+INPUT ../Figures/dirichlet_histogram.pdf
+INPUT ../Figures/dirichlet_histogram.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd

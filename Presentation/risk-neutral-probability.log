@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  7 JUN 2025 02:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  7 JUN 2025 17:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1408,18 +1408,24 @@ Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 220.
 [14
 
  <../Figures/alpha_histogram.pdf>]
+<../Figures/dirichlet_histogram.pdf, id=162, 527.9725pt x 265.99374pt>
+File: ../Figures/dirichlet_histogram.pdf Graphic file (type pdf)
+<use ../Figures/dirichlet_histogram.pdf>
+Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 228.
+(pdftex.def)             Requested size: 302.1663pt x 152.23087pt.
+
 
 [15
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 239.
+ <../Figures/dirichlet_histogram.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 242.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 239.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 242.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 239.
+(Font)              scaled to size 10.0pt on input line 242.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceSansPro-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1434,19 +1440,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 251.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 254.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 251.
+(Font)              scaled to size 7.0pt on input line 254.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 251.
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 254.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 7.0pt on input line 251.
-LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 251.
+(Font)              scaled to size 7.0pt on input line 254.
+LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 254.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF.fd
 File: T1SourceCodePro-TLF.fd 2018/02/18 (autoinst) Font definitions for T1/SourceCodePro-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 251.
+(Font)              scaled to size 7.0pt on input line 254.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceCodePro-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1477,18 +1483,18 @@ Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36089 strings out of 473600
- 713587 string characters out of 5728708
+ 36101 strings out of 473600
+ 714054 string characters out of 5728708
  1936905 words of memory out of 5000000
- 58145 multiletter control sequences out of 15000+600000
- 679007 words of font info for 139 fonts, out of 8000000 for 9000
+ 58154 multiletter control sequences out of 15000+600000
+ 679319 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,1083b,1571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (18 pages, 302988 bytes).
+Output written on risk-neutral-probability.pdf (18 pages, 308284 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 500000)
- 55899 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 55904 words of extra memory for PDF output out of 61914 (max. 10000000)
 
