@@ -304,20 +304,27 @@ for (i in seq(1, length(expirations))) {
 
 
 alpha_histogram <-
-  ggplot(as_tibble(extract(results_01[[1]][[1]])$alpha), aes(x = value)) +
-  geom_histogram(alpha = 0.15, color = "black", fill = "#F8766D") +
+  ggplot(as_tibble(extract(results_01[[1]][[1]])$alpha)|> slice(4000:n()), aes(x = value)) +
+  geom_histogram(aes(y = ..density..),alpha = 0.15, color = "black", fill = "#F8766D") +
   geom_histogram(
-    data = as_tibble(extract(results_04[[1]][[1]])$alpha),
+    data = as_tibble(extract(results_04[[1]][[1]])$alpha)|> slice(4000:n()),
+    aes(y = ..density..),
     alpha = 0.15, color = "black", fill = "#00BFC4"
   ) +
-  labs(x = "Alpha", y = "Frequency") +
+  labs(x = "Alpha", y="") +
   theme_light()
 alpha_histogram
 
 wilcox.test(
-  extract(results_27[[1]][[1]])$alpha,
-  extract(results_23[[1]][[1]])$alpha,
-  paired = F, alternative="greater"
+  extract(results_27[[3]][[1]])$alpha,
+  extract(results_23[[3]][[1]])$alpha,
+  paired = F, alternative="less"
+)
+
+t.test(
+  extract(results_01[[1]][[1]])$alpha,
+  extract(results_04[[1]][[1]])$alpha,
+  paired = F
 )
 
 ggsave("alpha_histogram.pdf",
@@ -350,3 +357,47 @@ ggsave("summaries_plot.pdf",
   units = "mm"
 )
 
+library(LaplacesDemon)
+
+
+# Set parameters
+n_samples <- 2000
+alpha<-3000
+samples <- rdirichlet(n_samples, rep(alpha, length(state_space)))
+
+# Sort each sample's values in decreasing order
+sorted_samples <- t(apply(samples, 1, sort, decreasing = TRUE))
+
+# Convert to tidy format for plotting
+df <- as.data.frame(sorted_samples)
+df$SampleID <- 1:n_samples
+
+tidy_df <- df %>%
+  pivot_longer(cols = -SampleID, names_to = "Rank", values_to = "Probability") %>%
+  mutate(Rank = as.integer(gsub("V", "", Rank)))  # V1 becomes 1, V2 becomes 2, ...
+
+tidy_df_1<-tidy_df|> mutate(rank_mod = (1-Rank %% 2)*(Rank/2+10)+(Rank %% 2)*(10-(Rank-1)/2) )
+
+# Compute mean and error bars for each rank
+summary_df <- tidy_df_1 %>%
+  group_by(rank_mod) %>%
+  summarise(
+    Mean = mean(Probability),
+    SD = sd(Probability),
+    .groups = 'drop'
+  )
+
+# Plot: Histogram-like barplot of sorted Dirichlet values
+ggplot(summary_df, aes(x = rank_mod, y = Mean)) +
+  geom_col(fill = "skyblue", color = "black") +
+  labs(y = "Mean Probability"
+  ) +
+  theme_light()
+
+
+ggplot(results_01[[1]][[3]], aes(x = state, y = estimate)) +
+  geom_col() +
+  geom_errorbar(aes(max = conf.high, min = conf.low), width = 4) +
+  scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
+  scale_x_continuous("State") +
+  theme_light()
