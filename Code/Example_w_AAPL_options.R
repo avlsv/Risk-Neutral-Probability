@@ -369,7 +369,7 @@ library(LaplacesDemon)
 n_samples <- 4000
 alpha_1 <- 0.2
 alpha_2 <- 0.4
-alpha_3 <- 0.6
+alpha_3 <- 0.8
 
 samples_1 <- rdirichlet(n_samples, rep(alpha_1, length(state_space)))
 samples_2 <- rdirichlet(n_samples, rep(alpha_2, length(state_space)))
@@ -425,6 +425,8 @@ dirichlet_histogram <-
   geom_col(color = "black", alpha = 0.2) +
   labs(y = "Mean Probability",x="") +
   theme_light()
+
+
 
 ggsave("dirichlet_histogram.pdf",
   dirichlet_histogram,

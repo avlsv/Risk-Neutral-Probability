@@ -90,7 +90,7 @@
 %     \tableofcontents[currentsection]
 % \end{frame}
 
-\begin{frame}{\al{Implied} Risk-Neutral Probability Density}
+\begin{frame}{\al{Implied} Risk-Neutral Probability Density (State-Price Density)}
 
     \[S=\sum_{s=1}^K\phi(s)q(s)\]
 
@@ -122,11 +122,17 @@ For short-term, $r\approx 0$.
         \frac{\partial C}{\partial \mathcal{K}}&=-\mathcal{K}p^*(\mathcal{K})-1+P^*(\mathcal{K})+\mathcal{K}p^*(\mathcal{K})=P^*(\mathcal{K})-1\\ 
         \frac{\partial^2 C}{\partial \mathcal{K}^2}&=p^*(\mathcal{K}).
     \end{align*}
- \cite{ait-sahaliaNonparametricOptionPricing2003}
-
+   We need an option price, $C$, to be twice differentiable, $C^2$, function.
 \end{frame}
 
+\begin{frame}{Approaches to Estimation}
+    \begin{itemize}
+        \item Estimation of $C$ with shape restrictions {\small\parencite{ait-sahaliaNonparametricOptionPricing2003}}
 
+        \item Bayesian Methods {\small\parencite{fisherSimplexRegression2016,hardleStatePriceDensities2015} + KDE in the second case}
+        \item 
+    \end{itemize}
+\end{frame}
 
 \begin{frame}{Bayesian Formulation}
     \cite{fisherSimplexRegression2016} proposes the following approach.
@@ -230,14 +236,18 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Conclusions and Further Work}
     \begin{itemize}
-        \item We have constructed a way to measure
+        \item Concentration parameter is a natural way to measure uncertainty in the risk-neutral probability density.
         \item The liberation day (April 2) increased the uncertainty of expected AAPL price.
     \end{itemize}
+
+Applications:
 \begin{itemize}
     \item This method can be applied to derivatives of rate of interest (e.g SOFR options by CME).
-    \item Concentration parameter then measures whether the forward guidance effect is present.
+    \item Concentration parameter then measures whether the forward guidance is effective/was there misinterpretation.
 \end{itemize}
-
+\begin{itemize}
+    \item The concentration parameter $\alpha$ distribution can be conditioned. (Definitely the position and scale parameters are dependent on expiration date.)
+\end{itemize}
 
 \end{frame}
 
