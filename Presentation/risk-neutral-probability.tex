@@ -110,6 +110,15 @@
 
 \end{frame}
 
+
+\begin{frame}{Approaches to Estimation}
+    \begin{itemize}  \setlength\itemsep{1em}
+        \item Estimation of $C$ with shape restrictions -- $C^2$ approximation with 2nd derivative being a valid density \\{\scriptsize\parencite{ait-sahaliaNonparametricOptionPricing2003}}
+        \item Bayesian methods \\{\scriptsize\parencite{fisherSimplexRegression2016, hardleStatePriceDensities2015,tabogaOptionimpliedProbabilityDistributions2016} + KDE in the second case}
+        \item 
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Breeden-Litzenberger (1978) Formula}
 \nocite{breedenPricesStateContingentClaims1978}
 For short-term, $r\approx 0$.
@@ -125,23 +134,17 @@ For short-term, $r\approx 0$.
    We need an option price, $C$, to be twice differentiable, $C^2$, function. 
 \end{frame}
 
-\begin{frame}{Approaches to Estimation}
-    \begin{itemize}  \setlength\itemsep{1em}
-        \item Estimation of $C$ with shape restrictions -- $C^2$ approximation with 2nd derivative being a valid density {\small\parencite{ait-sahaliaNonparametricOptionPricing2003}}
-        \item Bayesian Methods {\small\parencite{fisherSimplexRegression2016,hardleStatePriceDensities2015} + KDE in the second case}
-        \item 
-    \end{itemize}
-\end{frame}
 
 \begin{frame}{Bayesian Formulation}
-    \cite{fisherSimplexRegression2016} proposes the following approach.
-
+    \cite{fisherSimplexRegression2016} proposes the following approach.\footnote[frame]{\tiny This is the methodology for \cite{MarketProbabilityTracker}.}
+\vspace{-2ex}
     \[y_i=\lambda\sum_{j=1}^KX_{ij}\beta_j+\varepsilon_i,\]
     where $\beta=(\beta_1,\dots, \beta_K)\in \Delta^{K-1}$, $\Delta^{K-1}$ denotes the simplex of dimension $(K-1)$; $X_{ij}$ is a payoff of derivative $i$ in state $j$, and $\varepsilon_i\sim N(0,\sigma^2)$.
 
     In vector form,
     \[y=\lambda X \beta+\varepsilon.\]
 
+\vspace{-2ex}
     In order to insure $\beta\in \Delta^{K-1}$, we select the (symmetric) Dirichlet prior:
     \[p(\beta\mid \alpha)=\operatorname{Dirichlet}(\beta\mid \alpha)\propto \prod_{i=1}^{K}x_{i}^{\alpha-1}.\]
 
@@ -154,7 +157,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
  \begin{figure}\centering
     \begin{minipage}{0.6\linewidth}
         \centering
-                \includegraphics[width=\linewidth]{betas_23_3.pdf}
+                \includegraphics[width=\linewidth]{betas_01_3.pdf}
     \end{minipage}
     \end{figure}
 
@@ -184,14 +187,15 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Risk Neutral Density for AAPL I}
     Calculated in 2025-04-01 with expiration date 2025-04-17 (\al{+16 days}). Wiskers are 90\% HPD interval.
-    \begin{center}
-        \includegraphics[width=0.8\linewidth]{betas_01_1.pdf}
-    \end{center}
-    
+     \begin{figure}\centering
+        \begin{minipage}{0.75\linewidth}
+        \includegraphics[width=\linewidth]{betas_01_1.pdf}
+     \end{minipage}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Risk Neutral Density for AAPL II}
-    Calculated in 2025-04-01 (same) with expiration date 2025-07-18 (\al{+45 days}).
+    Calculated in 2025-04-01 (same) with expiration date 2025-05-16 (\al{+45 days}).
     \begin{figure}\centering
         \begin{minipage}{0.75\linewidth}
         \includegraphics[width=\linewidth]{betas_01_3.pdf}
@@ -203,7 +207,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Density before and after the ``Liberation Day'' 2025-04-02}
     \begin{figure} \centering
-        \begin{minipage}{0.85\linewidth}
+        \begin{minipage}{0.9\linewidth}
                 \includegraphics[width=\linewidth]{betas.pdf}
         \end{minipage}
     \end{figure}

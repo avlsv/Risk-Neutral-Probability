@@ -210,6 +210,69 @@
       \endverb
       \keyw{Bayesian,CDD,Data sparsity,HDD,Quadrature,State Price Density,Temperature derivatives,Weather derivatives}
     \endentry
+    \entry{MarketProbabilityTracker}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This tool estimates the market-implied probabilities of various ranges for the three-month average fed funds rate.}
+      \field{howpublished}{https://www.atlantafed.org/cenfis/market-probability-tracker}
+      \field{langid}{english}
+      \field{title}{Market {{Probability Tracker}}}
+      \field{urlday}{9}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/vlasov/Documents/Zotero/storage/3UAIW6Q3/market-probability-tracker.html
+      \endverb
+    \endentry
+    \entry{tabogaOptionimpliedProbabilityDistributions2016}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2972c1ce3f0f450496ec221a2397d862}{%
+           family={Taboga},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{fullhash}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{fullhashraw}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{bibnamehash}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{authorbibnamehash}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{authornamehash}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{authorfullhash}{2972c1ce3f0f450496ec221a2397d862}
+      \strng{authorfullhashraw}{2972c1ce3f0f450496ec221a2397d862}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Estimates of option-implied probability distributions are routinely used in central banks, as well as in other institutions, but their reliability is often difficult to assess. To address this issue, we propose a semi-nonparametric model that allows to compute exact credible intervals around estimated distributions. By analyzing a panel of S\&P 500 options, we find that the estimates of the distributions are quite precise. We also provide evidence that the multi-modality often found in option-implied distributions could be an artifact due to over-fitting, and that models with uni-modality constraints have high posterior odds.}
+      \field{issn}{1059-0560}
+      \field{journaltitle}{International Review of Economics \& Finance}
+      \field{month}{9}
+      \field{shorttitle}{Option-Implied Probability Distributions}
+      \field{title}{Option-Implied Probability Distributions: {{How}} Reliable? {{How}}~Jagged?}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{45}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{453\bibrangedash 469}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.iref.2016.07.013
+      \endverb
+      \verb{file}
+      \verb /Users/vlasov/Documents/Zotero/storage/A2HHMBHS/Taboga - 2016 - Option-implied probability distributions How reliable How jagged.pdf;/Users/vlasov/Documents/Zotero/storage/UB8PUI7J/S1059056016300685.html
+      \endverb
+      \keyw{Implied risk-neutral distributions,Implied state prices,Option-implied distributions,State price estimation}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
