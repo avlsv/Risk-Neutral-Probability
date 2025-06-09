@@ -1,7 +1,7 @@
 data {
-  int<lower=0> n;   // number of data items must match number rows of X
-  int<lower=0> k;   // number of predictors must match number columns of X
-  matrix[n, k] X;   // predictor matrix. Might include intercept (column of 1s)
+  int<lower=0> n;   // number of options
+  int<lower=0> k;   // number of states == number of coefficients
+  matrix[n, k] X;   // payoff matrix
   vector[n] y;      // outcome vector
 }
 parameters {

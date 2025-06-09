@@ -122,13 +122,12 @@ For short-term, $r\approx 0$.
         \frac{\partial C}{\partial \mathcal{K}}&=-\mathcal{K}p^*(\mathcal{K})-1+P^*(\mathcal{K})+\mathcal{K}p^*(\mathcal{K})=P^*(\mathcal{K})-1\\ 
         \frac{\partial^2 C}{\partial \mathcal{K}^2}&=p^*(\mathcal{K}).
     \end{align*}
-   We need an option price, $C$, to be twice differentiable, $C^2$, function.
+   We need an option price, $C$, to be twice differentiable, $C^2$, function. 
 \end{frame}
 
 \begin{frame}{Approaches to Estimation}
-    \begin{itemize}
-        \item Estimation of $C$ with shape restrictions {\small\parencite{ait-sahaliaNonparametricOptionPricing2003}}
-
+    \begin{itemize}  \setlength\itemsep{1em}
+        \item Estimation of $C$ with shape restrictions -- $C^2$ approximation with 2nd derivative being a valid density {\small\parencite{ait-sahaliaNonparametricOptionPricing2003}}
         \item Bayesian Methods {\small\parencite{fisherSimplexRegression2016,hardleStatePriceDensities2015} + KDE in the second case}
         \item 
     \end{itemize}
@@ -152,9 +151,12 @@ For short-term, $r\approx 0$.
 $X$ consists of $n$ payoffs of $K$ derivatives, including the payoffs price (you can think of it as call option with strike equal zero).
 
 The state space is chosen to ensure that the first and last coefficients are near zero, so the list of possibilities is exhaustive.
- \begin{center}
-        \includegraphics[width=0.6\linewidth]{betas_23_3.pdf}
-    \end{center}
+ \begin{figure}\centering
+    \begin{minipage}{0.6\linewidth}
+        \centering
+                \includegraphics[width=\linewidth]{betas_23_3.pdf}
+    \end{minipage}
+    \end{figure}
 
 \end{frame}
 
@@ -190,47 +192,67 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Risk Neutral Density for AAPL II}
     Calculated in 2025-04-01 (same) with expiration date 2025-07-18 (\al{+45 days}).
-    \begin{center}
-        \includegraphics[width=0.8\linewidth]{betas_01_3.pdf}
-    \end{center}
+    \begin{figure}\centering
+        \begin{minipage}{0.75\linewidth}
+        \includegraphics[width=\linewidth]{betas_01_3.pdf}
+     \end{minipage}
+    \end{figure}
 \end{frame}
 
 
 
-\begin{frame}{Density before and after the ``Liberation Day'' 2025-04-02}\centering
-    \includegraphics[width=0.8\linewidth]{betas.pdf}
+\begin{frame}{Density before and after the ``Liberation Day'' 2025-04-02}
+    \begin{figure} \centering
+        \begin{minipage}{0.85\linewidth}
+                \includegraphics[width=\linewidth]{betas.pdf}
+        \end{minipage}
+    \end{figure}
 \end{frame}
  
 
 \begin{frame}{Summary Statistics \& Sanity Check}
-    \begin{center}
-        \includegraphics[width=0.9\linewidth]{summaries_plot.pdf}
-    \end{center}
+    \begin{figure}\centering
+        \begin{minipage}{0.9\linewidth}
+            \includegraphics[width=\linewidth]{summaries_plot.pdf}
+        \end{minipage}
+    \end{figure}
 \end{frame}
 
 
 \begin{frame}{Concentration Parameter Posterior Distribution}
 
-    Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution.
+    Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution, indicating lower uncertainty.
 
-    \begin{center}
-            \includegraphics[scale=0.5]{alphas.pdf}
-    \end{center}
+    \begin{figure}\centering 
+        \begin{minipage}{0.7\linewidth}
+            \includegraphics[width=\textwidth]{alphas.pdf}
+        \end{minipage}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Concentration Parameter Posterior Distribution}
-    \centering
-    The posterior distribution of the concentration parameter, $\alpha$, for 2025-05-16.
-
-    \includegraphics[width=0.8\linewidth]{alpha_histogram.pdf}
+    
+    The posterior distribution of the concentration parameter, $\alpha$, for expiration 2025-04-17.
+\begin{figure}
+    \begin{minipage}{0.9\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{alpha_histogram.pdf}
+    \end{minipage}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Concentration Parameter and State Space}
-    The concentration parameter is dependent on the state space. Since we want to ensure that the list of possibilities is exhaustive, we will be facing several betas close to zero. This coressponds to the concentration parameter being close to zero.
-    
-    \begin{center}
-        \includegraphics[width=0.9\linewidth]{dirichlet_histogram.pdf}
-    \end{center}
+    The concentration parameter is dependent on the state space. Since we want to ensure that the list of possibilities is exhaustive, we will be facing several betas close to zero. This corresponds to the concentration parameter being close to zero.
+    \begin{figure}[htbp]
+    \begin{minipage}{0.9\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dirichlet_histogram.pdf}
+        \vspace{-6ex}
+        \begin{flushleft}
+        \tiny \textit{Notes:} This figure shows the means of random samples from Dirichlet distribution, that are arranged in order to resample the distribution of state prices.
+        \end{flushleft}
+    \end{minipage}
+      \end{figure}
 \end{frame}
 
 
@@ -240,7 +262,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
         \item The liberation day (April 2) increased the uncertainty of expected AAPL price.
     \end{itemize}
 
-Applications:
+Applications:\vspace{-3ex}
 \begin{itemize}
     \item This method can be applied to derivatives of rate of interest (e.g SOFR options by CME).
     \item Concentration parameter then measures whether the forward guidance is effective/was there misinterpretation.

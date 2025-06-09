@@ -101,7 +101,7 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
 
     plot <- ggplot(betas, aes(x = state, y = estimate)) +
       geom_col() +
-      geom_errorbar(aes(max = conf.high, min = conf.low), width = 4) +
+      geom_errorbar(aes(max = conf.high, min = conf.low), width = 4,alpha = 0.8) +
       scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
       scale_x_continuous("State", breaks = extended_breaks(n = round(length(states) / 2) + 1)) +
       theme_light()
