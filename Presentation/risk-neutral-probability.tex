@@ -92,7 +92,11 @@
 
 \begin{frame}{\al{Implied} Risk-Neutral Probability Density (State-Price Density)}
 
+Risk-Neutral Probability Density = Implied Probability Density = State-Price Density (SPD) = Risk-Neutral Probability Measure (RNK) = Arrow-Debreu prices
+
     \[S=\sum_{s=1}^K\phi(s)q(s)\]
+
+    
 
     \[\phi^*\overset{d}{=}\frac{\phi(s)}{\sum_{s=1}^K\phi(s)}=\frac{\phi(s)}{1/(1+r)}=(1+r)\phi(s)\]
 
@@ -111,13 +115,7 @@
 \end{frame}
 
 
-\begin{frame}{Approaches to Estimation}
-    \begin{itemize}  \setlength\itemsep{1em}
-        \item Estimation of $C$ with shape restrictions -- $C^2$ approximation with 2nd derivative being a valid density \\{\scriptsize\parencite{ait-sahaliaNonparametricOptionPricing2003}}
-        \item Bayesian methods \\{\scriptsize\parencite{fisherSimplexRegression2016, hardleStatePriceDensities2015,tabogaOptionimpliedProbabilityDistributions2016} + KDE in the second case}
-        \item 
-    \end{itemize}
-\end{frame}
+
 
 \begin{frame}{Breeden-Litzenberger (1978) Formula}
 \nocite{breedenPricesStateContingentClaims1978}
@@ -134,6 +132,15 @@ For short-term, $r\approx 0$.
    We need an option price, $C$, to be twice differentiable, $C^2$, function. 
 \end{frame}
 
+
+\begin{frame}{Approaches to Nonparametric Estimation}
+
+    \begin{itemize}  \setlength\itemsep{1em}
+        \item Local polynomial estimation of $C(S,t)$ with shape restrictions --\\ $\frac{\partial^2}{\partial S^2}\hat C(S,t)$ is a valid density + other theory-motivated restrictions \\ {\scriptsize\parencite{ait-sahaliaNonparametricOptionPricing2003,leeEstimationRiskneutralMeasures2014}}
+        \item Bayesian methods \\{\scriptsize\parencite{fisherSimplexRegression2016, hardleStatePriceDensities2015,tabogaOptionimpliedProbabilityDistributions2016} + KDE in the second case}
+        \item 
+    \end{itemize}
+\end{frame}
 
 \begin{frame}{Bayesian Formulation}
     \cite{fisherSimplexRegression2016} proposes the following approach.\footnote[frame]{\tiny This is the methodology for \cite{MarketProbabilityTracker}.}

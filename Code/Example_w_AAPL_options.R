@@ -471,4 +471,3 @@ ggplot(results_01[[1]][[3]], aes(x = state, y = estimate)) +
   scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
   scale_x_continuous("State") +
   theme_light()
-
