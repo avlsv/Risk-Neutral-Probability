@@ -354,6 +354,7 @@ ggsave("alpha_histogram.pdf",
 
 
 
+
 wilcox.test(
   extract(results_04[[1]][[1]])$alpha,
   extract(results_04[[2]][[1]])$alpha,

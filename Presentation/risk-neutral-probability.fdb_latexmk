@@ -1,21 +1,21 @@
 # Fdb version 4
-["biber risk-neutral-probability"] 1749496268.73775 "risk-neutral-probability.bcf" "risk-neutral-probability.bbl" "risk-neutral-probability" 1749496506.57994 0
+["biber risk-neutral-probability"] 1749510943.54326 "risk-neutral-probability.bcf" "risk-neutral-probability.bbl" "risk-neutral-probability" 1749521385.88037 0
   "references.bib" 1749493949.38283 12428 c39bfcda66fa3efd964754bc66e879e8 ""
-  "risk-neutral-probability.bcf" 1749496506.29574 109333 9c677dc61be1507ce28a89ff63b083ca "pdflatex"
+  "risk-neutral-probability.bcf" 1749521385.5584 109333 9c677dc61be1507ce28a89ff63b083ca "pdflatex"
   (generated)
   "risk-neutral-probability.bbl"
   "risk-neutral-probability.blg"
   (rewritten before read)
-["pdflatex"] 1749496503.47495 "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" "risk-neutral-probability.pdf" "risk-neutral-probability" 1749496506.58034 0
-  "../Figures/alpha_histogram.pdf" 1749461140.62472 5179 7e635253c239be3a85f3c1910409cc14 ""
-  "../Figures/alphas.pdf" 1749461139.86719 5424 a029cbe983189fc70e20fcaac81c389e ""
-  "../Figures/betas.pdf" 1749461139.67253 7578 9b39c8116fc4cb0202866d2c937b6628 ""
-  "../Figures/betas_01_1.pdf" 1749461139.98525 5736 6ff99db10c8f05d396b40f7c8d8cd634 ""
-  "../Figures/betas_01_3.pdf" 1749461140.14441 5821 d46d1b7bb5f078ef9b82f85c3b5076bd ""
-  "../Figures/dirichlet_histogram.pdf" 1749455226.89642 5880 f00cc96da790fca83e249564bdf9800f ""
+["pdflatex"] 1749521382.19387 "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" "risk-neutral-probability.pdf" "risk-neutral-probability" 1749521385.88076 0
+  "../Figures/alpha_histogram.pdf" 1749514589.20147 5219 7f145f6dbda8a56c212a1d1d7ecaa014 ""
+  "../Figures/alphas.pdf" 1749514588.39855 5450 f17032a7f05a6048cfd55177dd491e3d ""
+  "../Figures/betas.pdf" 1749514588.20691 7584 faeff503d253295a4554b0737fa08f32 ""
+  "../Figures/betas_01_1.pdf" 1749514588.52146 5739 fca33b9125d6a3fa6461901eb5c9877f ""
+  "../Figures/betas_01_3.pdf" 1749514588.68379 5810 4d30387cc3da981eb29f33ee85c052d7 ""
+  "../Figures/dirichlet_histogram.pdf" 1749514590.39569 5890 d0c354008a0d216db7f92c08aa1605af ""
   "../Figures/prior_difference.pdf" 1748883824.11813 15974 9ac28d13eb447a93c0bb1e8bf1830ffc ""
-  "../Figures/summaries_plot.pdf" 1749455225.80032 5667 df154dc6f52c2d5c5fd36b27593f3eb2 ""
-  "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" 1749496503.24098 10282 c78ffff3a6a3548dbf19e8b95bcd1b92 ""
+  "../Figures/summaries_plot.pdf" 1749514589.53096 5667 c2b75de7da7d2afa278982d698445762 ""
+  "/Users/vlasov/Documents/Risk-Neutral-Probability/Presentation/risk-neutral-probability.tex" 1749521381.94438 10320 6071c29f439ec8eb5b7bd541f549d516 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc" 1558300257 2905 926f570532f1104044846d18d8d97080 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc" 1587936753 3267 177411e539fcc6ace86309ff03b22da6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc" 1587936753 3344 37c976a8b2fa4b8f132a488735054f7d ""
@@ -303,13 +303,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1718364846 8238417 8f06f440554203638529dcd7d61a9d8d ""
   "/usr/local/texlive/2024/texmf.cnf" 1718364683.00481 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "presentation.sty" 1748705286.41685 3683 a1d9f185338dcb06bb0d58f270a3a05d ""
-  "risk-neutral-probability.aux" 1749496506.29007 5187 fde4157f4830c56322eaab965f448a99 "pdflatex"
-  "risk-neutral-probability.bbl" 1749496271.37691 18377 7c7cb9db1036e0460dceb44bc1b43fa2 "biber risk-neutral-probability"
-  "risk-neutral-probability.nav" 1749496506.29679 2100 863c9d4e584204832d6fb95436bc4b59 "pdflatex"
-  "risk-neutral-probability.out" 1749496506.29155 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
-  "risk-neutral-probability.run.xml" 1749496506.2967 2511 42be3db28e1e9b0351b716e57fbdaa86 "pdflatex"
-  "risk-neutral-probability.tex" 1749496503.24098 10282 c78ffff3a6a3548dbf19e8b95bcd1b92 ""
-  "risk-neutral-probability.vrb" 1749496505.31213 11 03cba00f6b70749ac61ba0e15a6279e7 "pdflatex"
+  "risk-neutral-probability.aux" 1749521385.55232 5187 fde4157f4830c56322eaab965f448a99 "pdflatex"
+  "risk-neutral-probability.bbl" 1749510947.02114 18377 7c7cb9db1036e0460dceb44bc1b43fa2 "biber risk-neutral-probability"
+  "risk-neutral-probability.nav" 1749521385.55954 2100 863c9d4e584204832d6fb95436bc4b59 "pdflatex"
+  "risk-neutral-probability.out" 1749521385.55415 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
+  "risk-neutral-probability.run.xml" 1749521385.55943 2511 42be3db28e1e9b0351b716e57fbdaa86 "pdflatex"
+  "risk-neutral-probability.tex" 1749521381.94438 10320 6071c29f439ec8eb5b7bd541f549d516 ""
+  "risk-neutral-probability.vrb" 1749521384.56277 11 03cba00f6b70749ac61ba0e15a6279e7 "pdflatex"
   (generated)
   "risk-neutral-probability.aux"
   "risk-neutral-probability.bcf"
