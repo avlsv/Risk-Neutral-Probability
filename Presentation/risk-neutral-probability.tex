@@ -49,7 +49,7 @@
 \DeclareMathOperator*{\argmin}{arg\,min}
 
 
-\title{Bayesian Estimation of Risk-Neutral Probability}
+\title{Bayesian Estimation of Risk-Neutral Density}
 % Enter presentation information:
 \information%
 % Enter link to research paper (optional; comment line if not needed):
@@ -89,6 +89,7 @@
 %     \large
 %     \tableofcontents[currentsection]
 % \end{frame}
+
 
 \begin{frame}{\al{Implied} Risk-Neutral Probability Density (State-Price Density)}
 
@@ -135,10 +136,11 @@ For short-term, $r\approx 0$.
 
 \begin{frame}{Approaches to Nonparametric Estimation}
 
+    How can we measure the risk-neutral probability density?
+
     \begin{itemize}  \setlength\itemsep{1em}
         \item Local polynomial estimation of $C(S,t)$ with shape restrictions --\\ $\frac{\partial^2}{\partial S^2}\hat C(S,t)$ is a valid density + other theory-motivated restrictions \\ {\scriptsize\parencite{ait-sahaliaNonparametricOptionPricing2003,leeEstimationRiskneutralMeasures2014}}
         \item Bayesian methods \\{\scriptsize\parencite{fisherSimplexRegression2016, hardleStatePriceDensities2015,tabogaOptionimpliedProbabilityDistributions2016} + KDE in the second case}
-    
     \end{itemize}
 \end{frame}
 
