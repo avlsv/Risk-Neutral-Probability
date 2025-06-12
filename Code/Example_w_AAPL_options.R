@@ -132,12 +132,30 @@ results_01 <-
     states = state_space
   )
 
+results_02 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-02.csv", show_col_types = F),
+    states = state_space
+  )
+
+
+results_03 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-03.csv", show_col_types = F),
+    states = state_space
+  )
+
 results_04 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-04.csv", show_col_types = F),
     states = state_space
   )
 
+results_07 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-07.csv", show_col_types = F),
+    states = state_space
+  )
 
 
 
