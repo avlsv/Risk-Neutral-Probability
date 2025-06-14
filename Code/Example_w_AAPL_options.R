@@ -132,12 +132,27 @@ results_01 <-
     states = state_space
   )
 
+saveRDS(results_01, file = "data/results/results_01.RData")
+
+readRDS("data/results/results_01.RData")
+
+results_01_alt <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
+    states = state_space, 
+    model = "simplex_alternative.stan"
+  )
+
+
 results_02 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-02.csv", show_col_types = F),
     states = state_space
   )
 
+saveRDS(results_02, file = "data/results/results_02.RData")
+
+readRDS("data/results/results_02.RData")
 
 results_03 <-
   estimation_procedure(
@@ -150,6 +165,10 @@ results_04 <-
     dataset = read_csv("data/AAPL options 2025-04-04.csv", show_col_types = F),
     states = state_space
   )
+
+saveRDS(results_04, file = "data/results/results_04.RData")
+
+readRDS("data/results/results_04.RData")
 
 results_07 <-
   estimation_procedure(
@@ -325,10 +344,10 @@ for (i in seq(1, length(expirations))) {
 
 
 alpha_histogram_1 <-
-  ggplot(as_tibble(extract(results_01[[1]][[1]])$alpha) |> slice(4000:n()), aes(x = value)) +
+  ggplot(as_tibble(extract(results_01[[1]][[1]])$alpha), aes(x = value)) +
   geom_histogram(aes(y = ..density..), alpha = 0.15, color = "black", fill = "#F8766D") +
   geom_histogram(
-    data = as_tibble(extract(results_04[[1]][[1]])$alpha) |> slice(4000:n()),
+    data = as_tibble(extract(results_04[[1]][[1]])$alpha),
     aes(y = ..density..),
     alpha = 0.15, color = "black", fill = "#00BFC4"
   ) +
@@ -336,10 +355,10 @@ alpha_histogram_1 <-
   theme_light()
 
 alpha_histogram_2 <-
-  ggplot(as_tibble(extract(results_01[[2]][[1]])$alpha) |> slice(4000:n()), aes(x = value)) +
+  ggplot(as_tibble(extract(results_01[[2]][[1]])$alpha), aes(x = value)) +
   geom_histogram(aes(y = ..density..), alpha = 0.15, color = "black", fill = "#F8766D") +
   geom_histogram(
-    data = as_tibble(extract(results_04[[2]][[1]])$alpha) |> slice(4000:n()),
+    data = as_tibble(extract(results_04[[2]][[1]])$alpha),
     aes(y = ..density..),
     alpha = 0.15, color = "black", fill = "#00BFC4"
   ) +
@@ -347,10 +366,10 @@ alpha_histogram_2 <-
   theme_light()
 
 alpha_histogram_3 <-
-  ggplot(as_tibble(extract(results_01[[3]][[1]])$alpha) |> slice(4000:n()), aes(x = value)) +
+  ggplot(as_tibble(extract(results_01[[3]][[1]])$alpha), aes(x = value)) +
   geom_histogram(aes(y = ..density..), alpha = 0.15, color = "black", fill = "#F8766D") +
   geom_histogram(
-    data = as_tibble(extract(results_04[[3]][[1]])$alpha) |> slice(4000:n()),
+    data = as_tibble(extract(results_04[[3]][[1]])$alpha),
     aes(y = ..density..),
     alpha = 0.15, color = "black", fill = "#00BFC4"
   ) +

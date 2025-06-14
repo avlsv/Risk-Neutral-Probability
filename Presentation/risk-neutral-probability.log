@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  11 JUN 2025 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  14 JUN 2025 04:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1067,253 +1067,253 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 60.
+(hyperref)                removing `\new@ifnextchar' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 60.
+(hyperref)                removing `\\' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 60.
+(hyperref)                removing `\new@ifnextchar' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 60.
+(hyperref)                removing `\\' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\color' on input line 60.
+(hyperref)                removing `\color' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 60.
+(hyperref)                removing `\begingroup' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 60.
+(hyperref)                removing `\catcode' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 60.
+(hyperref)                removing `\catcode' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 60.
+(hyperref)                removing `\active' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 60.
+(hyperref)                removing `\catcode' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 60.
+(hyperref)                removing `\active' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\%' on input line 60.
+(hyperref)                removing `\%' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 60.
+(hyperref)                removing `\catcode' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 60.
+(hyperref)                removing `\active' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\#' on input line 60.
+(hyperref)                removing `\#' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 60.
+(hyperref)                removing `\catcode' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\&' on input line 60.
+(hyperref)                removing `\&' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textunderscore' on input line 60.
+(hyperref)                removing `\textunderscore' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\_' on input line 60.
+(hyperref)                removing `\_' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 60.
+(hyperref)                removing `\catcode' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 60.
+(hyperref)                removing `\active' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\~' on input line 60.
+(hyperref)                removing `\~' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textasciitilde' on input line 60.
+(hyperref)                removing `\textasciitilde' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 60.
+(hyperref)                removing `\<let>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 60.
+(hyperref)                removing `\\' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 60.
+(hyperref)                removing `\csname\endcsname' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Hy@tempa' on input line 60.
+(hyperref)                removing `\Hy@tempa' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 60.
+(hyperref)                removing `\<def>-command' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Hy@tempa' on input line 60.
+(hyperref)                removing `\Hy@tempa' on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 79.
+(hyperref)                removing `\new@ifnextchar' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\color' on input line 79.
+(hyperref)                removing `\color' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 79.
+(hyperref)                removing `\@ifnextchar' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textwidth' on input line 79.
+(hyperref)                removing `\textwidth' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 79.
+(hyperref)                removing `\new@ifnextchar' on input line 80.
 
 \@quotelevel=\count485
 \@quotereset=\count486
 (./risk-neutral-probability.aux)
 \openout1 = `risk-neutral-probability.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 79.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 80.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 80.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    ... okay on input line 80.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1368,7 +1368,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 79.
+Package hyperref Info: Link coloring OFF on input line 80.
  (./risk-neutral-probability.out) (./risk-neutral-probability.out)
 \@outlinefile=\write6
 \openout6 = `risk-neutral-probability.out'.
@@ -1399,21 +1399,21 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'risk-neutral-probability.bbl' found.
  (./risk-neutral-probability.bbl)
-Package biblatex Info: Reference section=0 on input line 79.
-Package biblatex Info: Reference segment=0 on input line 79.
-LaTeX Info: Redefining \microtypecontext on input line 79.
-Package microtype Info: Applying patch `item' on input line 79.
-Package microtype Info: Applying patch `toc' on input line 79.
-Package microtype Info: Applying patch `eqnum' on input line 79.
-Package microtype Info: Applying patch `footnote' on input line 79.
-Package microtype Info: Applying patch `verbatim' on input line 79.
+Package biblatex Info: Reference section=0 on input line 80.
+Package biblatex Info: Reference segment=0 on input line 80.
+LaTeX Info: Redefining \microtypecontext on input line 80.
+Package microtype Info: Applying patch `item' on input line 80.
+Package microtype Info: Applying patch `toc' on input line 80.
+Package microtype Info: Applying patch `eqnum' on input line 80.
+Package microtype Info: Applying patch `footnote' on input line 80.
+Package microtype Info: Applying patch `verbatim' on input line 80.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 79.
+LaTeX Info: Redefining \showhyphens on input line 80.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1425,9 +1425,9 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./risk-neutral-probability.nav)
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 79.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 80.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 5.0pt on input line 79.
+(Font)              scaled to size 5.0pt on input line 80.
 \openout4 = `risk-neutral-probability.vrb'.
 
  (./risk-neutral-probability.vrb
@@ -1452,17 +1452,7 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
 (Font)              `T1/SourceSansPro-TLF/regular/n' on input line 1.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
 (Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 1.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF.fd
-File: T1SourceCodePro-TLF.fd 2018/02/18 (autoinst) Font definitions for T1/SourceCodePro-TLF.
-)
-LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `SourceCodePro-TLF' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
@@ -1484,20 +1474,20 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
 )
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 83.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 84.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 4.0pt on input line 83.
+(Font)              scaled to size 4.0pt on input line 84.
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc}]
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 106.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 107.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 106.
+(Font)              scaled to size 14.4pt on input line 107.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 106.
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 107.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 14.4pt on input line 106.
+(Font)              scaled to size 14.4pt on input line 107.
 
 
 [2
@@ -1511,14 +1501,14 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
 [4
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 145.
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 146.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 145.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 146.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 145.
+(Font)              scaled to size 10.0pt on input line 146.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceSansPro-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1529,35 +1519,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc}]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 160.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 161.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 6.0pt on input line 160.
+(Font)              scaled to size 6.0pt on input line 161.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 160.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 161.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 5.0pt on input line 160.
+(Font)              scaled to size 5.0pt on input line 161.
 
 
 [6
 
 ]
-<../Figures/betas_01_3.pdf, id=78, 527.9725pt x 373.395pt>
+<../Figures/betas_01_3.pdf, id=77, 527.9725pt x 373.395pt>
 File: ../Figures/betas_01_3.pdf Graphic file (type pdf)
 <use ../Figures/betas_01_3.pdf>
-Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 173.
+Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 174.
 (pdftex.def)             Requested size: 201.44762pt x 142.46703pt.
 
 
 [7
 
  <../Figures/betas_01_3.pdf>]
-<../Figures/prior_difference.pdf, id=94, 468.75125pt x 331.2375pt>
+<../Figures/prior_difference.pdf, id=93, 468.75125pt x 331.2375pt>
 File: ../Figures/prior_difference.pdf Graphic file (type pdf)
 <use ../Figures/prior_difference.pdf>
-Package pdftex.def Info: ../Figures/prior_difference.pdf  used on input line 182.
+Package pdftex.def Info: ../Figures/prior_difference.pdf  used on input line 183.
 (pdftex.def)             Requested size: 201.44762pt x 142.34846pt.
 
-Overfull \vbox (14.43042pt too high) detected at line 182
+Overfull \vbox (14.43042pt too high) detected at line 183
  []
 
 
@@ -1569,10 +1559,10 @@ Overfull \vbox (14.43042pt too high) detected at line 182
 [9
 
 ]
-<../Figures/betas_01_1.pdf, id=113, 527.9725pt x 373.395pt>
+<../Figures/betas_01_1.pdf, id=112, 527.9725pt x 373.395pt>
 File: ../Figures/betas_01_1.pdf Graphic file (type pdf)
 <use ../Figures/betas_01_1.pdf>
-Package pdftex.def Info: ../Figures/betas_01_1.pdf  used on input line 204.
+Package pdftex.def Info: ../Figures/betas_01_1.pdf  used on input line 205.
 (pdftex.def)             Requested size: 251.80696pt x 178.08235pt.
 
 
@@ -1581,20 +1571,20 @@ Package pdftex.def Info: ../Figures/betas_01_1.pdf  used on input line 204.
  <../Figures/betas_01_1.pdf>]
 File: ../Figures/betas_01_3.pdf Graphic file (type pdf)
 <use ../Figures/betas_01_3.pdf>
-Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 213.
+Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 214.
 (pdftex.def)             Requested size: 251.80696pt x 178.08235pt.
 
 
 [11
 
 ]
-<../Figures/betas.pdf, id=132, 649.42625pt x 458.71375pt>
+<../Figures/betas.pdf, id=131, 649.42625pt x 458.71375pt>
 File: ../Figures/betas.pdf Graphic file (type pdf)
 <use ../Figures/betas.pdf>
-Package pdftex.def Info: ../Figures/betas.pdf  used on input line 223.
+Package pdftex.def Info: ../Figures/betas.pdf  used on input line 224.
 (pdftex.def)             Requested size: 302.1663pt x 213.43268pt.
 
-Overfull \vbox (3.39464pt too high) detected at line 223
+Overfull \vbox (3.39464pt too high) detected at line 224
  []
 
 
@@ -1602,23 +1592,23 @@ Overfull \vbox (3.39464pt too high) detected at line 223
 [12
 
  <../Figures/betas.pdf>]
-<../Figures/summaries_plot.pdf, id=146, 527.9725pt x 373.395pt>
+<../Figures/summaries_plot.pdf, id=145, 527.9725pt x 373.395pt>
 File: ../Figures/summaries_plot.pdf Graphic file (type pdf)
 <use ../Figures/summaries_plot.pdf>
-Package pdftex.def Info: ../Figures/summaries_plot.pdf  used on input line 232.
+Package pdftex.def Info: ../Figures/summaries_plot.pdf  used on input line 233.
 (pdftex.def)             Requested size: 302.1663pt x 213.6977pt.
 
 
 [13
 
  <../Figures/summaries_plot.pdf>]
-<../Figures/alphas.pdf, id=158, 439.6425pt x 373.395pt>
+<../Figures/alphas.pdf, id=157, 439.6425pt x 373.395pt>
 File: ../Figures/alphas.pdf Graphic file (type pdf)
 <use ../Figures/alphas.pdf>
-Package pdftex.def Info: ../Figures/alphas.pdf  used on input line 244.
+Package pdftex.def Info: ../Figures/alphas.pdf  used on input line 245.
 (pdftex.def)             Requested size: 235.01881pt x 199.60197pt.
 
-Overfull \vbox (36.63393pt too high) detected at line 244
+Overfull \vbox (36.63393pt too high) detected at line 245
  []
 
 
@@ -1626,20 +1616,20 @@ Overfull \vbox (36.63393pt too high) detected at line 244
 [14
 
  <../Figures/alphas.pdf>]
-<../Figures/alpha_histogram.pdf, id=171, 527.9725pt x 373.395pt>
+<../Figures/alpha_histogram.pdf, id=170, 527.9725pt x 373.395pt>
 File: ../Figures/alpha_histogram.pdf Graphic file (type pdf)
 <use ../Figures/alpha_histogram.pdf>
-Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 255.
+Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 256.
 (pdftex.def)             Requested size: 241.73396pt x 170.96043pt.
 
 
 [15
 
  <../Figures/alpha_histogram.pdf>]
-<../Figures/dirichlet_histogram.pdf, id=185, 527.9725pt x 265.99374pt>
+<../Figures/dirichlet_histogram.pdf, id=184, 527.9725pt x 265.99374pt>
 File: ../Figures/dirichlet_histogram.pdf Graphic file (type pdf)
 <use ../Figures/dirichlet_histogram.pdf>
-Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 269.
+Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 270.
 (pdftex.def)             Requested size: 302.1663pt x 152.23087pt.
 
 
@@ -1655,15 +1645,13 @@ Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 299.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 300.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 299.
+(Font)              scaled to size 7.0pt on input line 300.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 299.
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 300.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 7.0pt on input line 299.
-LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 299.
+(Font)              scaled to size 7.0pt on input line 300.
 
 
 [19
@@ -1690,18 +1678,18 @@ Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36278 strings out of 473600
- 718302 string characters out of 5728708
+ 36215 strings out of 473600
+ 716431 string characters out of 5728708
  1940905 words of memory out of 5000000
- 58268 multiletter control sequences out of 15000+600000
- 715394 words of font info for 187 fonts, out of 8000000 for 9000
+ 58203 multiletter control sequences out of 15000+600000
+ 715174 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,1501b,1750s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (19 pages, 323413 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on risk-neutral-probability.pdf (19 pages, 277819 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
+ 299 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
  47 named destinations out of 1000 (max. 500000)
- 76891 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 75867 words of extra memory for PDF output out of 89155 (max. 10000000)
 
