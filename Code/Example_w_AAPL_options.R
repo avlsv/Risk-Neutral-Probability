@@ -132,16 +132,24 @@ results_01 <-
     states = state_space
   )
 
-saveRDS(results_01, file = "data/results/results_01.RData")
+saveRDS(results_01, file = "Data/Results/results_01.RData")
 
-readRDS("data/results/results_01.RData")
+# readRDS("data/results/results_01.RData")
 
-results_01_alt <-
-  estimation_procedure(
-    dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
-    states = state_space, 
-    model = "simplex_alternative.stan"
-  )
+# results_01_alt <-
+#   estimation_procedure(
+#     dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
+#     states = state_space, 
+#     model = "simplex_alternative.stan"
+#   )
+
+# results_02_alt <-
+#   estimation_procedure(
+#     dataset = read_csv("data/AAPL options 2025-04-02.csv", show_col_types = F),
+#     states =  seq(100, 290, by = 20), 
+#     model = "simplex_alternative.stan"
+#   )
+
 
 
 results_02 <-
@@ -150,15 +158,18 @@ results_02 <-
     states = state_space
   )
 
-saveRDS(results_02, file = "data/results/results_02.RData")
+saveRDS(results_02, file = "Data/Results/results_02.RData")
 
-readRDS("data/results/results_02.RData")
+readRDS("Data/Results/results_02.RData")
 
 results_03 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-03.csv", show_col_types = F),
     states = state_space
   )
+
+saveRDS(results_03, file = "data/results/results_03.RData")
+
 
 results_04 <-
   estimation_procedure(
@@ -176,6 +187,8 @@ results_07 <-
     states = state_space
   )
 
+
+saveRDS(results_07, file = "data/results/results_07.RData")
 
 
 # alternative specification
@@ -284,6 +297,31 @@ alphas_01 <-
   ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-01")))
 
 
+
+alphas_02 <-
+  bind_rows(
+    results_02[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_02[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_02[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-02")))
+
+
+alphas_03 <-
+  bind_rows(
+    results_03[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_03[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_03[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-03")))
+
+
+
+
 alphas_04 <-
   bind_rows(
     results_04[[1]][[2]] |>
@@ -294,15 +332,27 @@ alphas_04 <-
       filter(term == "alpha")
   ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-04")))
 
-alphas <- bind_rows(alphas_01, alphas_04)
+alphas_07 <-
+  bind_rows(
+    results_07[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_07[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_07[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-07")))
 
 
 
-alphas
+alphas_01_05 <- bind_rows(alphas_01,alphas_02,alphas_03, alphas_04, alphas_07)
+
+
+
+alphas_0102 <- bind_rows(alphas_01, alphas_02)
 
 
 alphas_plot <-
-  ggplot(alphas, aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))) +
+  ggplot(alphas_01_05, aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))) +
   geom_point(position = position_dodge(width = 0.5)) +
   geom_errorbar(aes(min = conf.low, max = conf.high), width = .3, position = position_dodge(width = 0.5)) +
   scale_x_discrete("Expiration Date") +
@@ -319,6 +369,18 @@ ggsave("alphas.pdf",
   height = 210 / 1.6,
   units = "mm"
 )
+
+alphas_plot_1 <-
+  ggplot(alphas_1, aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))) +
+  geom_point(position = position_dodge(width = 0.5)) +
+  geom_errorbar(aes(min = conf.low, max = conf.high), width = .3, position = position_dodge(width = 0.5)) +
+  scale_x_discrete("Expiration Date") +
+  scale_y_continuous(expression(alpha ~ "Estimate"), breaks = extended_breaks(n = 6)) +
+  theme_minimal() +
+  labs(color = "Date") +
+  theme(legend.position = "bottom")
+alphas_plot_1
+
 
 for (i in seq(1, length(expirations))) {
   ggsave(paste("betas_01_", as.character(i), ".pdf", sep = ""),
@@ -393,10 +455,12 @@ ggsave("alpha_histogram.pdf",
 
 
 wilcox.test(
-  extract(results_04[[1]][[1]])$alpha,
-  extract(results_04[[2]][[1]])$alpha,
+  extract(results_02[[3]][[1]])$alpha,
+  extract(results_03[[3]][[1]])$alpha,
   paired = F
 )
+
+
 
 
 summaries_plot <-
