@@ -190,6 +190,16 @@ results_07 <-
 
 saveRDS(results_07, file = "data/results/results_07.RData")
 
+results_08 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-08.csv", show_col_types = F),
+    states = state_space
+  )
+
+
+saveRDS(results_08, file = "data/results/results_08.RData")
+
+
 
 # alternative specification
 # results_23_1 <-
@@ -452,11 +462,11 @@ ggsave("alpha_histogram.pdf",
 )
 
 
-
+#two-sample Wilcoxon (Mann-Whitney) tests
 
 wilcox.test(
-  extract(results_02[[3]][[1]])$alpha,
-  extract(results_03[[3]][[1]])$alpha,
+  extract(results_04[[1]][[1]])$alpha,
+  extract(results_07[[1]][[1]])$alpha,
   paired = F
 )
 
