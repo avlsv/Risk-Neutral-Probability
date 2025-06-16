@@ -126,11 +126,37 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   arrange(date)
 
 
+
+results_28 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-03-28.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_28, file = "Data/Results/results_28.RData")
+
+
+
+results_31 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-03-31.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_31, file = "Data/Results/results_31.RData")
+
+
+
+
+
 results_01 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
     states = state_space
   )
+
+saveRDS(results_01, file = "Data/Results/results_01.RData")
+
 
 results_01_15 <-
   estimation_procedure(
@@ -138,7 +164,6 @@ results_01_15 <-
     states =  seq(100, 295, by = 15)
   )
 
-saveRDS(results_01, file = "Data/Results/results_01.RData")
 
 # readRDS("data/results/results_01.RData")
 
@@ -254,6 +279,23 @@ results_15 <-
   )
 
 saveRDS(results_15, file = "data/results/results_15.RData")
+
+
+results_16 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-16.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_16, file = "data/results/results_16.RData")
+
+results_17 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-17.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_17, file = "data/results/results_17.RData")
 
 
 
@@ -449,8 +491,20 @@ alphas_10 <-
   ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-10")))
 
 
+alphas_11 <-
+  bind_rows(
+    results_11[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_11[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_11[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-11")))
 
-alphas_01_05 <- bind_rows(alphas_01,alphas_02,alphas_03, alphas_04, alphas_07, alphas_08, alphas_09,alphas_10)
+
+
+
+alphas_01_05 <- bind_rows(alphas_01,alphas_02,alphas_03, alphas_04, alphas_07, alphas_08, alphas_09,alphas_10, alphas_11, alphas_14)
 
 
 
