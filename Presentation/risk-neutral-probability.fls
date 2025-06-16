@@ -577,10 +577,10 @@ INPUT ../Figures/summaries_plot.pdf
 INPUT ../Figures/summaries_plot.pdf
 INPUT ../Figures/summaries_plot.pdf
 INPUT ../Figures/summaries_plot.pdf
-INPUT ../Figures/alphas.pdf
-INPUT ../Figures/alphas.pdf
-INPUT ../Figures/alphas.pdf
-INPUT ../Figures/alphas.pdf
+INPUT ../Figures/two_alphas_plot.pdf
+INPUT ../Figures/two_alphas_plot.pdf
+INPUT ../Figures/two_alphas_plot.pdf
+INPUT ../Figures/two_alphas_plot.pdf
 INPUT ../Figures/alpha_histogram.pdf
 INPUT ../Figures/alpha_histogram.pdf
 INPUT ../Figures/alpha_histogram.pdf
@@ -589,6 +589,10 @@ INPUT ../Figures/dirichlet_histogram.pdf
 INPUT ../Figures/dirichlet_histogram.pdf
 INPUT ../Figures/dirichlet_histogram.pdf
 INPUT ../Figures/dirichlet_histogram.pdf
+INPUT ../Figures/all_alphas_plot.pdf
+INPUT ../Figures/all_alphas_plot.pdf
+INPUT ../Figures/all_alphas_plot.pdf
+INPUT ../Figures/all_alphas_plot.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-It-tlf-t1.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-sc-t1.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/sourcesanspro/SourceSansPro-It-tlf-t1.vf

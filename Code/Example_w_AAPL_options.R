@@ -11,7 +11,8 @@ options(mc.cores = parallel::detectCores())
 
 
 
-estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(120 - 20, 260 + 20, by = 10)) {
+estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(120 - 20, 260 + 20, by = 10), iter = 4000,
+                                 chains = 4) {
   print(dataset$date[1])
 
   dataset_1 <- dataset |> select(expiration, strike, call_put, bid, ask)
@@ -88,8 +89,8 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
       stan(
         as.character(model),
         data = stan_data_aapl,
-        iter = 4000,
-        chains = 4
+        iter = iter,
+        chains = chains
       )
 
     coefs <- stan_model_aapl |>
@@ -126,11 +127,29 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   arrange(date)
 
 
+results_25 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-03-25.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_25, file = "Data/Results/results_25.RData")
+
+
+results_27 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-03-27.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_27, file = "Data/Results/results_27.RData")
+
+
 
 results_28 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-28.csv", show_col_types = F),
-    states = state_space
+    states = state_space, iter = 6000
   )
 
 saveRDS(results_28, file = "Data/Results/results_28.RData")
@@ -161,7 +180,7 @@ saveRDS(results_01, file = "Data/Results/results_01.RData")
 results_01_15 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
-    states =  seq(100, 295, by = 15)
+    states = seq(100, 295, by = 15)
   )
 
 
@@ -170,14 +189,14 @@ results_01_15 <-
 # results_01_alt <-
 #   estimation_procedure(
 #     dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
-#     states = state_space, 
+#     states = state_space,
 #     model = "simplex_alternative.stan"
 #   )
 
 # results_02_alt <-
 #   estimation_procedure(
 #     dataset = read_csv("data/AAPL options 2025-04-02.csv", show_col_types = F),
-#     states =  seq(100, 290, by = 20), 
+#     states =  seq(100, 290, by = 20),
 #     model = "simplex_alternative.stan"
 #   )
 
@@ -501,18 +520,40 @@ alphas_11 <-
       filter(term == "alpha")
   ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-11")))
 
+alphas_28 <-
+  bind_rows(
+    results_28[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_28[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_28[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-03-28")))
+
+
+alphas_31 <-
+  bind_rows(
+    results_31[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_31[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_31[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-03-31")))
 
 
 
-alphas_01_05 <- bind_rows(alphas_01,alphas_02,alphas_03, alphas_04, alphas_07, alphas_08, alphas_09,alphas_10, alphas_11, alphas_14)
+
+alphas <- bind_rows(alphas_28, alphas_31, alphas_01, alphas_02, alphas_03, alphas_04, alphas_07, alphas_08, alphas_09, alphas_10, alphas_11, alphas_14)
 
 
 
-alphas_0102 <- bind_rows(alphas_01, alphas_02)
 
-
-alphas_plot <-
-  ggplot(alphas_01_05, aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))) +
+two_alphas_plot <-
+  ggplot(
+    alphas |> filter(date %in% c(as_date("2025-04-01"), as_date("2025-04-04"))),
+    aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))
+  ) +
   geom_point(position = position_dodge(width = 0.5)) +
   geom_errorbar(aes(min = conf.low, max = conf.high), width = .3, position = position_dodge(width = 0.5)) +
   scale_x_discrete("Expiration Date") +
@@ -520,26 +561,37 @@ alphas_plot <-
   theme_minimal() +
   labs(color = "Date") +
   theme(legend.position = "bottom")
-alphas_plot
+two_alphas_plot
 
-ggsave("alphas.pdf",
-  alphas_plot,
+ggsave("two_alphas_plot.pdf",
+  two_alphas_plot,
   path = "~/Documents/Risk-Neutral-Probability/Figures/",
   width = 297 / (1.6 * 1.2),
   height = 210 / 1.6,
   units = "mm"
 )
 
-alphas_plot_1 <-
-  ggplot(alphas_1, aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))) +
-  geom_point(position = position_dodge(width = 0.5)) +
-  geom_errorbar(aes(min = conf.low, max = conf.high), width = .3, position = position_dodge(width = 0.5)) +
-  scale_x_discrete("Expiration Date") +
+all_alphas_plot <-
+  ggplot(alphas, aes(x = date, y = estimate)) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "gray50", alpha = 0.3) +
+  geom_line() +
+  geom_point() +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2) +
   scale_y_continuous(expression(alpha ~ "Estimate"), breaks = extended_breaks(n = 6)) +
-  theme_minimal() +
+  facet_grid(~expiration) +
+  geom_vline(xintercept = as_date("2025-04-02"), color = "red") +
   labs(color = "Date") +
+  theme_light() +
   theme(legend.position = "bottom")
-alphas_plot_1
+all_alphas_plot
+
+ggsave("all_alphas_plot.pdf",
+  all_alphas_plot,
+  path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  width = 297 / (1.6 * 1.2),
+  height = 210 / 1.6,
+  units = "mm"
+)
 
 
 for (i in seq(1, length(expirations))) {
@@ -612,7 +664,7 @@ ggsave("alpha_histogram.pdf",
 )
 
 
-#two-sample Wilcoxon (Mann-Whitney) tests
+# two-sample Wilcoxon (Mann-Whitney) tests
 
 wilcox.test(
   extract(results_04[[1]][[1]])$alpha,
