@@ -132,6 +132,12 @@ results_01 <-
     states = state_space
   )
 
+results_01_15 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
+    states =  seq(100, 295, by = 15)
+  )
+
 saveRDS(results_01, file = "Data/Results/results_01.RData")
 
 # readRDS("data/results/results_01.RData")
@@ -187,6 +193,12 @@ results_07 <-
     states = state_space
   )
 
+results_07_15 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-07.csv", show_col_types = F),
+    states = seq(100, 295, by = 15)
+  )
+
 
 saveRDS(results_07, file = "data/results/results_07.RData")
 
@@ -195,9 +207,57 @@ results_08 <-
     dataset = read_csv("data/AAPL options 2025-04-08.csv", show_col_types = F),
     states = state_space
   )
-
-
 saveRDS(results_08, file = "data/results/results_08.RData")
+
+
+results_09 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-09.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_09, file = "data/results/results_09.RData")
+
+
+results_10 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-10.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_10, file = "data/results/results_10.RData")
+
+
+results_11 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-11.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_11, file = "data/results/results_11.RData")
+
+
+results_14 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-14.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_14, file = "data/results/results_14.RData")
+
+
+
+results_15 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-04-15.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_15, file = "data/results/results_15.RData")
+
+
+
+
 
 
 
@@ -354,7 +414,43 @@ alphas_07 <-
 
 
 
-alphas_01_05 <- bind_rows(alphas_01,alphas_02,alphas_03, alphas_04, alphas_07)
+
+alphas_08 <-
+  bind_rows(
+    results_08[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_08[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_08[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-08")))
+
+
+alphas_09 <-
+  bind_rows(
+    results_09[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_09[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_09[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-09")))
+
+
+
+alphas_10 <-
+  bind_rows(
+    results_10[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_10[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_10[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-04-10")))
+
+
+
+alphas_01_05 <- bind_rows(alphas_01,alphas_02,alphas_03, alphas_04, alphas_07, alphas_08, alphas_09,alphas_10)
 
 
 
