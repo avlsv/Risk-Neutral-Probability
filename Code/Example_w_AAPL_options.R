@@ -542,9 +542,37 @@ alphas_31 <-
   ) |> bind_cols(tibble(expiration = expirations, date = as_date("2025-03-31")))
 
 
+alphas_27 <-
+  bind_rows(
+    results_27[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_27[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_27[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(
+    expiration = expirations,
+    date = as_date("2025-03-27")
+  ))
 
 
-alphas <- bind_rows(alphas_28, alphas_31, alphas_01, alphas_02, alphas_03, alphas_04, alphas_07, alphas_08, alphas_09, alphas_10, alphas_11, alphas_14)
+alphas_25 <-
+  bind_rows(
+    results_25[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_25[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_25[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(
+    expiration = expirations,
+    date = as_date("2025-03-25")
+  ))
+
+
+
+
+alphas <- bind_rows(alphas_25, alphas_27, alphas_28, alphas_31, alphas_01, alphas_02, alphas_03, alphas_04, alphas_07, alphas_08, alphas_09, alphas_10, alphas_11, alphas_14)
 
 
 
@@ -573,13 +601,14 @@ ggsave("two_alphas_plot.pdf",
 
 all_alphas_plot <-
   ggplot(alphas, aes(x = date, y = estimate)) +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "gray50", alpha = 0.3) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "gray50", alpha = 0.2) +
   geom_line() +
   geom_point() +
-  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2) +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "gray50", alpha = 0.5) +
+  scale_x_date("") +
   scale_y_continuous(expression(alpha ~ "Estimate"), breaks = extended_breaks(n = 6)) +
-  facet_grid(~expiration) +
-  geom_vline(xintercept = as_date("2025-04-02"), color = "red") +
+  facet_wrap(~expiration, nrow = 3, scales = "free_y") +
+  geom_vline(xintercept = as_date("2025-04-02"), color = "darkred") +
   labs(color = "Date") +
   theme_light() +
   theme(legend.position = "bottom")
@@ -602,18 +631,99 @@ for (i in seq(1, length(expirations))) {
     height = 210 / 1.6,
     units = "mm"
   )
-}
-
-
-for (i in seq(1, length(expirations))) {
   ggsave(paste("betas_04_", as.character(i), ".pdf", sep = ""),
-    results_04[[i]][[4]],
-    path = "~/Documents/Risk-Neutral-Probability/Figures/",
-    width = 297 / 1.6,
-    height = 210 / 1.6,
-    units = "mm"
+         results_04[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  # ggsave(paste("betas_24_", as.character(i), ".pdf", sep = ""),
+  #        results_24[[i]][[4]],
+  #        path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  #        width = 297 / 1.6,
+  #        height = 210 / 1.6,
+  #        units = "mm"
+  # )
+  
+  ggsave(paste("betas_25_", as.character(i), ".pdf", sep = ""),
+         results_25[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_27_", as.character(i), ".pdf", sep = ""),
+         results_27[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_28_", as.character(i), ".pdf", sep = ""),
+         results_28[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_31_", as.character(i), ".pdf", sep = ""),
+         results_31[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_02_", as.character(i), ".pdf", sep = ""),
+         results_02[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_03_", as.character(i), ".pdf", sep = ""),
+         results_03[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_07_", as.character(i), ".pdf", sep = ""),
+         results_07[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_08_", as.character(i), ".pdf", sep = ""),
+         results_08[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
+  )
+  
+  ggsave(paste("betas_09_", as.character(i), ".pdf", sep = ""),
+         results_09[[i]][[4]],
+         path = "~/Documents/Risk-Neutral-Probability/Figures/",
+         width = 297 / 1.6,
+         height = 210 / 1.6,
+         units = "mm"
   )
 }
+
+
+
+
+
 
 
 
@@ -779,9 +889,3 @@ ggplot(results_01[[1]][[3]], aes(x = state, y = estimate)) +
   theme_light()
 
 
-ggplot(results_01[[1]][[3]], aes(x = state, y = estimate)) +
-  geom_col(color = "black", fill = "gray", alpha = 0.8) +
-  geom_errorbar(aes(max = conf.high, min = conf.low), width = 4) +
-  scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
-  scale_x_continuous("State") +
-  theme_light()
