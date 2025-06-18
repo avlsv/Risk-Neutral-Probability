@@ -408,7 +408,6 @@ beta_coefs_full <-
     results_17[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-17")
   ) |> mutate(date = as_date(date))
 
-beta_coefs <- beta_coefs_full |> filter(date %in% c("2025-04-01", "2025-04-04"))
 
 
 # Function to calculate discrete quantiles (e.g., 5% and 95%)
@@ -443,14 +442,16 @@ summaries_full <- beta_coefs_full |>
   relocate(date) |>
   arrange(date)
 
+beta_coefs <- 
+  beta_coefs_full |> filter(date %in% c("2025-04-01", "2025-04-03"))
 
 summaries <- summaries_full |>
-  filter(date %in% c("2025-04-01", "2025-04-04")) |>
+  filter(date %in% c("2025-04-01", "2025-04-03")) |>
   mutate(
     price =
       c(
         rep(price_01, length(expirations)),
-        rep(price_04, length(expirations))
+        rep(price_03, length(expirations))
       )
   )
 
@@ -775,7 +776,7 @@ alphas <-
 
 two_alphas_plot <-
   ggplot(
-    alphas |> filter(date %in% c(as_date("2025-04-01"), as_date("2025-04-04"))),
+    alphas |> filter(date %in% c(as_date("2025-04-01"), as_date("2025-04-03"))),
     aes(x = as_factor(as.character(expiration)), y = estimate, group = date, color = as_factor(as.character(date)))
   ) +
   geom_point(position = position_dodge(width = 0.5)) +
