@@ -231,18 +231,22 @@ The state space is chosen to ensure that the first and last coefficients are nea
             \includegraphics[width=\linewidth]{summaries_plot.pdf}
         \end{minipage}
     \end{figure}
-    Uncertainty, as indicated by the 5th and 95th percentiles, has increased. 
-    \\  The price is close to the mean of the distribution.
+    \vspace{-3ex}
+    {\footnotesize 
+    \begin{itemize} 
+        \item Uncertainty, as indicated by the 5th and 95th percentiles, has increased. 
+        \item The price is close to the mean of the distribution.
+    \end{itemize}}
 \end{frame}
 
 
 \begin{frame}{State Densities Through Time}
   \begin{figure}\centering 
-        \begin{minipage}{0.92\linewidth}\centering
+        \begin{minipage}{0.9\linewidth}\centering
             \includegraphics[width=\textwidth]{summaries_plot_full.pdf}
         \vspace{-6ex}
         \begin{flushleft}
-            \tiny \textit{Notes:} This figure shows the 5th- 95th percentile interval (in light gray) and 25th-75th percentile interval (in dark gray) of the estimated implied risk neutral density around the liberation date 2025-04-02 (red vertical line).
+            \tiny \textit{Notes:} This figure shows the 5th- 95th percentile interval (in light gray) and 25th-75th percentile interval (in dark gray) of the estimated implied risk neutral density around the liberation date 2025-04-02 (red vertical line). 2025-04-09 is the day of 90 days pause on tariffs (gray vertical line).
         \end{flushleft}
         \end{minipage}
     \end{figure}
@@ -252,7 +256,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Concentration Parameter Posterior Distribution}
 
-    {Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution, indicating lower uncertainty.}
+    {\footnotesize Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution \so lower uncertainty.}
 
     \begin{figure}\centering 
         \begin{minipage}{0.7\linewidth}
@@ -293,7 +297,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
             \includegraphics[width=\textwidth]{all_alphas_plot.pdf}
             \vspace{-6ex}
         \begin{flushleft}
-            \tiny \textit{Notes:} This figure shows the posterior mean and HPD interval (in gray) of the concentration parameter of the Dirichlet distribution, $\alpha$, around the liberation day, 2025-04-02. 
+            \tiny \textit{Notes:} This figure shows the posterior mean and HPD interval (in gray) of the concentration parameter of the Dirichlet distribution, $\alpha$, around the liberation day, 2025-04-02 (red vertical line). 2025-04-09 is the day of 90 days pause on tariffs (gray vertical line). 
         \end{flushleft}
         \end{minipage}
     \end{figure}
@@ -314,7 +318,7 @@ Applications:\vspace{-3ex}
     \item Concentration parameter then measures whether the forward guidance is effective/was there misinterpretation.
 \end{itemize}
 \begin{itemize}
-    \item The concentration parameter $\alpha$ distribution can be conditioned. (Definitely the position and scale parameters are dependent on expiration date.)
+    \item The concentration parameter $\alpha$ distribution can be conditioned. (What increases uncertainty?)
 \end{itemize}
 
 \end{frame}
