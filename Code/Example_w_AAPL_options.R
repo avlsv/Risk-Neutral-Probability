@@ -103,7 +103,7 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
     plot <- ggplot(betas, aes(x = state, y = estimate)) +
       geom_col(color = "black", fill = "gray", alpha = 0.8) +
       geom_errorbar(aes(max = conf.high, min = conf.low), width = 4) +
-      scale_y_continuous("Probability", breaks = extended_breaks(n = 6)) +
+      scale_y_continuous("", breaks = extended_breaks(n = 6)) +
       scale_x_continuous("State", breaks = extended_breaks(n = round(length(states) / 2) + 1)) +
       theme_light()
 
@@ -408,7 +408,7 @@ beta_coefs_full <-
     results_17[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-17")
   ) |> mutate(date = as_date(date))
 
-beta_coefs <- beta_coefs_full |> filter(date %in% c("2025-04-01", "2025-04-04","2025-04-09"))
+beta_coefs <- beta_coefs_full |> filter(date %in% c("2025-04-01", "2025-04-04"))
 
 
 # Function to calculate discrete quantiles (e.g., 5% and 95%)
@@ -419,6 +419,7 @@ get_discrete_quantiles <- function(prob_vec, bins, probs) {
 
 
 price_01 <- filter(aapl, date == "2025-04-01")$price
+price_03 <- filter(aapl, date == "2025-04-03")$price
 price_04 <- filter(aapl, date == "2025-04-04")$price
 price_09 <- filter(aapl, date == "2025-04-09")$price
 
@@ -444,13 +445,12 @@ summaries_full <- beta_coefs_full |>
 
 
 summaries <- summaries_full |>
-  filter(date %in% c("2025-04-01", "2025-04-04","2025-04-09")) |>
+  filter(date %in% c("2025-04-01", "2025-04-04")) |>
   mutate(
     price =
       c(
         rep(price_01, length(expirations)),
-        rep(price_04, length(expirations)),
-        rep(price_09, length(expirations))
+        rep(price_04, length(expirations))
       )
   )
 
@@ -458,12 +458,13 @@ summaries <- summaries_full |>
 beta_coefs_plot <-
   ggplot(beta_coefs, aes(x = state, y = estimate, group = expiration)) +
   geom_col(color = "black", fill = "gray", alpha = 0.8) +
+  geom_errorbar(aes(max = conf.high, min = conf.low), width = 3, color = "gray60") +
   facet_grid(date ~ as_date(expiration)) +
   geom_vline(data = summaries, aes(xintercept = q5), linetype = "dashed", linewidth = 0.3) +
   geom_vline(data = summaries, aes(xintercept = q95), linetype = "dashed", linewidth = 0.3) +
   geom_vline(data = summaries, aes(xintercept = mean), linetype = "solid", linewidth = 0.3) +
   scale_x_continuous("State", breaks = extended_breaks(n = 10)) +
-  scale_y_continuous("Probability") +
+  scale_y_continuous("") +
   theme_light()
 
 
@@ -483,7 +484,7 @@ ggsave("betas.pdf",
 summaries_plot <-
   ggplot(summaries, aes(x = as_factor(as.character(expiration)), y = mean, group = date, color = as.character(date))) +
   geom_point(position = position_dodge(width = 0.5)) +
-  geom_errorbar(aes(min = q5, max = q95), width = .5, position = position_dodge(width = 0.5)) +
+  geom_errorbar(aes(min = q5, max = q95), width = .3, position = position_dodge(width = 0.5)) +
   geom_errorbar(aes(min = q25, max = q75), width = .2, position = position_dodge(width = 0.5)) +
   geom_line(aes(y = price), position = position_dodge(width = 0.5), linetype = "dashed") +
   scale_x_discrete("Expiration Date") +
@@ -494,11 +495,11 @@ summaries_plot <-
 summaries_plot
 
 ggsave("summaries_plot.pdf",
-       summaries_plot,
-       path = "~/Documents/Risk-Neutral-Probability/Figures/",
-       width = 297 / 1.6,
-       height = 210 / 1.6,
-       units = "mm"
+  summaries_plot,
+  path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  width = 297 / 1.6,
+  height = 210 / 1.6,
+  units = "mm"
 )
 
 
@@ -518,11 +519,11 @@ summaries_plot_full <-
 summaries_plot_full
 
 ggsave("summaries_plot_full.pdf",
-       summaries_plot_full,
-       path = "~/Documents/Risk-Neutral-Probability/Figures/",
-       width = 297 / 1.6,
-       height = 210 / 1.6,
-       units = "mm"
+  summaries_plot_full,
+  path = "~/Documents/Risk-Neutral-Probability/Figures/",
+  width = 297 / 1.6,
+  height = 210 / 1.6,
+  units = "mm"
 )
 
 
@@ -1028,5 +1029,3 @@ wilcox.test(
   extract(results_07[[1]][[1]])$alpha,
   paired = F
 )
-
-

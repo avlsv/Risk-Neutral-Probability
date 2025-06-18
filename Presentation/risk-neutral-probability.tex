@@ -197,7 +197,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 
 \begin{frame}{Risk Neutral Density for AAPL I}
-    Calculated in 2025-04-01 with expiration date 2025-04-17 (\al{+16 days}). Wiskers are 90\% HPD interval.
+    Calculated in 2025-04-01 with expiration date 2025-04-17 (\al{+16 days}). Whiskers are 90\% HPD interval.
      \begin{figure}\centering
         \begin{minipage}{0.75\linewidth}
         \includegraphics[width=\linewidth]{betas_01_1.pdf}
@@ -214,12 +214,25 @@ The state space is chosen to ensure that the first and last coefficients are nea
     \end{figure}
 \end{frame}
 
+\begin{frame}{Tariffs Debacle Timeline}
+    \begin{itemize} \setlength\itemsep{1em}
+        \item \textbf{April 2.} ``Liberation Day''. Tariffs on Chinese goods became 54\% (\al{+ 34\%})
+        \item \textbf{April 4.} China retaliated.
+        \item \textbf{April 9.} Trump announced a 90-day pause on universal tariffs.
+        \item \textbf{April 11.} Electronics exempted from reciprocal tariffs (tariffs are 20\% as before).
+    \end{itemize}
+    
+\end{frame}
 
 
-\begin{frame}{Density before and after the ``Liberation Day'' 2025-04-02}
+\begin{frame}{Density before and after the ``Liberation Day''}
     \begin{figure} \centering
-        \begin{minipage}{0.9\linewidth}
+        \begin{minipage}{0.88\linewidth}\centering
                 \includegraphics[width=\linewidth]{betas.pdf}
+                \vspace{-5ex}
+                \begin{flushleft}
+                \tiny \textit{Notes:} This figure shows the risk-neutral density of AAPL stock price. The solid line indicates the mean of the distribution, the dashed are 5th and 95th quantiles. The whiskers are 90\% HPD intervals.
+                \end{flushleft}
         \end{minipage}
     \end{figure}
 \end{frame}
@@ -227,7 +240,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Summary Statistics \& Sanity Check}
     \begin{figure}\centering
-        \begin{minipage}{0.8\linewidth}
+        \begin{minipage}{0.8\linewidth}\centering
             \includegraphics[width=\linewidth]{summaries_plot.pdf}
         \end{minipage}
     \end{figure}

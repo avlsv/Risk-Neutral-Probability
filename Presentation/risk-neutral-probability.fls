@@ -569,6 +569,9 @@ INPUT ../Figures/betas_01_1.pdf
 INPUT ../Figures/betas_01_3.pdf
 INPUT ../Figures/betas_01_3.pdf
 INPUT ../Figures/betas_01_3.pdf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Bold-tlf-t1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/sourcesanspro/SourceSansPro-Bold-tlf-t1.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Bold-tlf-t1--base.tfm
 INPUT ../Figures/betas.pdf
 INPUT ../Figures/betas.pdf
 INPUT ../Figures/betas.pdf
@@ -614,6 +617,7 @@ INPUT ./risk-neutral-probability.out
 INPUT ./risk-neutral-probability.out
 INPUT risk-neutral-probability.run.xml
 OUTPUT risk-neutral-probability.run.xml
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
