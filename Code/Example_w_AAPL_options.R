@@ -136,6 +136,15 @@ results_25 <-
 saveRDS(results_25, file = "Data/Results/results_25.RData")
 
 
+results_26 <-
+  estimation_procedure(
+    dataset = read_csv("data/AAPL options 2025-03-26.csv", show_col_types = F),
+    states = state_space
+  )
+
+saveRDS(results_26, file = "Data/Results/results_26.RData")
+
+
 results_27 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-27.csv", show_col_types = F),
@@ -346,6 +355,9 @@ beta_coefs_full <-
     results_25[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-03-25"),
     results_25[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-03-25"),
     results_25[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-03-25"),
+    results_26[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-03-26"),
+    results_26[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-03-26"),
+    results_26[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-03-26"),
     results_27[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-03-27"),
     results_27[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-03-27"),
     results_27[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-03-27"),
@@ -361,6 +373,9 @@ beta_coefs_full <-
     results_02[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-04-02"),
     results_02[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-04-02"),
     results_02[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-02"),
+    results_03[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-04-03"),
+    results_03[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-04-03"),
+    results_03[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-03"),
     results_04[[1]][[3]] |> mutate(expiration = expirations[1], date = "2025-04-04"),
     results_04[[2]][[3]] |> mutate(expiration = expirations[2], date = "2025-04-04"),
     results_04[[3]][[3]] |> mutate(expiration = expirations[3], date = "2025-04-04"),
@@ -656,6 +671,21 @@ alphas_27 <-
   ))
 
 
+alphas_26 <-
+  bind_rows(
+    results_26[[1]][[2]] |>
+      filter(term == "alpha"),
+    results_26[[2]][[2]] |>
+      filter(term == "alpha"),
+    results_26[[3]][[2]] |>
+      filter(term == "alpha")
+  ) |> bind_cols(tibble(
+    expiration = expirations,
+    date = as_date("2025-03-26")
+  ))
+
+
+
 alphas_25 <-
   bind_rows(
     results_25[[1]][[2]] |>
@@ -674,6 +704,7 @@ alphas_25 <-
 alphas <-
   bind_rows(
     alphas_25,
+    alphas_26,
     alphas_27,
     alphas_28,
     alphas_31,
@@ -684,10 +715,11 @@ alphas <-
     alphas_07,
     alphas_08,
     alphas_09,
-    alphas_10, 
-    alphas_11, 
-    alphas_12, 
-    alphas_14, 
+    alphas_10,
+    alphas_11,
+    alphas_12,
+    alphas_14,
+    alphas_15,
     alphas_16, alphas_17
   )
 
@@ -718,22 +750,22 @@ ggsave("two_alphas_plot.pdf",
 
 all_alphas_plot <-
   ggplot(alphas, aes(x = date, y = estimate)) +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "gray50", alpha = 0.3) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "black", alpha = 0.2) +
   geom_vline(xintercept = as_date("2025-04-02"), color = "darkred") +
   geom_line() +
   geom_point() +
-  scale_x_date("") +
+  scale_x_date("", date_breaks="3 days", date_minor_breaks="1 day", date_labels = "%b %d") +
   scale_y_continuous(expression(alpha ~ "Estimate"), breaks = extended_breaks(n = 6)) +
   facet_wrap(~expiration, nrow = 3, scales = "free_y") +
-  labs(color = "Date") +
   theme_light() +
   theme(legend.position = "bottom")
 all_alphas_plot
 
+
 ggsave("all_alphas_plot.pdf",
   all_alphas_plot,
   path = "~/Documents/Risk-Neutral-Probability/Figures/",
-  width = 297 / 1.6 ,
+  width = 297 / 1.6,
   height = 210 / 1.6,
   units = "mm"
 )
@@ -835,61 +867,57 @@ for (i in seq(1, length(expirations))) {
     units = "mm"
   )
   ggsave(paste("betas_10_", as.character(i), ".pdf", sep = ""),
-         results_10[[i]][[4]],
-         path = "~/Documents/Risk-Neutral-Probability/Figures/",
-         width = 297 / 1.6,
-         height = 210 / 1.6,
-         units = "mm"
+    results_10[[i]][[4]],
+    path = "~/Documents/Risk-Neutral-Probability/Figures/",
+    width = 297 / 1.6,
+    height = 210 / 1.6,
+    units = "mm"
   )
-  
-  ggsave(paste("betas_11_", as.character(i), ".pdf", sep = ""),
-         results_11[[i]][[4]],
-         path = "~/Documents/Risk-Neutral-Probability/Figures/",
-         width = 297 / 1.6,
-         height = 210 / 1.6,
-         units = "mm"
-  )
-  
-  
 
-  
+  ggsave(paste("betas_11_", as.character(i), ".pdf", sep = ""),
+    results_11[[i]][[4]],
+    path = "~/Documents/Risk-Neutral-Probability/Figures/",
+    width = 297 / 1.6,
+    height = 210 / 1.6,
+    units = "mm"
+  )
+
+
+
+
   ggsave(paste("betas_14_", as.character(i), ".pdf", sep = ""),
-         results_14[[i]][[4]],
-         path = "~/Documents/Risk-Neutral-Probability/Figures/",
-         width = 297 / 1.6,
-         height = 210 / 1.6,
-         units = "mm"
+    results_14[[i]][[4]],
+    path = "~/Documents/Risk-Neutral-Probability/Figures/",
+    width = 297 / 1.6,
+    height = 210 / 1.6,
+    units = "mm"
   )
-  
+
   ggsave(paste("betas_15_", as.character(i), ".pdf", sep = ""),
-         results_15[[i]][[4]],
-         path = "~/Documents/Risk-Neutral-Probability/Figures/",
-         width = 297 / 1.6,
-         height = 210 / 1.6,
-         units = "mm"
+    results_15[[i]][[4]],
+    path = "~/Documents/Risk-Neutral-Probability/Figures/",
+    width = 297 / 1.6,
+    height = 210 / 1.6,
+    units = "mm"
   )
-  
-  
+
+
   ggsave(paste("betas_16_", as.character(i), ".pdf", sep = ""),
-         results_16[[i]][[4]],
-         path = "~/Documents/Risk-Neutral-Probability/Figures/",
-         width = 297 / 1.6,
-         height = 210 / 1.6,
-         units = "mm"
+    results_16[[i]][[4]],
+    path = "~/Documents/Risk-Neutral-Probability/Figures/",
+    width = 297 / 1.6,
+    height = 210 / 1.6,
+    units = "mm"
   )
-  
-  
+
+
   ggsave(paste("betas_17_", as.character(i), ".pdf", sep = ""),
-         results_17[[i]][[4]],
-         path = "~/Documents/Risk-Neutral-Probability/Figures/",
-         width = 297 / 1.6,
-         height = 210 / 1.6,
-         units = "mm"
+    results_17[[i]][[4]],
+    path = "~/Documents/Risk-Neutral-Probability/Figures/",
+    width = 297 / 1.6,
+    height = 210 / 1.6,
+    units = "mm"
   )
-  
-  
-  
-  
 }
 
 
@@ -981,22 +1009,22 @@ ggsave("summaries_plot.pdf",
 
 summaries_plot_full <-
   ggplot(summaries_full, aes(x = date, y = mean, group = expiration)) +
-  geom_ribbon(aes(ymin = q5, ymax = q95), fill = "gray50", alpha = 0.2) +
-  geom_ribbon(aes(ymin = q25, ymax = q75), fill = "gray50", alpha = 0.3) +
+  geom_ribbon(aes(ymin = q5, ymax = q95), fill = "black", alpha = 0.15) +
+  geom_ribbon(aes(ymin = q25, ymax = q75), fill = "black", alpha = 0.2) +
   geom_vline(xintercept = as_date("2025-04-02"), color = "darkred") +
   geom_point() +
   geom_line() +
-  facet_wrap(~expiration, nrow = 3, scales = "free_y") +
-  scale_x_date("") +
+  facet_wrap(~expiration, nrow = 3) +
+  scale_x_date("", date_breaks="3 days", date_minor_breaks="1 day", date_labels = "%b %d") +
   scale_y_continuous("Price", breaks = extended_breaks(n = 6)) +
   labs(color = "Date") +
   theme_light()
 summaries_plot_full
 
 ggsave("summaries_plot_full.pdf",
-       summaries_plot_full,
+  summaries_plot_full,
   path = "~/Documents/Risk-Neutral-Probability/Figures/",
-  width = 297 / 1.6  ,
+  width = 297 / 1.6,
   height = 210 / 1.6,
   units = "mm"
 )

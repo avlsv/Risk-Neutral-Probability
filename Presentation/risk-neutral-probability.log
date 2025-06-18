@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  17 JUN 2025 06:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  18 JUN 2025 03:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1606,55 +1606,63 @@ Overfull \vbox (4.95796pt too high) detected at line 236
 [13
 
  <../Figures/summaries_plot.pdf>]
-<../Figures/two_alphas_plot.pdf, id=157, 439.6425pt x 373.395pt>
-File: ../Figures/two_alphas_plot.pdf Graphic file (type pdf)
-<use ../Figures/two_alphas_plot.pdf>
-Package pdftex.def Info: ../Figures/two_alphas_plot.pdf  used on input line 248.
-(pdftex.def)             Requested size: 235.01881pt x 199.60197pt.
+<../Figures/summaries_plot_full.pdf, id=157, 527.9725pt x 373.395pt>
+File: ../Figures/summaries_plot_full.pdf Graphic file (type pdf)
+<use ../Figures/summaries_plot_full.pdf>
+Package pdftex.def Info: ../Figures/summaries_plot_full.pdf  used on input line 249.
+(pdftex.def)             Requested size: 308.8826pt x 218.44943pt.
 
-Overfull \vbox (36.63393pt too high) detected at line 248
+Overfull \vbox (3.28638pt too high) detected at line 249
  []
 
 
 
 [14
 
- <../Figures/two_alphas_plot.pdf>]
-<../Figures/alpha_histogram.pdf, id=170, 527.9725pt x 373.395pt>
-File: ../Figures/alpha_histogram.pdf Graphic file (type pdf)
-<use ../Figures/alpha_histogram.pdf>
-Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 259.
-(pdftex.def)             Requested size: 241.73396pt x 170.96043pt.
+ <../Figures/summaries_plot_full.pdf>]
+<../Figures/two_alphas_plot.pdf, id=173, 439.6425pt x 373.395pt>
+File: ../Figures/two_alphas_plot.pdf Graphic file (type pdf)
+<use ../Figures/two_alphas_plot.pdf>
+Package pdftex.def Info: ../Figures/two_alphas_plot.pdf  used on input line 262.
+(pdftex.def)             Requested size: 235.01881pt x 199.60197pt.
+
+Overfull \vbox (36.63393pt too high) detected at line 262
+ []
+
 
 
 [15
 
- <../Figures/alpha_histogram.pdf>]
-<../Figures/dirichlet_histogram.pdf, id=184, 527.9725pt x 265.99374pt>
-File: ../Figures/dirichlet_histogram.pdf Graphic file (type pdf)
-<use ../Figures/dirichlet_histogram.pdf>
-Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 273.
-(pdftex.def)             Requested size: 302.1663pt x 152.23087pt.
+ <../Figures/two_alphas_plot.pdf>]
+<../Figures/alpha_histogram.pdf, id=185, 527.9725pt x 373.395pt>
+File: ../Figures/alpha_histogram.pdf Graphic file (type pdf)
+<use ../Figures/alpha_histogram.pdf>
+Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 273.
+(pdftex.def)             Requested size: 241.73396pt x 170.96043pt.
 
 
 [16
 
- <../Figures/dirichlet_histogram.pdf>]
-<../Figures/summaries_plot_full.pdf, id=198, 527.9725pt x 373.395pt>
-File: ../Figures/summaries_plot_full.pdf Graphic file (type pdf)
-<use ../Figures/summaries_plot_full.pdf>
-Package pdftex.def Info: ../Figures/summaries_plot_full.pdf  used on input line 281.
-(pdftex.def)             Requested size: 315.59888pt x 223.1955pt.
+ <../Figures/alpha_histogram.pdf>]
+<../Figures/dirichlet_histogram.pdf, id=199, 527.9725pt x 265.99374pt>
+File: ../Figures/dirichlet_histogram.pdf Graphic file (type pdf)
+<use ../Figures/dirichlet_histogram.pdf>
+Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 287.
+(pdftex.def)             Requested size: 302.1663pt x 152.23087pt.
 
 
 [17
 
- <../Figures/summaries_plot_full.pdf>]
+ <../Figures/dirichlet_histogram.pdf>]
 <../Figures/all_alphas_plot.pdf, id=213, 527.9725pt x 373.395pt>
 File: ../Figures/all_alphas_plot.pdf Graphic file (type pdf)
 <use ../Figures/all_alphas_plot.pdf>
-Package pdftex.def Info: ../Figures/all_alphas_plot.pdf  used on input line 290.
+Package pdftex.def Info: ../Figures/all_alphas_plot.pdf  used on input line 300.
 (pdftex.def)             Requested size: 315.59888pt x 223.1955pt.
+
+Overfull \vbox (8.03244pt too high) detected at line 300
+ []
+
 
 
 [18
@@ -1669,13 +1677,13 @@ Package pdftex.def Info: ../Figures/all_alphas_plot.pdf  used on input line 290.
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 322.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 332.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 322.
+(Font)              scaled to size 7.0pt on input line 332.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 322.
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 332.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 7.0pt on input line 322.
+(Font)              scaled to size 7.0pt on input line 332.
 
 
 [21
@@ -1702,18 +1710,18 @@ Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36241 strings out of 473600
- 717282 string characters out of 5728708
+ 36243 strings out of 473600
+ 717351 string characters out of 5728708
  1940905 words of memory out of 5000000
  58225 multiletter control sequences out of 15000+600000
- 715174 words of font info for 189 fonts, out of 8000000 for 9000
+ 715409 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,1501b,1750s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (21 pages, 295324 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on risk-neutral-probability.pdf (21 pages, 305437 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
- 249 compressed objects within 3 object streams
+ 335 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
  51 named destinations out of 1000 (max. 500000)
  75877 words of extra memory for PDF output out of 89155 (max. 10000000)
 

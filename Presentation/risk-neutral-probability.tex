@@ -95,7 +95,7 @@
 
 \begin{frame}{\al{Implied} Risk-Neutral Probability Density (State-Price Density)}
 
-Risk-Neutral Probability Density = Implied Probability Density = State-Price Density (SPD) = Risk-Neutral Probability Measure (RNK) = Arrow-Debreu prices
+Risk-Neutral Probability Density = Implied Probability Density = State-Price Density (SPD) = Risk-Neutral Probability Measure (RNM) = Arrow-Debreu prices
 
     \[S=\sum_{s=1}^K\phi(s)q(s)\]
 
@@ -236,9 +236,23 @@ The state space is chosen to ensure that the first and last coefficients are nea
 \end{frame}
 
 
+\begin{frame}{State Densities Through Time}
+  \begin{figure}\centering 
+        \begin{minipage}{0.92\linewidth}\centering
+            \includegraphics[width=\textwidth]{summaries_plot_full.pdf}
+        \vspace{-6ex}
+        \begin{flushleft}
+            \tiny \textit{Notes:} This figure shows the 5th- 95th percentile interval (in light gray) and 25th-75th percentile interval (in dark gray) of the estimated implied risk neutral density around the liberation date 2025-04-02 (red vertical line).
+        \end{flushleft}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+
+
 \begin{frame}{Concentration Parameter Posterior Distribution}
 
-    Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution, indicating lower uncertainty.
+    {Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution, indicating lower uncertainty.}
 
     \begin{figure}\centering 
         \begin{minipage}{0.7\linewidth}
@@ -272,19 +286,15 @@ The state space is chosen to ensure that the first and last coefficients are nea
       \end{figure}
 \end{frame}
 
-\begin{frame}{State Densities Through Time}
-  \begin{figure}\centering 
-        \begin{minipage}{0.94\linewidth}\centering
-            \includegraphics[width=\textwidth]{summaries_plot_full.pdf}
-        \end{minipage}
-    \end{figure}
-\end{frame}
-
 
 \begin{frame}{Concentration Parameter Posteriors}
   \begin{figure}\centering 
         \begin{minipage}{0.94\linewidth}\centering
             \includegraphics[width=\textwidth]{all_alphas_plot.pdf}
+            \vspace{-6ex}
+        \begin{flushleft}
+            \tiny \textit{Notes:} This figure shows the posterior mean and HPD interval (in gray) of the concentration parameter of the Dirichlet distribution, $\alpha$, around the liberation day, 2025-04-02. 
+        \end{flushleft}
         \end{minipage}
     \end{figure}
 \end{frame}
