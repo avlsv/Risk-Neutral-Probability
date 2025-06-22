@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  22 JUN 2025 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.14)  22 JUN 2025 19:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1547,10 +1547,10 @@ Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 187.
 <../Figures/dirichlet_histogram_1.pdf, id=101, 527.9725pt x 265.99374pt>
 File: ../Figures/dirichlet_histogram_1.pdf Graphic file (type pdf)
 <use ../Figures/dirichlet_histogram_1.pdf>
-Package pdftex.def Info: ../Figures/dirichlet_histogram_1.pdf  used on input line 209.
-(pdftex.def)             Requested size: 235.01881pt x 118.40134pt.
+Package pdftex.def Info: ../Figures/dirichlet_histogram_1.pdf  used on input line 213.
+(pdftex.def)             Requested size: 218.23065pt x 109.94293pt.
 
-Overfull \vbox (14.99232pt too high) detected at line 209
+Overfull \vbox (6.53392pt too high) detected at line 213
  []
 
 
@@ -1561,10 +1561,10 @@ Overfull \vbox (14.99232pt too high) detected at line 209
 <../Figures/prior_difference.pdf, id=116, 468.75125pt x 331.2375pt>
 File: ../Figures/prior_difference.pdf Graphic file (type pdf)
 <use ../Figures/prior_difference.pdf>
-Package pdftex.def Info: ../Figures/prior_difference.pdf  used on input line 219.
+Package pdftex.def Info: ../Figures/prior_difference.pdf  used on input line 223.
 (pdftex.def)             Requested size: 201.44762pt x 142.34846pt.
 
-Overfull \vbox (14.43042pt too high) detected at line 219
+Overfull \vbox (14.43042pt too high) detected at line 223
  []
 
 
@@ -1579,7 +1579,7 @@ Overfull \vbox (14.43042pt too high) detected at line 219
 <../Figures/betas_01_1.pdf, id=135, 527.9725pt x 373.395pt>
 File: ../Figures/betas_01_1.pdf Graphic file (type pdf)
 <use ../Figures/betas_01_1.pdf>
-Package pdftex.def Info: ../Figures/betas_01_1.pdf  used on input line 241.
+Package pdftex.def Info: ../Figures/betas_01_1.pdf  used on input line 245.
 (pdftex.def)             Requested size: 251.80696pt x 178.08235pt.
 
 
@@ -1588,7 +1588,7 @@ Package pdftex.def Info: ../Figures/betas_01_1.pdf  used on input line 241.
  <../Figures/betas_01_1.pdf>]
 File: ../Figures/betas_01_3.pdf Graphic file (type pdf)
 <use ../Figures/betas_01_3.pdf>
-Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 250.
+Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 254.
 (pdftex.def)             Requested size: 251.80696pt x 178.08235pt.
 
 
@@ -1596,9 +1596,9 @@ Package pdftex.def Info: ../Figures/betas_01_3.pdf  used on input line 250.
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 260.
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 264.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 260.
+(Font)              scaled to size 10.0pt on input line 264.
 
 
 [14
@@ -1607,7 +1607,7 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
 <../Figures/betas.pdf, id=162, 649.42625pt x 458.71375pt>
 File: ../Figures/betas.pdf Graphic file (type pdf)
 <use ../Figures/betas.pdf>
-Package pdftex.def Info: ../Figures/betas.pdf  used on input line 273.
+Package pdftex.def Info: ../Figures/betas.pdf  used on input line 277.
 (pdftex.def)             Requested size: 295.45514pt x 208.69408pt.
 
 
@@ -1617,12 +1617,12 @@ Package pdftex.def Info: ../Figures/betas.pdf  used on input line 273.
 <../Figures/summaries_plot.pdf, id=176, 527.9725pt x 373.395pt>
 File: ../Figures/summaries_plot.pdf Graphic file (type pdf)
 <use ../Figures/summaries_plot.pdf>
-Package pdftex.def Info: ../Figures/summaries_plot.pdf  used on input line 288.
+Package pdftex.def Info: ../Figures/summaries_plot.pdf  used on input line 292.
 (pdftex.def)             Requested size: 268.59512pt x 189.95602pt.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 288.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 292.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 288.
+(Font)              scaled to size 8.0pt on input line 292.
 
 
 [16
@@ -1631,7 +1631,7 @@ LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
 <../Figures/summaries_plot_full.pdf, id=187, 527.9725pt x 373.395pt>
 File: ../Figures/summaries_plot_full.pdf Graphic file (type pdf)
 <use ../Figures/summaries_plot_full.pdf>
-Package pdftex.def Info: ../Figures/summaries_plot_full.pdf  used on input line 301.
+Package pdftex.def Info: ../Figures/summaries_plot_full.pdf  used on input line 305.
 (pdftex.def)             Requested size: 302.1663pt x 213.6977pt.
 
 
@@ -1641,10 +1641,10 @@ Package pdftex.def Info: ../Figures/summaries_plot_full.pdf  used on input line 
 <../Figures/two_alphas_plot.pdf, id=202, 439.6425pt x 373.395pt>
 File: ../Figures/two_alphas_plot.pdf Graphic file (type pdf)
 <use ../Figures/two_alphas_plot.pdf>
-Package pdftex.def Info: ../Figures/two_alphas_plot.pdf  used on input line 314.
+Package pdftex.def Info: ../Figures/two_alphas_plot.pdf  used on input line 318.
 (pdftex.def)             Requested size: 235.01881pt x 199.60197pt.
 
-Overfull \vbox (11.49992pt too high) detected at line 314
+Overfull \vbox (11.49992pt too high) detected at line 318
  []
 
 
@@ -1655,7 +1655,7 @@ Overfull \vbox (11.49992pt too high) detected at line 314
 <../Figures/alpha_histogram.pdf, id=217, 527.9725pt x 373.395pt>
 File: ../Figures/alpha_histogram.pdf Graphic file (type pdf)
 <use ../Figures/alpha_histogram.pdf>
-Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 325.
+Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 329.
 (pdftex.def)             Requested size: 241.73396pt x 170.96043pt.
 
 
@@ -1663,13 +1663,13 @@ Package pdftex.def Info: ../Figures/alpha_histogram.pdf  used on input line 325.
 
  <../Figures/alpha_histogram.pdf>]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 340.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 344.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 340.
+(Font)              scaled to size 9.0pt on input line 344.
 <../Figures/dirichlet_histogram.pdf, id=232, 527.9725pt x 265.99374pt>
 File: ../Figures/dirichlet_histogram.pdf Graphic file (type pdf)
 <use ../Figures/dirichlet_histogram.pdf>
-Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 340.
+Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 344.
 (pdftex.def)             Requested size: 302.1663pt x 152.23087pt.
 
 
@@ -1679,10 +1679,10 @@ Package pdftex.def Info: ../Figures/dirichlet_histogram.pdf  used on input line 
 <../Figures/all_alphas_plot.pdf, id=246, 527.9725pt x 373.395pt>
 File: ../Figures/all_alphas_plot.pdf Graphic file (type pdf)
 <use ../Figures/all_alphas_plot.pdf>
-Package pdftex.def Info: ../Figures/all_alphas_plot.pdf  used on input line 353.
+Package pdftex.def Info: ../Figures/all_alphas_plot.pdf  used on input line 357.
 (pdftex.def)             Requested size: 315.59888pt x 223.1955pt.
 
-Overfull \vbox (8.12244pt too high) detected at line 353
+Overfull \vbox (8.12244pt too high) detected at line 357
  []
 
 
@@ -1699,13 +1699,13 @@ Overfull \vbox (8.12244pt too high) detected at line 353
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 385.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 389.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 385.
+(Font)              scaled to size 7.0pt on input line 389.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 385.
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 389.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
-(Font)              scaled to size 7.0pt on input line 385.
+(Font)              scaled to size 7.0pt on input line 389.
 
 
 [24
@@ -1733,14 +1733,14 @@ Package logreq Info: Writing requests to 'risk-neutral-probability.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  36538 strings out of 473600
- 721317 string characters out of 5728708
+ 721349 string characters out of 5728708
  1941905 words of memory out of 5000000
  58460 multiletter control sequences out of 15000+600000
  739159 words of font info for 224 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,1561b,1752s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on risk-neutral-probability.pdf (24 pages, 400977 bytes).
+Output written on risk-neutral-probability.pdf (24 pages, 400993 bytes).
 PDF statistics:
  386 PDF objects out of 1000 (max. 8388607)
  290 compressed objects within 3 object streams

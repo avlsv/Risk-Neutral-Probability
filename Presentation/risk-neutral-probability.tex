@@ -39,7 +39,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
-\bibliography{references.bib}
+\bibliography{../misc/references.bib}
 
 
 \usepackage{makecell}
@@ -187,6 +187,7 @@ The state space is chosen to ensure that the first and last coefficients are nea
 \end{frame}
 
 
+
 \begin{frame}{Dirichlet Distribution}
 
     The symmetric Dirichlet distribution is a multivariate generalization of the Beta distribution. It is defined on the simplex $\Delta^{K-1}$, which is the set of $K$-dimensional vectors that sum to 1 and are non-negative.
@@ -200,9 +201,12 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \vspace{-4ex}
 \begin{figure}\centering
-    \begin{minipage}{0.7\linewidth}
+    \begin{minipage}{0.65\linewidth}
         \centering
         \includegraphics[width=\linewidth]{dirichlet_histogram_1.pdf}
+        % \begin{flushleft}
+        %     \tiny\textit{Notes:} This figure shows the means ordered Dirichlet random vectors.
+        % \end{flushleft}
     \end{minipage}
 \end{figure}
    
@@ -363,8 +367,8 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 Applications:\vspace{-3ex}
 \begin{itemize}
-    \item This method can be applied to derivatives of rate of interest (e.g SOFR options by CME).
-    \item Concentration parameter then measures whether the forward guidance is effective/was there misinterpretation.
+    \item This method can be applied to derivatives of rate of interest (e.g SOFR options by CME/other).
+    \item Concentration parameter then measures whether the forward guidance is effective/was there misinterpretation of signal.
 \end{itemize}
 \begin{itemize}
     \item The concentration parameter $\alpha$ distribution can be conditioned. (What increases uncertainty?)

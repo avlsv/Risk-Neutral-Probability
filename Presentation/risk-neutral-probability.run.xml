@@ -81,7 +81,7 @@
       <file>risk-neutral-probability.bcf</file>
     </requires>
     <requires type="editable">
-      <file>references.bib</file>
+      <file>../misc/references.bib</file>
     </requires>
   </external>
 </requests>
