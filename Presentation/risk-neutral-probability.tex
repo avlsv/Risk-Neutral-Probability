@@ -12,6 +12,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{textcomp}
+\usepackage{econometrics}
 % \usepackage{enumitem}
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, 
@@ -92,10 +93,14 @@
 %     \tableofcontents[currentsection]
 % \end{frame}
 
-\begin{frame}
-    
+\begin{frame}{Overview}
+    This work\vspace{-3ex}
+    \begin{itemize}\setlength{\itemsep}{2ex}
+        \item replicates the Bayesian approach to estimating risk-neutral probability density with Dirichlet prior {\footnotesize\parencite{fisherSimplexRegression2016,hardleStatePriceDensities2015}}
+        \item extends the interpretation of the concentration coefficient as a measure of uncertainty in the risk-neutral probability density.
+        \item applies the method to AAPL stock around the ``Liberation Day''.
+    \end{itemize}
 \end{frame}
-
 
 \begin{frame}{\al{Implied} Risk-Neutral Density}
 
@@ -110,6 +115,9 @@ Risk-Neutral Density (Probability) = Implied Probability Density = State-Price D
     \[S=\frac{1}{1+r}\sum_{s=1}^K\phi^*(s)q(s)=\frac{1}{1+r}\mathbb{E}^*[q(s)].\]
 
 \end{frame}
+
+
+
 \begin{frame}{Implied \al{Risk-Neutral} Density}
  
     For TAS utility, the state-prices are 
@@ -145,13 +153,13 @@ For short-term, $r\approx 0$.
     How can we measure the risk-neutral probability density?
 
     \begin{itemize}  \setlength\itemsep{1em}
-        \item Local polynomial estimation of $C(S,t)$ with shape restrictions --\\ $\frac{\partial^2}{\partial S^2}\hat C(S,t)$ is a valid density + other theory-motivated restrictions \\ {\scriptsize\parencite{ait-sahaliaNonparametricOptionPricing2003,leeEstimationRiskneutralMeasures2014}}
+        \item Local polynomial estimation of $C(S,t)$ with shape restrictions --\\ $\frac{\partial^2}{\partial S^2}\hat C(S,t)$ is a valid density + \cite{mertonTheoryRationalOption1973} arbitrage restrictions \\ {\scriptsize\parencite{ait-sahaliaNonparametricOptionPricing2003,leeEstimationRiskneutralMeasures2014}}
         \item Bayesian methods \\{\scriptsize\parencite{fisherSimplexRegression2016, hardleStatePriceDensities2015,tabogaOptionimpliedProbabilityDistributions2016} + KDE in the second case}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Bayesian Formulation}
-    \cite{fisherSimplexRegression2016} proposes the following approach.\footnote[frame]{\tiny This is the methodology for \cite{MarketProbabilityTracker}.}
+    \cite{fisherSimplexRegression2016}\footnote[frame]{\tiny This is calculated by the Atlanta Fed, \cite{MarketProbabilityTracker}.} proposes the following approach.
 \vspace{-2ex}
     \[y_i=\lambda\sum_{j=1}^KX_{ij}\beta_j+\varepsilon_i,\]
     where $\beta=(\beta_1,\dots, \beta_K)\in \Delta^{K-1}$, $\Delta^{K-1}$ denotes the simplex of dimension $(K-1)$; $X_{ij}$ is a payoff of derivative $i$ in state $j$, and $\varepsilon_i\sim N(0,\sigma^2)$.
@@ -177,6 +185,29 @@ The state space is chosen to ensure that the first and last coefficients are nea
     \end{figure}
 
 \end{frame}
+
+
+\begin{frame}{Dirichlet Distribution}
+
+    The symmetric Dirichlet distribution is a multivariate generalization of the Beta distribution. It is defined on the simplex $\Delta^{K-1}$, which is the set of $K$-dimensional vectors that sum to 1 and are non-negative.
+
+    For $X\sim \operatorname{Dirichlet}(n,\alpha)$
+    \begin{align*}
+        \mathbb{E}[X_i]&=\frac{1}{n}, & 
+        \var[X_{i}]&=\frac{n-1}{n}\frac{1}{n(n\alpha+1)}, &
+        \cov[X_{i},X_{j\ne i}]&=\frac{-1}{n(n\alpha+1)}.
+    \end{align*}
+
+\vspace{-4ex}
+\begin{figure}\centering
+    \begin{minipage}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{dirichlet_histogram_1.pdf}
+    \end{minipage}
+\end{figure}
+   
+\end{frame}
+
 
 \begin{frame}{Prior for Concentration Coefficient}
     $\alpha$ is a vector of concentration parameters for Dirichlet distribution. The lower the value, the less 'flat' the distribution of risk-neutral density $\beta$.
@@ -273,8 +304,8 @@ The state space is chosen to ensure that the first and last coefficients are nea
 
 \begin{frame}{Concentration Parameter Posterior Distribution}
 
-    {\footnotesize Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less 'flat' the distribution \so lower uncertainty.}
-
+    {\footnotesize Concentration parameter, $\alpha$, is a measure of uncertainty in the risk-neutral probability density. The lower the value, the less `flat' the distribution \so lower uncertainty.}
+\vspace{-2ex}
     \begin{figure}\centering 
         \begin{minipage}{0.7\linewidth}
             \includegraphics[width=\textwidth]{two_alphas_plot.pdf}
@@ -293,15 +324,16 @@ The state space is chosen to ensure that the first and last coefficients are nea
 \end{figure}
 \end{frame}
 
-\begin{frame}{Concentration Parameter and State Space}
-    The concentration parameter is dependent on the state space. Since we want to ensure that the list of possibilities is exhaustive, we will be facing several betas close to zero. This corresponds to the concentration parameter being close to zero.
+\begin{frame}{Concentration Parameter and State Space} 
+
+    {\small The concentration parameter is dependent on the state space. Since we want to ensure that the list of possibilities is exhaustive, we will be facing several betas close to zero. This corresponds to the concentration parameter being close to zero.}
     \begin{figure}[htbp]
     \begin{minipage}{0.9\linewidth}
         \centering
         \includegraphics[width=\linewidth]{dirichlet_histogram.pdf}
         \vspace{-6ex}
         \begin{flushleft}
-        \tiny \textit{Notes:} This figure shows the means of random samples from Dirichlet distribution, that are arranged in order to resample the distribution of state prices.
+        \tiny \textit{Notes:} This figure shows the means of random samples from Dirichlet distribution, that are arranged in order to resemble the distribution with central tendency.
         \end{flushleft}
     \end{minipage}
       \end{figure}

@@ -276,6 +276,56 @@
       \verb /Users/vlasov/Documents/Zotero/storage/3UAIW6Q3/market-probability-tracker.html
       \endverb
     \endentry
+    \entry{mertonTheoryRationalOption1973}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b1e2894bce14479f5a711418ce8f8ffa}{%
+           family={Merton},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Wiley, RAND Corporation]}%
+      }
+      \strng{namehash}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{fullhash}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{fullhashraw}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{bibnamehash}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{authorbibnamehash}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{authornamehash}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{authorfullhash}{b1e2894bce14479f5a711418ce8f8ffa}
+      \strng{authorfullhashraw}{b1e2894bce14479f5a711418ce8f8ffa}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The long history of the theory of option pricing began in 1900 when the French mathematician Louis Bachelier deduced an option pricing formula based on the assumption that stock prices follow a Brownian motion with zero drift. Since that time, numerous researchers have contributed to the theory. The present paper begins by deducing a set of restrictions on option pricing formulas from the assumption that investors prefer more to less. These restrictions are necessary conditions for a formula to be consistent with a rational pricing theory. Attention is given to the problems created when dividends are paid on the underlying common stock and when the terms of the option contract can be changed explicitly by a change in exercise price or implicitly by a shift in the investment or capital structure policy of the firm. Since the deduced restrictions are not sufficient to uniquely determine an option pricing formula, additional assumptions are introduced to examine and extend the seminal Black-Scholes theory of option pricing. Explicit formulas for pricing both call and put options as well as for warrants and the new "down-and-out" option are derived. The effects of dividends and call provisions on the warrant price are examined. The possibilities for further extension of the theory to the pricing of corporate liabilities are discussed.}
+      \field{eprinttype}{jstor}
+      \field{issn}{0005-8556}
+      \field{journaltitle}{The Bell Journal of Economics and Management Science}
+      \field{number}{1}
+      \field{title}{Theory of {{Rational Option Pricing}}}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{4}
+      \field{year}{1973}
+      \field{urldateera}{ce}
+      \field{pages}{141\bibrangedash 183}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.2307/3003143
+      \endverb
+      \verb{eprint}
+      \verb 3003143
+      \endverb
+      \verb{file}
+      \verb /Users/vlasov/Documents/Zotero/storage/NWECXQV8/Merton - 1973 - Theory of Rational Option Pricing.pdf
+      \endverb
+    \endentry
     \entry{tabogaOptionimpliedProbabilityDistributions2016}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2972c1ce3f0f450496ec221a2397d862}{%

@@ -24,6 +24,8 @@ df_2 <- as_tibble(sorted_samples_2) |> mutate(SampleID = 1:n_samples)
 df_3 <- as_tibble(sorted_samples_3) |> mutate(SampleID = 1:n_samples)
 
 
+
+
 tidy_df_1 <- df_1 |>
   pivot_longer(cols = -SampleID, names_to = "Rank", values_to = "Probability") %>%
   mutate(Rank = as.integer(gsub("V", "", Rank))) |>
@@ -47,7 +49,7 @@ tidy_df <- bind_rows(tidy_df_1, tidy_df_2, tidy_df_3)
 
 # Compute mean and error bars for each rank
 summary_df <- tidy_df %>%
-  group_by(rank_mod, alpha) %>%
+  group_by(rank_mod, alpha, Rank) %>%
   summarise(
     Mean = mean(Probability),
     SD = sd(Probability),
@@ -63,10 +65,27 @@ dirichlet_histogram <-
   labs(y = "Mean Probability", x = "") +
   theme_light()
 
+dirichlet_histogram
 
+dirichlet_histogram_1 <-
+  ggplot(summary_df, aes(x = Rank, y = Mean)) +
+  facet_wrap(~alpha) +
+  geom_col(color = "black", alpha = 0.2) +
+  labs(y = "Mean Probability", x = "") +
+  theme_light()
+
+dirichlet_histogram_1
 
 ggsave("dirichlet_histogram.pdf",
        dirichlet_histogram,
+       width = 297 / 1.6,
+       height = 210 / (1.6 * 1.4),
+       units = "mm",
+       path = "~/Documents/Risk-Neutral-Probability/Figures/"
+)
+
+ggsave("dirichlet_histogram_1.pdf",
+       dirichlet_histogram_1,
        width = 297 / 1.6,
        height = 210 / (1.6 * 1.4),
        units = "mm",
