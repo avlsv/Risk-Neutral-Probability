@@ -93,8 +93,31 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
         chains = chains
       )
 
-    coefs <- stan_model_aapl |>
+    coefs_90 <- stan_model_aapl |>
       tidy(conf.int = T, conf.level = 0.90, conf.method = "HPDinterval")
+
+    
+    coefs_95 <- stan_model_aapl |>
+      tidy(conf.int = T, conf.level = 0.95, conf.method = "HPDinterval") |>
+      rename(
+        conf.low.hpd.0.95 = conf.low,
+        conf.high.hpd.0.95 = conf.high
+      )
+ 
+    coefs_50 <- stan_model_aapl |>
+      tidy(conf.int = T, conf.level = 0.50, conf.method = "HPDinterval") |>
+      rename(
+        conf.low.hpd.50 = conf.low,
+        conf.high.hpd.50 = conf.high
+      )
+
+    
+    
+    coefs <- coefs_90 |>
+      left_join(coefs_95) |>
+      left_join(coefs_50)
+
+
 
     betas <- coefs |>
       filter(startsWith(term, "b")) |>
@@ -442,7 +465,7 @@ summaries_full <- beta_coefs_full |>
   relocate(date) |>
   arrange(date)
 
-beta_coefs <- 
+beta_coefs <-
   beta_coefs_full |> filter(date %in% c("2025-04-01", "2025-04-03"))
 
 summaries <- summaries_full |>
