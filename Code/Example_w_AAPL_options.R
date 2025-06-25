@@ -149,11 +149,15 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   mutate(date = as_date(date)) |>
   arrange(date)
 
+iter=10000
+chains=8
 
 results_25 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-25.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_25, file = "Data/Results/results_25.RData")
@@ -162,7 +166,9 @@ saveRDS(results_25, file = "Data/Results/results_25.RData")
 results_26 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-26.csv", show_col_types = F),
-    states = state_space
+    states = state_space,
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_26, file = "Data/Results/results_26.RData")
@@ -171,7 +177,9 @@ saveRDS(results_26, file = "Data/Results/results_26.RData")
 results_27 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-27.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_27, file = "Data/Results/results_27.RData")
@@ -181,7 +189,9 @@ saveRDS(results_27, file = "Data/Results/results_27.RData")
 results_28 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-28.csv", show_col_types = F),
-    states = state_space, iter = 6000
+    states = state_space, 
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_28, file = "Data/Results/results_28.RData")
