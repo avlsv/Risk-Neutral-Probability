@@ -110,12 +110,22 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
         conf.low.hpd.50 = conf.low,
         conf.high.hpd.50 = conf.high
       )
+    
+    
+    coefs_90_q <- stan_model_aapl |>
+      tidy(conf.int = T, conf.level = 0.90, conf.method = "quantile") |>
+      rename(
+        conf.low.q.90 = conf.low,
+        conf.high.q.90 = conf.high
+      )
+    
 
 
 
     coefs <- coefs_90 |>
       left_join(coefs_95) |>
-      left_join(coefs_50)
+      left_join(coefs_50)|>
+      left_join(coefs_90_q)
 
 
 
@@ -153,6 +163,9 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
 iter <- 6000
 chains <- 6
 
+start.time <- Sys.time()
+
+
 
 results_25 <-
   estimation_procedure(
@@ -164,6 +177,10 @@ results_25 <-
 
 saveRDS(results_25, file = "Data/Results/results_25.RData")
 
+end.time <- Sys.time()
+
+time.taken <- end.time - start.time
+time.taken
 
 results_26 <-
   estimation_procedure(
