@@ -201,7 +201,9 @@ saveRDS(results_28, file = "Data/Results/results_28.RData")
 results_31 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-31.csv", show_col_types = F),
-    states = state_space
+    states = state_space,
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_31, file = "Data/Results/results_31.RData")
@@ -213,17 +215,14 @@ saveRDS(results_31, file = "Data/Results/results_31.RData")
 results_01 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_01, file = "Data/Results/results_01.RData")
 
 
-results_01_15 <-
-  estimation_procedure(
-    dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
-    states = seq(100, 295, by = 15)
-  )
 
 
 # readRDS("data/results/results_01.RData")
@@ -247,17 +246,20 @@ results_01_15 <-
 results_02 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-02.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_02, file = "Data/Results/results_02.RData")
 
-readRDS("Data/Results/results_02.RData")
 
 results_03 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-03.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter=iter,
+    chains=chains
   )
 
 saveRDS(results_03, file = "data/results/results_03.RData")
@@ -266,7 +268,9 @@ saveRDS(results_03, file = "data/results/results_03.RData")
 results_04 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-04.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_04, file = "data/results/results_04.RData")
@@ -276,7 +280,9 @@ readRDS("data/results/results_04.RData")
 results_07 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-07.csv", show_col_types = F),
-    states = state_space
+    states = state_space, 
+    iter = iter,
+    chains = chains
   )
 
 results_07_15 <-
