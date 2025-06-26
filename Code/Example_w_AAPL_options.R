@@ -163,10 +163,9 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
 iter <- 6000
 chains <- 6
 
+{
 start.time <- Sys.time()
-
-
-
+start.time
 results_25 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-25.csv", show_col_types = F),
@@ -180,7 +179,7 @@ saveRDS(results_25, file = "Data/Results/results_25.RData")
 end.time <- Sys.time()
 
 time.taken <- end.time - start.time
-time.taken
+time.taken}
 
 results_26 <-
   estimation_procedure(
