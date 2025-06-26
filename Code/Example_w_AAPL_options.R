@@ -149,8 +149,8 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   mutate(date = as_date(date)) |>
   arrange(date)
 
-iter=10000
-chains=8
+iter=6000
+chains=6
 
 results_25 <-
   estimation_procedure(
