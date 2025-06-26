@@ -149,13 +149,10 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   mutate(date = as_date(date)) |>
   arrange(date)
 
-<<<<<<< Updated upstream
-iter=6000
-chains=6
-=======
-iter <- 10000
-chains <- 8
->>>>>>> Stashed changes
+
+iter <- 6000
+chains <- 6
+
 
 results_25 <-
   estimation_procedure(
