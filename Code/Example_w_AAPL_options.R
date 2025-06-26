@@ -96,14 +96,14 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
     coefs_90 <- stan_model_aapl |>
       tidy(conf.int = T, conf.level = 0.90, conf.method = "HPDinterval")
 
-    
+
     coefs_95 <- stan_model_aapl |>
       tidy(conf.int = T, conf.level = 0.95, conf.method = "HPDinterval") |>
       rename(
         conf.low.hpd.0.95 = conf.low,
         conf.high.hpd.0.95 = conf.high
       )
- 
+
     coefs_50 <- stan_model_aapl |>
       tidy(conf.int = T, conf.level = 0.50, conf.method = "HPDinterval") |>
       rename(
@@ -111,8 +111,8 @@ estimation_procedure <- function(dataset, model = "simplex.stan", states = seq(1
         conf.high.hpd.50 = conf.high
       )
 
-    
-    
+
+
     coefs <- coefs_90 |>
       left_join(coefs_95) |>
       left_join(coefs_50)
@@ -149,15 +149,20 @@ aapl <- getSymbols("AAPL", src = "yahoo", auto.assign = FALSE) |>
   mutate(date = as_date(date)) |>
   arrange(date)
 
+<<<<<<< Updated upstream
 iter=6000
 chains=6
+=======
+iter <- 10000
+chains <- 8
+>>>>>>> Stashed changes
 
 results_25 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-25.csv", show_col_types = F),
-    states = state_space, 
-    iter=iter,
-    chains=chains
+    states = state_space,
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_25, file = "Data/Results/results_25.RData")
@@ -167,8 +172,8 @@ results_26 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-26.csv", show_col_types = F),
     states = state_space,
-    iter=iter,
-    chains=chains
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_26, file = "Data/Results/results_26.RData")
@@ -177,9 +182,9 @@ saveRDS(results_26, file = "Data/Results/results_26.RData")
 results_27 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-27.csv", show_col_types = F),
-    states = state_space, 
-    iter=iter,
-    chains=chains
+    states = state_space,
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_27, file = "Data/Results/results_27.RData")
@@ -189,9 +194,9 @@ saveRDS(results_27, file = "Data/Results/results_27.RData")
 results_28 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-28.csv", show_col_types = F),
-    states = state_space, 
-    iter=iter,
-    chains=chains
+    states = state_space,
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_28, file = "Data/Results/results_28.RData")
@@ -202,8 +207,8 @@ results_31 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-03-31.csv", show_col_types = F),
     states = state_space,
-    iter=iter,
-    chains=chains
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_31, file = "Data/Results/results_31.RData")
@@ -215,9 +220,9 @@ saveRDS(results_31, file = "Data/Results/results_31.RData")
 results_01 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-01.csv", show_col_types = F),
-    states = state_space, 
-    iter=iter,
-    chains=chains
+    states = state_space,
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_01, file = "Data/Results/results_01.RData")
@@ -246,9 +251,9 @@ saveRDS(results_01, file = "Data/Results/results_01.RData")
 results_02 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-02.csv", show_col_types = F),
-    states = state_space, 
-    iter=iter,
-    chains=chains
+    states = state_space,
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_02, file = "Data/Results/results_02.RData")
@@ -257,9 +262,9 @@ saveRDS(results_02, file = "Data/Results/results_02.RData")
 results_03 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-03.csv", show_col_types = F),
-    states = state_space, 
-    iter=iter,
-    chains=chains
+    states = state_space,
+    iter = iter,
+    chains = chains
   )
 
 saveRDS(results_03, file = "data/results/results_03.RData")
@@ -268,7 +273,7 @@ saveRDS(results_03, file = "data/results/results_03.RData")
 results_04 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-04.csv", show_col_types = F),
-    states = state_space, 
+    states = state_space,
     iter = iter,
     chains = chains
   )
@@ -280,7 +285,7 @@ readRDS("data/results/results_04.RData")
 results_07 <-
   estimation_procedure(
     dataset = read_csv("data/AAPL options 2025-04-07.csv", show_col_types = F),
-    states = state_space, 
+    states = state_space,
     iter = iter,
     chains = chains
   )
@@ -377,6 +382,3 @@ saveRDS(results_17, file = "data/results/results_17.RData")
 #     states = state_space,
 #     model = "simplex_alternative.stan"
 #   )
-
-
-
