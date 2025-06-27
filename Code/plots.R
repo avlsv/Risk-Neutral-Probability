@@ -130,7 +130,7 @@ beta_coefs_plot <-
   geom_vline(data = summaries, aes(xintercept = q5), linetype = "dashed", linewidth = 0.3) +
   geom_vline(data = summaries, aes(xintercept = q95), linetype = "dashed", linewidth = 0.3) +
   geom_vline(data = summaries, aes(xintercept = mean), linetype = "solid", linewidth = 0.3) +
-  scale_x_continuous("State", breaks = extended_breaks(n = 10)) +
+  scale_x_continuous("Price of an asset", breaks = extended_breaks(n = 10)) +
   scale_y_continuous("") +
   theme_light()
 
