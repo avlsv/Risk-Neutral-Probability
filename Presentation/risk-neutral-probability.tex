@@ -137,12 +137,12 @@ Risk-Neutral Density (Probability) = Implied Probability Density = State-Price D
 For short-term, $r\approx 0$.
     \begin{align*}
         C(S,t)&=\mathbb{E}^*\left[[S(T)-\mathcal{K}]^+\mid S(t)=S\right]\\ 
-        &=\int_0^{+\infty}(x-\mathcal{K})^+\,dP^*(x)\\ &=\int_{\mathcal{K}}^{+\infty}x\,dP^*(x)-\mathcal{K}\int_0^{+\infty}\,dP^*(x)\\ 
+        &=\int_0^{+\infty}(x-\mathcal{K})^+\,dP^*(x)\\ &=\int_{\mathcal{K}}^{+\infty}x\,dP^*(x)-\mathcal{K}\int_\mathcal{K}^{+\infty}\,dP^*(x)\\ 
         &=\int_{\mathcal{K}}^{+\infty}x\,dP^*(x)-\mathcal{K}(1-P^*(\mathcal{K}))
     \end{align*}
     \begin{align*}
-        \frac{\partial C}{\partial \mathcal{K}}&=-\mathcal{K}p^*(\mathcal{K})-1+P^*(\mathcal{K})+\mathcal{K}p^*(\mathcal{K})=P^*(\mathcal{K})-1\\ 
-        \frac{\partial^2 C}{\partial \mathcal{K}^2}&=p^*(\mathcal{K}).
+        \frac{\partial C}{\partial \mathcal{K}}&=P^*(\mathcal{K})-1\\ 
+        \frac{\partial^2 C}{\partial \mathcal{K}^2}&=p^*(\mathcal{K})\implies p^*(x)=\left.\frac{\partial^2 C}{\partial\mathcal{K}^2}\right|_{\mathcal{K}=x}.
     \end{align*}
    We need an option price, $C$, to be twice differentiable, $C^2$, function. 
 \end{frame}
