@@ -9,9 +9,10 @@ library(patchwork)
 
 options(mc.cores = parallel::detectCores())
 
+simplex_model <- "simplex.stan" |> stan_model()
 
 estimation_procedure <- function(dataset,
-                                 model = "simplex.stan",
+                                 model = simplex_model,
                                  states = seq(120 - 20, 260 + 20, by = 10),
                                  iter = 4000,
                                  chains = 4) {
@@ -77,8 +78,8 @@ estimation_procedure <- function(dataset,
     )
 
     stan_model_aapl <-
-      stan(
-        as.character(model),
+      sampling(
+        model,
         data = stan_data_aapl,
         iter = iter,
         chains = chains
@@ -177,7 +178,6 @@ chains <- 4
       dataset =
         read_csv("data/AAPL options 2025-03-25.csv", show_col_types = F),
       states = state_space,
-      iter = 10,
       chains = chains
     )
 
@@ -185,22 +185,39 @@ chains <- 4
 
   end.time <- Sys.time()
 
-  time.taken <- end.time - start.time
-  time.taken
+  time.taken_2 <- end.time - start.time
+  time.taken_2
+}
+# time.taken_1 Time difference of 7.450578 mins
+
+
+{
+  start.time <- Sys.time()
+  start.time
+
+  results_26 <-
+    estimation_procedure(
+      model = results_25[[1]]$model,
+      dataset =
+        read_csv("data/AAPL options 2025-03-26.csv", show_col_types = F),
+      states = state_space,
+      chains = chains
+    )
+
+  # saveRDS(results_26, file = "Data/Results/results_26.RData")
+
+
+  end.time <- Sys.time()
+
+  time.taken_2 <- end.time - start.time
+  time.taken_2
 }
 
+time.taken_1
+time.taken_2
 
 
-results_26 <-
-  estimation_procedure(
-    dataset =
-      read_csv("data/AAPL options 2025-03-26.csv", show_col_types = F),
-    states = state_space,
-    iter = iter,
-    chains = chains
-  )
-
-saveRDS(results_26, file = "Data/Results/results_26.RData")
+readRDS(results_26, file = "Data/Results/results_26.RData")
 
 
 results_27 <-
@@ -391,7 +408,8 @@ results_15 <-
   estimation_procedure(
     dataset =
       read_csv("data/AAPL options 2025-04-15.csv",
-               show_col_types = F),
+        show_col_types = F
+      ),
     states = state_space,
     iter = iter,
     chains = chains
