@@ -1,3 +1,7 @@
+library(renv)
+
+renv::restore()
+
 library(tidyverse)
 library(quantmod)
 library(broom)
@@ -5,6 +9,8 @@ library(broom.mixed)
 library(rstan)
 library(scales)
 library(patchwork)
+
+#renv::snapshot()
 
 
 options(mc.cores = parallel::detectCores())
