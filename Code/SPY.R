@@ -156,12 +156,14 @@ estimation_procedure <- function(dataset,
 }
 
 
+
 getSymbols("SPY", from = "2026-01-30", to = "2026-02-05", auto.assign = T)
 
 last_price <- last(as_tibble(SPY, rownames = "Date"))$SPY.Close
 old_price <- first(as_tibble(SPY, rownames = "Date"))$SPY.Close
 
 state_space_normalized <- seq(-30, 20, by = 5)
+
 
 state_space <- (state_space_normalized / 100 + 1) * last_price
 state_space_old <- (state_space_normalized / 100 + 1) * old_price
@@ -216,13 +218,12 @@ betas <- betas |> mutate(state_percent = state / last_price - 1)
 }
 
 
-betas_compare <- 
-results_old[[4]]$betas|> mutate(date="2026-01-30")|> 
-  mutate(state_percent = state / old_price - 1)
-  bind_rows(results[[4]]$betas|> mutate(date="2026-02-05")|>
-              mutate(state_percent = state / last_price - 1)) 
- 
-
+betas_compare <-
+  results_old[[4]]$betas |>
+  mutate(date = "2026-01-30") |>
+  mutate(state_percent = state / old_price - 1) |>
+  bind_rows(results[[4]]$betas |> mutate(date = "2026-02-05") |>
+    mutate(state_percent = state / last_price - 1))
 
 
 betas_plot <-
@@ -234,7 +235,7 @@ betas_plot <-
     color = "#2F2926",
     fill =  "#6E8C2F"
   ) +
-  geom_errorbar(aes(max = conf.high, min = conf.low), width = .01, alpha = 0.5) +
+  geom_errorbar(aes(max = conf.high.hpd.0.95, min = conf.low.hpd.0.95), width = .01, alpha = 0.5) +
   scale_y_continuous(NULL) +
   scale_x_continuous("%", labels = \(x){
     100 * x
@@ -263,13 +264,13 @@ betas_plot <-
     axis.title = element_text(color = "#2F2926"),
     legend.text = element_text(color = "#2F2926"),
     legend.title = element_text(color = "#2F2926"),
+    plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "in"),
     # panel.grid.major = element_line(color = NA),
     # panel.grid.minor = element_line(color = NA),
     panel.grid.major.y = element_line(color = alpha("#2F2926", 0.1)),
     panel.grid.minor.y = element_line(color = alpha("#2F2926", 0.1)),
     panel.grid.major.x = element_line(color = alpha("#2F2926", 0.1)),
     panel.grid.minor.x = element_line(color = alpha("#2F2926", 0.1)),
-    plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "in"),
     strip.background = element_blank(),
     strip.text = element_text(face = "bold", color = "#2F2926")
   )
