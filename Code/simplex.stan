@@ -17,7 +17,7 @@ transformed parameters{
 }
 
 model {
-  //lambda ~ uniform(0.9,1);//lambda prior
+  //lambda ~ uniform(0.9,1); //lambda prior
   alpha ~ weibull(1.1,1); // dirichlet parameter prior
   b ~ dirichlet(rep_vector(alpha, k)); // coef prior
   y ~ normal(f, sigma);  // likelihood

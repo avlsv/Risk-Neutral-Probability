@@ -18,3 +18,4 @@ mpd_a |>
   filter(field == "Rate: mean", date >= as_date("2025-01-01")) |>
   ggplot(aes(x = reference_start, y = value, group = date, color = date)) +
   geom_line()
+
