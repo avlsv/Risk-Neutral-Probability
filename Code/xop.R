@@ -172,12 +172,14 @@ state_space <- seq(100, 260, by = 10)
 iter <- 5000
 chains <- 4
 
+new_date= "2026-04-14"
+
 dataset_new <-
-  read_csv("data/XOP Options.csv") |>
-  filter(date == "2026-03-20")
+  read_csv("data/XOP Options_20260415.csv") |>
+  filter(date == new_date)
 
 dataset_old <-
-  read_csv("data/XOP Options.csv") |>
+  read_csv("data/XOP Options_20260415.csv") |>
   filter(date == "2026-02-26")
 
 # 2026-02-28
@@ -210,17 +212,17 @@ message("estimation started")
   toc()
 }
 
+
+saveRDS(results_xop, file = "Data/Results/results_xop.RData")
+saveRDS(results_xop_old, file = "Data/Results/results_xop_old.RData")
+
+
 # 
-# saveRDS(results_xop, file = "Data/Results/results_xop.RData")
-# saveRDS(results_xop_old, file = "Data/Results/results_xop_old.RData")
+# results_xop <- readRDS("Data/Results/results_xop.RData")
+# results_xop_old <- readRDS("Data/Results/results_xop_old.RData")
 
 
-
-results_xop <- readRDS("Data/Results/results_xop.RData")
-results_xop_old <- readRDS("Data/Results/results_xop_old.RData")
-
-
-dataset_old$expiration |> unique()
+dataset_new$expiration |> unique()
 
 # renv::snapshot()
 # "2026-03-09"
@@ -229,7 +231,7 @@ dataset_old$expiration |> unique()
 betas_compare <-
   results_xop_old[[4]]$betas |>
   mutate(date = "2026-02-26") |>
-  bind_rows(results_xop[[4]]$betas |> mutate(date = "2026-03-20"))
+  bind_rows(results_xop[[4]]$betas |> mutate(date = new_date))
 
 
 betas_plot <-
@@ -299,7 +301,7 @@ betas_plot_1 <-
   scale_y_continuous("%", expand = expansion(mult = c(0, 0.05)), labels = \(x)x*100) +
   scale_x_continuous(NULL, breaks = extended_breaks(n = 6)) +
   scale_fill_manual(NULL, values = c("#6E8C2F", "#157AC5")) +
-  labs(title = "вмененное распределение вероятности\nS&P Oil & Gas Exploration & Production\nк 2026-04-17") +
+  labs(title = "вмененное распределение вероятности\nS&P Oil & Gas Exploration & Production\nк ") +
   theme_light() +
   theme(
     plot.title = element_text(size = 11, color = "#2F2926"),
